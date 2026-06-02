@@ -1,0 +1,366 @@
+{
+  "about": {
+    "homepage": "https://www.ladle.dev",
+    "github": "https://github.com/tajo/ladle",
+    "version": 1
+  },
+  "stories": {
+    "core--alert--variants": {
+      "name": "Variants",
+      "levels": [
+        "Core",
+        "Alert"
+      ],
+      "locStart": 6,
+      "locEnd": 12,
+      "filePath": "src/stories/Alert.stories.tsx",
+      "namedExport": "Variants",
+      "meta": {}
+    },
+    "core--badge--pill": {
+      "name": "Pill",
+      "levels": [
+        "Core",
+        "Badge"
+      ],
+      "locStart": 14,
+      "locEnd": 20,
+      "filePath": "src/stories/Badge.stories.tsx",
+      "namedExport": "Pill",
+      "meta": {}
+    },
+    "core--badge--variants": {
+      "name": "Variants",
+      "levels": [
+        "Core",
+        "Badge"
+      ],
+      "locStart": 6,
+      "locEnd": 12,
+      "filePath": "src/stories/Badge.stories.tsx",
+      "namedExport": "Variants",
+      "meta": {}
+    },
+    "core--button--outline": {
+      "name": "Outline",
+      "levels": [
+        "Core",
+        "Button"
+      ],
+      "locStart": 14,
+      "locEnd": 20,
+      "filePath": "src/stories/Button.stories.tsx",
+      "namedExport": "Outline",
+      "meta": {}
+    },
+    "core--button--sizes": {
+      "name": "Sizes",
+      "levels": [
+        "Core",
+        "Button"
+      ],
+      "locStart": 22,
+      "locEnd": 28,
+      "filePath": "src/stories/Button.stories.tsx",
+      "namedExport": "Sizes",
+      "meta": {}
+    },
+    "core--button--states": {
+      "name": "States",
+      "levels": [
+        "Core",
+        "Button"
+      ],
+      "locStart": 30,
+      "locEnd": 36,
+      "filePath": "src/stories/Button.stories.tsx",
+      "namedExport": "States",
+      "meta": {}
+    },
+    "core--button--variants": {
+      "name": "Variants",
+      "levels": [
+        "Core",
+        "Button"
+      ],
+      "locStart": 6,
+      "locEnd": 12,
+      "filePath": "src/stories/Button.stories.tsx",
+      "namedExport": "Variants",
+      "meta": {}
+    },
+    "core--card--basic": {
+      "name": "Basic",
+      "levels": [
+        "Core",
+        "Card"
+      ],
+      "locStart": 6,
+      "locEnd": 15,
+      "filePath": "src/stories/Card.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "core--card--grid": {
+      "name": "Grid",
+      "levels": [
+        "Core",
+        "Card"
+      ],
+      "locStart": 29,
+      "locEnd": 43,
+      "filePath": "src/stories/Card.stories.tsx",
+      "namedExport": "Grid",
+      "meta": {}
+    },
+    "core--card--with-header-footer": {
+      "name": "With header footer",
+      "levels": [
+        "Core",
+        "Card"
+      ],
+      "locStart": 17,
+      "locEnd": 27,
+      "filePath": "src/stories/Card.stories.tsx",
+      "namedExport": "WithHeaderFooter",
+      "meta": {}
+    },
+    "forms--formcontrol--checks": {
+      "name": "Checks",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 53,
+      "locEnd": 62,
+      "filePath": "src/stories/Forms.stories.tsx",
+      "namedExport": "Checks",
+      "meta": {}
+    },
+    "forms--formcontrol--input-groups": {
+      "name": "Input groups",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 64,
+      "locEnd": 75,
+      "filePath": "src/stories/Forms.stories.tsx",
+      "namedExport": "InputGroups",
+      "meta": {}
+    },
+    "forms--formcontrol--inputs": {
+      "name": "Inputs",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 6,
+      "locEnd": 22,
+      "filePath": "src/stories/Forms.stories.tsx",
+      "namedExport": "Inputs",
+      "meta": {}
+    },
+    "forms--formcontrol--select": {
+      "name": "Select",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 39,
+      "locEnd": 51,
+      "filePath": "src/stories/Forms.stories.tsx",
+      "namedExport": "Select",
+      "meta": {}
+    },
+    "forms--formcontrol--sizes": {
+      "name": "Sizes",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 31,
+      "locEnd": 37,
+      "filePath": "src/stories/Forms.stories.tsx",
+      "namedExport": "Sizes",
+      "meta": {}
+    },
+    "forms--formcontrol--validation": {
+      "name": "Validation",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 24,
+      "locEnd": 29,
+      "filePath": "src/stories/Forms.stories.tsx",
+      "namedExport": "Validation",
+      "meta": {}
+    },
+    "getting-started--installation": {
+      "name": "Installation",
+      "levels": [
+        "Getting started"
+      ],
+      "locStart": 45,
+      "locEnd": 75,
+      "filePath": "src/stories/GettingStarted.stories.tsx",
+      "namedExport": "Installation",
+      "meta": {}
+    },
+    "getting-started--introduction": {
+      "name": "Introduction",
+      "levels": [
+        "Getting started"
+      ],
+      "locStart": 18,
+      "locEnd": 40,
+      "filePath": "src/stories/GettingStarted.stories.tsx",
+      "namedExport": "Introduction",
+      "meta": {}
+    },
+    "getting-started--quick-start": {
+      "name": "Quick start",
+      "levels": [
+        "Getting started"
+      ],
+      "locStart": 80,
+      "locEnd": 106,
+      "filePath": "src/stories/GettingStarted.stories.tsx",
+      "namedExport": "QuickStart",
+      "meta": {}
+    },
+    "getting-started--theming": {
+      "name": "Theming",
+      "levels": [
+        "Getting started"
+      ],
+      "locStart": 111,
+      "locEnd": 163,
+      "filePath": "src/stories/GettingStarted.stories.tsx",
+      "namedExport": "Theming",
+      "meta": {}
+    },
+    "navigation--accordion": {
+      "name": "Accordion",
+      "levels": [
+        "Navigation"
+      ],
+      "locStart": 65,
+      "locEnd": 77,
+      "filePath": "src/stories/Navigation.stories.tsx",
+      "namedExport": "AccordionExample",
+      "meta": {}
+    },
+    "navigation--breadcrumb": {
+      "name": "Breadcrumb",
+      "levels": [
+        "Navigation"
+      ],
+      "locStart": 30,
+      "locEnd": 36,
+      "filePath": "src/stories/Navigation.stories.tsx",
+      "namedExport": "BreadcrumbExample",
+      "meta": {}
+    },
+    "navigation--nav": {
+      "name": "Nav",
+      "levels": [
+        "Navigation"
+      ],
+      "locStart": 6,
+      "locEnd": 13,
+      "filePath": "src/stories/Navigation.stories.tsx",
+      "namedExport": "NavBasic",
+      "meta": {}
+    },
+    "navigation--navbar": {
+      "name": "Navbar",
+      "levels": [
+        "Navigation"
+      ],
+      "locStart": 16,
+      "locEnd": 27,
+      "filePath": "src/stories/Navigation.stories.tsx",
+      "namedExport": "NavbarExample",
+      "meta": {}
+    },
+    "navigation--pagination": {
+      "name": "Pagination",
+      "levels": [
+        "Navigation"
+      ],
+      "locStart": 39,
+      "locEnd": 49,
+      "filePath": "src/stories/Navigation.stories.tsx",
+      "namedExport": "PaginationExample",
+      "meta": {}
+    },
+    "navigation--tabs": {
+      "name": "Tabs",
+      "levels": [
+        "Navigation"
+      ],
+      "locStart": 52,
+      "locEnd": 62,
+      "filePath": "src/stories/Navigation.stories.tsx",
+      "namedExport": "TabsExample",
+      "meta": {}
+    },
+    "overlays--dropdown": {
+      "name": "Dropdown",
+      "levels": [
+        "Overlays"
+      ],
+      "locStart": 45,
+      "locEnd": 55,
+      "filePath": "src/stories/Overlays.stories.tsx",
+      "namedExport": "DropdownExample",
+      "meta": {}
+    },
+    "overlays--modal": {
+      "name": "Modal",
+      "levels": [
+        "Overlays"
+      ],
+      "locStart": 7,
+      "locEnd": 25,
+      "filePath": "src/stories/Overlays.stories.tsx",
+      "namedExport": "ModalExample",
+      "meta": {}
+    },
+    "overlays--offcanvas": {
+      "name": "Offcanvas",
+      "levels": [
+        "Overlays"
+      ],
+      "locStart": 28,
+      "locEnd": 42,
+      "filePath": "src/stories/Overlays.stories.tsx",
+      "namedExport": "OffcanvasExample",
+      "meta": {}
+    },
+    "overlays--popover": {
+      "name": "Popover",
+      "levels": [
+        "Overlays"
+      ],
+      "locStart": 73,
+      "locEnd": 82,
+      "filePath": "src/stories/Overlays.stories.tsx",
+      "namedExport": "PopoverExample",
+      "meta": {}
+    },
+    "overlays--tooltip": {
+      "name": "Tooltip",
+      "levels": [
+        "Overlays"
+      ],
+      "locStart": 58,
+      "locEnd": 70,
+      "filePath": "src/stories/Overlays.stories.tsx",
+      "namedExport": "TooltipExample",
+      "meta": {}
+    }
+  }
+}
