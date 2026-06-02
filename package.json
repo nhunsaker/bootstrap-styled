@@ -23,6 +23,9 @@
     "play": "vite",
     "play:build": "vite build"
   },
+  "dependencies": {
+    "@floating-ui/react": "^0.26.0"
+  },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18",

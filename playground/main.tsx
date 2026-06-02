@@ -11,6 +11,11 @@ import {
   Pagination, PageItem, PageLink,
   Progress, ProgressBar,
   Tabs, Tab, Accordion, AccordionItem,
+  CloseButton,
+  Modal, ModalHeader, ModalTitle, ModalBody, ModalFooter,
+  Offcanvas, OffcanvasHeader, OffcanvasTitle, OffcanvasBody,
+  Dropdown, DropdownToggle, DropdownMenu, DropdownItem, DropdownDivider,
+  Tooltip, Popover,
   type ColorName,
 } from '../src'
 
@@ -28,6 +33,8 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 function App() {
   const [primary, setPrimary] = useState('#0d6efd')
   const [mode, setMode] = useState<'light' | 'dark'>('light')
+  const [modalOpen, setModalOpen] = useState(false)
+  const [offcanvasOpen, setOffcanvasOpen] = useState(false)
   const theme = createTheme({ colors: { primary } })
 
   return (
@@ -105,6 +112,48 @@ function App() {
               Third item body.
             </AccordionItem>
           </Accordion>
+        </Section>
+
+        <Section title="Overlays (Modal / Offcanvas / Dropdown / Tooltip / Popover)">
+          <Stack direction="horizontal" gap={2} style={{ flexWrap: 'wrap' }}>
+            <Button onClick={() => setModalOpen(true)}>Open modal</Button>
+            <Button variant="secondary" onClick={() => setOffcanvasOpen(true)}>Open offcanvas</Button>
+            <Dropdown>
+              <DropdownToggle>Dropdown</DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem onClick={() => {}}>Action</DropdownItem>
+                <DropdownItem onClick={() => {}}>Another action</DropdownItem>
+                <DropdownDivider />
+                <DropdownItem disabled>Disabled</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+            <Tooltip content="Hi, I'm a tooltip">
+              <Button variant="outline-primary">Hover me</Button>
+            </Tooltip>
+            <Popover title="Popover title" content="And here's the popover body.">
+              <Button variant="outline-secondary">Click me</Button>
+            </Popover>
+          </Stack>
+
+          <Modal show={modalOpen} onHide={() => setModalOpen(false)} centered>
+            <ModalHeader>
+              <ModalTitle>Modal title</ModalTitle>
+              <CloseButton onClick={() => setModalOpen(false)} />
+            </ModalHeader>
+            <ModalBody>Modal body — Escape, backdrop click, and the × all close it.</ModalBody>
+            <ModalFooter>
+              <Button variant="secondary" onClick={() => setModalOpen(false)}>Close</Button>
+              <Button onClick={() => setModalOpen(false)}>Save</Button>
+            </ModalFooter>
+          </Modal>
+
+          <Offcanvas show={offcanvasOpen} onHide={() => setOffcanvasOpen(false)} placement="end">
+            <OffcanvasHeader>
+              <OffcanvasTitle>Offcanvas</OffcanvasTitle>
+              <CloseButton onClick={() => setOffcanvasOpen(false)} />
+            </OffcanvasHeader>
+            <OffcanvasBody>Slides in from the end. Escape or backdrop closes.</OffcanvasBody>
+          </Offcanvas>
         </Section>
 
         <Section title="Buttons">
