@@ -10,6 +10,7 @@ import {
   Breadcrumb, BreadcrumbItem,
   Pagination, PageItem, PageLink,
   Progress, ProgressBar,
+  Tabs, Tab, Accordion, AccordionItem,
   type ColorName,
 } from '../src'
 
@@ -84,6 +85,26 @@ function App() {
           <Progress><ProgressBar now={45} /></Progress>
           <div style={{ height: 8 }} />
           <Progress><ProgressBar now={70} variant="success" /></Progress>
+        </Section>
+
+        <Section title="Tabs / Accordion">
+          <Tabs defaultActiveKey="a">
+            <Tab eventKey="a" title="First">First tab content.</Tab>
+            <Tab eventKey="b" title="Second">Second tab content.</Tab>
+            <Tab eventKey="c" title="Disabled" disabled>Unreachable.</Tab>
+          </Tabs>
+          <div style={{ height: 12 }} />
+          <Accordion defaultActiveKey="0">
+            <AccordionItem eventKey="0" header="Accordion item #1">
+              First item body — open by default.
+            </AccordionItem>
+            <AccordionItem eventKey="1" header="Accordion item #2">
+              Second item body.
+            </AccordionItem>
+            <AccordionItem eventKey="2" header="Accordion item #3">
+              Third item body.
+            </AccordionItem>
+          </Accordion>
         </Section>
 
         <Section title="Buttons">

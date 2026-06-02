@@ -58,4 +58,20 @@ export const GlobalStyles = createGlobalStyle`
     color: var(--bs-body-color);
     background-color: var(--bs-body-bg);
   }
+
+  /* Minimal Reboot: normalize default user-agent margins that otherwise leak
+     into flex/grid layouts (the recurring source of alignment bugs). */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  ul, ol {
+    margin-top: 0;
+  }
 `
