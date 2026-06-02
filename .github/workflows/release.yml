@@ -1,0 +1,42 @@
+name: Release
+
+# Publish to npm when a GitHub Release is published. The release tag (e.g.
+# "v0.1.0") sets the published version. Requires an NPM_TOKEN repo secret with
+# publish rights to the @metatoy scope.
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+
+      # No committed lockfile (gitignored), so use install rather than ci.
+      - name: Install
+        run: npm install --no-audit --no-fund
+
+      - name: Set version from the release tag
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"   # v0.1.0 -> 0.1.0
+          echo "Publishing $VERSION"
+          npm version "$VERSION" --no-git-tag-version --allow-same-version
+
+      - name: Typecheck + test + build
+        run: |
+          npm run typecheck
+          npm test
+          npm run build
+
+      - name: Publish
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
