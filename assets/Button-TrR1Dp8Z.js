@@ -1,4 +1,4 @@
-import{R as a,j as n,g as i}from"./index-B90HX0O5.js";const b=r=>r.startsWith("outline-"),o=r=>b(r)?r.slice(8):r,l=r=>`
+import{R as a,j as n,g as i}from"./index-BYafsvA3.js";const b=r=>r.startsWith("outline-"),o=r=>b(r)?r.slice(8):r,l=r=>`
   --bs-btn-color: var(--bs-${r}-contrast);
   --bs-btn-bg: var(--bs-${r});
   --bs-btn-border-color: var(--bs-${r});

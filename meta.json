@@ -5,43 +5,6 @@
     "version": 1
   },
   "stories": {
-    "getting-started--color-modes--light--dark-side-by-side": {
-      "name": "Dark side by side",
-      "levels": [
-        "Getting started",
-        "Color modes",
-        "Light"
-      ],
-      "locStart": 11,
-      "locEnd": 46,
-      "filePath": "src/stories/0-ColorMode.stories.tsx",
-      "namedExport": "LightAndDark",
-      "meta": {}
-    },
-    "getting-started--color-modes--toggle": {
-      "name": "Toggle",
-      "levels": [
-        "Getting started",
-        "Color modes"
-      ],
-      "locStart": 49,
-      "locEnd": 86,
-      "filePath": "src/stories/0-ColorMode.stories.tsx",
-      "namedExport": "Toggle",
-      "meta": {}
-    },
-    "getting-started--figtree-integration--live-preview-simulation": {
-      "name": "Live preview simulation",
-      "levels": [
-        "Getting started",
-        "Figtree integration"
-      ],
-      "locStart": 16,
-      "locEnd": 73,
-      "filePath": "src/stories/0-FigtreeIntegration.stories.tsx",
-      "namedExport": "LivePreviewSimulation",
-      "meta": {}
-    },
     "getting-started--installation": {
       "name": "Installation",
       "levels": [
@@ -204,6 +167,31 @@
       "locEnd": 27,
       "filePath": "src/stories/Card.stories.tsx",
       "namedExport": "WithHeaderFooter",
+      "meta": {}
+    },
+    "theming--light-and-dark-modes--light--dark-side-by-side": {
+      "name": "Dark side by side",
+      "levels": [
+        "Theming",
+        "Light and dark modes",
+        "Light"
+      ],
+      "locStart": 11,
+      "locEnd": 46,
+      "filePath": "src/stories/ColorMode.stories.tsx",
+      "namedExport": "LightAndDark",
+      "meta": {}
+    },
+    "theming--light-and-dark-modes--toggle": {
+      "name": "Toggle",
+      "levels": [
+        "Theming",
+        "Light and dark modes"
+      ],
+      "locStart": 49,
+      "locEnd": 86,
+      "filePath": "src/stories/ColorMode.stories.tsx",
+      "namedExport": "Toggle",
       "meta": {}
     },
     "forms--formcontrol--checks": {

@@ -1,4 +1,4 @@
-import{R as e,j as d,g as x}from"./index-B90HX0O5.js";const p=x.div`
+import{R as e,j as d,g as x}from"./index-BYafsvA3.js";const p=x.div`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
