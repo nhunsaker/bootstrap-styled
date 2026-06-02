@@ -1,0 +1,1 @@
+import{j as s,a as o,d as l,G as d}from"./index-DFp3fdG5.js";function x({theme:t=l,colorMode:e="light",noGlobalStyles:a=!1,children:r}){return s.jsxs(o,{theme:t,children:[!a&&s.jsx(d,{}),s.jsx("div",{"data-bs-theme":e,children:r})]})}export{x as B};
