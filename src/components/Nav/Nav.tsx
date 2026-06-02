@@ -4,8 +4,10 @@ import styled from 'styled-components'
 export const Nav = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   padding-left: 0;
-  margin-bottom: 0;
+  margin: 0; /* zero the default <ul> margin (incl. margin-top) so nav items
+                align with siblings like the navbar brand */
   list-style: none;
 `
 
