@@ -52,8 +52,26 @@ npm run build         # tsup → dist (ESM + CJS + .d.ts)
 npm run dev           # tsup --watch
 ```
 
-No docs harness yet (kept lean) — eyeball components via the `figtree-demo`
-showcase or a throwaway Vite page. A docs tool can be added at publish time.
+## Review the components (visual)
+
+A dev-only Vite playground renders every component (imports straight from
+`src/`) with a **live primary-color picker** and a **light/dark toggle** — so
+you can confirm theming, `color-mix` hover/active, and contrast actually work:
+
+```bash
+npm install
+npm run play          # → http://localhost:5174
+```
+
+What to check:
+- **Buttons** — variants, `outline-*`, sizes, disabled, `as="a"`; hover/active
+  shading; text stays legible on every variant (contrast).
+- Change the **Primary** color picker → all primary surfaces re-skin live, and
+  button/badge text recolors for contrast.
+- Toggle **Mode** → dark mode via `data-bs-theme`.
+- **Forms** — focus rings, `isInvalid`/`isValid`, switch toggle, input-group radii.
+
+The playground is dev-only (not in the published `files`).
 
 ## License
 
