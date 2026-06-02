@@ -4,8 +4,9 @@ Bootstrap 5 components implemented in **styled-components**, **theme-driven** �
 a modern rewrite of the abandoned [`bootstrap-styled/v4`](https://github.com/bootstrap-styled/v4)
 targeting **Bootstrap 5.3 · React 18 · styled-components 6 · TypeScript**.
 
-> Status: **early (M0/M1)** — foundation + first Core component (Button). See
-> the rewrite spec for the full plan and phasing.
+> Status: **early (M1, Phase 1 Core)**. Foundation + components: **Button,
+> Badge, Alert, Card (+ sub-parts), Spinner, Container/Row/Col grid, Stack**.
+> See the rewrite spec for the full plan and phasing.
 
 ## Why
 
