@@ -125,6 +125,43 @@
       "namedExport": "WithHeaderFooter",
       "meta": {}
     },
+    "getting-started--color-modes--light--dark-side-by-side": {
+      "name": "Dark side by side",
+      "levels": [
+        "Getting started",
+        "Color modes",
+        "Light"
+      ],
+      "locStart": 11,
+      "locEnd": 46,
+      "filePath": "src/stories/ColorMode.stories.tsx",
+      "namedExport": "LightAndDark",
+      "meta": {}
+    },
+    "getting-started--color-modes--toggle": {
+      "name": "Toggle",
+      "levels": [
+        "Getting started",
+        "Color modes"
+      ],
+      "locStart": 49,
+      "locEnd": 86,
+      "filePath": "src/stories/ColorMode.stories.tsx",
+      "namedExport": "Toggle",
+      "meta": {}
+    },
+    "getting-started--figtree-integration--live-preview-simulation": {
+      "name": "Live preview simulation",
+      "levels": [
+        "Getting started",
+        "Figtree integration"
+      ],
+      "locStart": 16,
+      "locEnd": 73,
+      "filePath": "src/stories/FigtreeIntegration.stories.tsx",
+      "namedExport": "LivePreviewSimulation",
+      "meta": {}
+    },
     "forms--formcontrol--checks": {
       "name": "Checks",
       "levels": [
@@ -239,6 +276,40 @@
       "locEnd": 163,
       "filePath": "src/stories/GettingStarted.stories.tsx",
       "namedExport": "Theming",
+      "meta": {}
+    },
+    "layout--grid--col": {
+      "name": "Col",
+      "levels": [
+        "Layout",
+        "Grid"
+      ],
+      "locStart": 9,
+      "locEnd": 24,
+      "filePath": "src/stories/Layout.stories.tsx",
+      "namedExport": "GridColumns",
+      "meta": {}
+    },
+    "layout--stack-horizontal-": {
+      "name": "Stack horizontal ",
+      "levels": [
+        "Layout"
+      ],
+      "locStart": 34,
+      "locEnd": 38,
+      "filePath": "src/stories/Layout.stories.tsx",
+      "namedExport": "StackHorizontal",
+      "meta": {}
+    },
+    "layout--stack-vertical-": {
+      "name": "Stack vertical ",
+      "levels": [
+        "Layout"
+      ],
+      "locStart": 27,
+      "locEnd": 31,
+      "filePath": "src/stories/Layout.stories.tsx",
+      "namedExport": "StackVertical",
       "meta": {}
     },
     "navigation--accordion": {
@@ -360,6 +431,54 @@
       "locEnd": 70,
       "filePath": "src/stories/Overlays.stories.tsx",
       "namedExport": "TooltipExample",
+      "meta": {}
+    },
+    "core--progress--basic": {
+      "name": "Basic",
+      "levels": [
+        "Core",
+        "Progress"
+      ],
+      "locStart": 6,
+      "locEnd": 13,
+      "filePath": "src/stories/Progress.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "core--progress--sizes": {
+      "name": "Sizes",
+      "levels": [
+        "Core",
+        "Progress"
+      ],
+      "locStart": 15,
+      "locEnd": 21,
+      "filePath": "src/stories/Progress.stories.tsx",
+      "namedExport": "Sizes",
+      "meta": {}
+    },
+    "core--spinner--colors": {
+      "name": "Colors",
+      "levels": [
+        "Core",
+        "Spinner"
+      ],
+      "locStart": 6,
+      "locEnd": 12,
+      "filePath": "src/stories/Spinner.stories.tsx",
+      "namedExport": "Colors",
+      "meta": {}
+    },
+    "core--spinner--sizes": {
+      "name": "Sizes",
+      "levels": [
+        "Core",
+        "Spinner"
+      ],
+      "locStart": 14,
+      "locEnd": 19,
+      "filePath": "src/stories/Spinner.stories.tsx",
+      "namedExport": "Sizes",
       "meta": {}
     }
   }

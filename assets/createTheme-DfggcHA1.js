@@ -1,0 +1,1 @@
+import{d as s}from"./index-BgozbNnj.js";function u(t){return typeof t=="object"&&t!==null&&!Array.isArray(t)}function f(t,n){const r={...t};for(const e of Object.keys(n)){const o=n[e],c=t[e];r[e]=u(o)&&u(c)?f(c,o):o}return r}function i(t={}){return f(s,t)}export{i as c};
