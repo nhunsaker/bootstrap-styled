@@ -14,7 +14,9 @@ const StyledAlert = styled.div<{ $variant: ColorName }>`
   ${(p) => `
     --bs-alert-bg: color-mix(in srgb, var(--bs-${p.$variant}) 12%, var(--bs-body-bg));
     --bs-alert-border-color: color-mix(in srgb, var(--bs-${p.$variant}) 30%, var(--bs-body-bg));
-    --bs-alert-color: color-mix(in srgb, var(--bs-${p.$variant}) 75%, #000);
+    /* Mix the emphasis text toward the body text color (not always black) so it
+       darkens in light mode and lightens in dark mode — readable on both. */
+    --bs-alert-color: color-mix(in srgb, var(--bs-${p.$variant}) 60%, var(--bs-body-color));
   `}
   position: relative;
   padding: 1rem 1rem;
