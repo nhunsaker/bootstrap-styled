@@ -31,7 +31,20 @@ function App() {
         <h1>bootstrap-styled — review</h1>
         <Stack direction="horizontal" gap={3}>
           <FormLabel style={{ margin: 0 }}>Primary</FormLabel>
-          <input type="color" value={primary} onChange={(e) => setPrimary(e.target.value)} />
+          <input
+            type="color"
+            value={primary}
+            onChange={(e) => setPrimary(e.target.value)}
+            style={{
+              width: 44,
+              height: 28,
+              padding: 2,
+              border: '1px solid var(--bs-border-color)',
+              borderRadius: 'var(--bs-border-radius)',
+              background: 'var(--bs-body-bg)',
+              cursor: 'pointer',
+            }}
+          />
           <Button size="sm" variant="secondary" onClick={() => setMode((m) => (m === 'light' ? 'dark' : 'light'))}>
             Mode: {mode}
           </Button>
