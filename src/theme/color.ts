@@ -14,17 +14,15 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
 }
 
 /**
- * Pick black or white for legible text on a background color, using sRGB
- * relative luminance and Bootstrap's 0.179 threshold. Non-hex inputs fall
- * back to white. Returns '#000' or '#fff'.
+ * Pick black or white for legible text on a background color, using the YIQ
+ * perceived-brightness formula with a 128 threshold. This matches Bootstrap's
+ * default button text choices across all theme colors (e.g. white on primary
+ * #0d6efd, black on warning #ffc107). Non-hex inputs fall back to white.
+ * Returns '#000' or '#fff'.
  */
 export function colorContrast(background: string): string {
   const rgb = hexToRgb(background)
   if (!rgb) return '#fff'
-  const lin = [rgb.r, rgb.g, rgb.b].map((v) => {
-    const c = v / 255
-    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
-  })
-  const L = 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2]
-  return L > 0.179 ? '#000' : '#fff'
+  const yiq = (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000
+  return yiq >= 128 ? '#000' : '#fff'
 }

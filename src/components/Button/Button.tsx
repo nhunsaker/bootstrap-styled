@@ -64,6 +64,7 @@ const StyledButton = styled.button<{ $variant: ButtonVariant; $size?: ButtonSize
   font-weight: var(--bs-font-weight-normal, 400);
   line-height: 1.5;
   text-align: center;
+  text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
