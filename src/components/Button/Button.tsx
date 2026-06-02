@@ -5,7 +5,9 @@ import type { ColorName } from '../../theme/types'
 export type ButtonVariant = ColorName | `outline-${ColorName}`
 export type ButtonSize = 'sm' | 'lg'
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    Pick<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'href' | 'target' | 'rel' | 'download'> {
   /** Bootstrap variant, e.g. "primary", "danger", "outline-primary". */
   variant?: ButtonVariant
   size?: ButtonSize
