@@ -5,3 +5,4 @@ storybook-static/
 .DS_Store
 package-lock.json
 playground/dist/
+docs-build/

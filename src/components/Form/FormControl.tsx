@@ -5,7 +5,8 @@ export type FormControlSize = 'sm' | 'lg'
 
 // Omit native `size` (number) so we can use it for sm/lg like Bootstrap.
 export interface FormControlProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>,
+    Pick<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'rows'> {
   size?: FormControlSize
   isInvalid?: boolean
   isValid?: boolean

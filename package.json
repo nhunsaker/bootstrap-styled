@@ -18,7 +18,9 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -27,7 +29,10 @@
     "test:watch": "vitest",
     "play": "vite",
     "play:build": "vite build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "docs": "ladle serve",
+    "docs:build": "ladle build",
+    "docs:preview": "ladle preview"
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.0"
@@ -38,6 +43,7 @@
     "styled-components": ">=6"
   },
   "devDependencies": {
+    "@ladle/react": "^5.1.1",
     "@testing-library/jest-dom": "^6.4.0",
     "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.0",
