@@ -4,7 +4,8 @@ Bootstrap 5 components implemented in **styled-components**, **theme-driven** �
 a modern rewrite of the abandoned [`bootstrap-styled/v4`](https://github.com/bootstrap-styled/v4)
 targeting **Bootstrap 5.3 · React 18 · styled-components 6 · TypeScript**.
 
-> Status: **pre-release (0.0.0)**. Component surface complete across:
+> Status: **pre-release (`0.1.0`, not yet on npm)**. Full component surface,
+> browser-verified, with a Vitest suite:
 > - **Core** — Button, Badge, Alert, Card (+sub-parts), Spinner, Grid
 >   (Container/Row/Col), Stack, CloseButton.
 > - **Forms** — FormControl, FormSelect, FormCheck (checkbox/radio/switch),
@@ -14,8 +15,9 @@ targeting **Bootstrap 5.3 · React 18 · styled-components 6 · TypeScript**.
 > - **Overlays** — Modal, Offcanvas, Dropdown, Tooltip, Popover (on
 >   `@floating-ui/react`).
 >
-> Core/Forms/Nav are browser-verified; the overlay set is built but pending
-> interaction/a11y review. See the rewrite spec for phasing.
+> Known limitation: Dropdown **keyboard arrow-key navigation** is not yet
+> implemented (click + outside/Escape dismiss + Tab-focusable items work). See
+> `CHANGELOG.md`.
 
 ## Why
 
