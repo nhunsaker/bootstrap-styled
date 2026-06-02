@@ -4,8 +4,8 @@ Bootstrap 5 components implemented in **styled-components**, **theme-driven** �
 a modern rewrite of the abandoned [`bootstrap-styled/v4`](https://github.com/bootstrap-styled/v4)
 targeting **Bootstrap 5.3 · React 18 · styled-components 6 · TypeScript**.
 
-> Status: **pre-release (`0.1.0`, not yet on npm)**. Full component surface,
-> browser-verified, with a Vitest suite:
+> Status: **published — [`0.1.0` on npm](https://www.npmjs.com/package/@metatoy/bootstrap-styled)**.
+> Full component surface, browser-verified, with a Vitest suite:
 > - **Core** — Button, Badge, Alert, Card (+sub-parts), Spinner, Grid
 >   (Container/Row/Col), Stack, CloseButton.
 > - **Forms** — FormControl, FormSelect, FormCheck (checkbox/radio/switch),

@@ -3,9 +3,9 @@
 All notable changes to `@metatoy/bootstrap-styled`. Follows
 [Keep a Changelog](https://keepachangelog.com/) and [SemVer](https://semver.org/).
 
-## [0.1.0] — unreleased
+## [0.1.0] — 2026-06-02
 
-First usable pre-release: a Bootstrap 5 component kit in styled-components 6 /
+First published pre-release: a Bootstrap 5 component kit in styled-components 6 /
 React 18 / TypeScript, theme-driven via runtime `--bs-*` CSS variables.
 
 ### Added
@@ -30,4 +30,3 @@ React 18 / TypeScript, theme-driven via runtime `--bs-*` CSS variables.
 - **Dropdown keyboard arrow-key navigation** is not yet implemented (click +
   outside/Escape dismiss + Tab-focusable items work). Needs floating-ui's full
   Menu recipe (focus-follow, open-focuses-first-item, typeahead).
-- Not yet published to npm.
