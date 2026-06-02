@@ -22,6 +22,8 @@ const rootVars = (t: Theme): string => {
     --bs-border-radius-sm: ${t.radius.sm};
     --bs-border-radius-lg: ${t.radius.lg};
     --bs-border-radius-pill: ${t.radius.pill};
+    --bs-link-color: var(--bs-primary);
+    --bs-link-hover-color: color-mix(in srgb, var(--bs-primary) 80%, #000);
     --bs-font-sans-serif: ${t.font.sansSerif};
     --bs-body-font-size: ${t.font.size.base};
     --bs-font-weight-normal: ${t.font.weight.normal};

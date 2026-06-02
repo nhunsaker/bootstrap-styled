@@ -6,6 +6,10 @@ import {
   Card, CardBody, CardTitle, CardText,
   Container, Row, Col, Stack,
   FormControl, FormSelect, FormCheck, FormLabel, FormGroup, InputGroup, InputGroupText,
+  Navbar, NavbarBrand, Nav, NavItem, NavLink,
+  Breadcrumb, BreadcrumbItem,
+  Pagination, PageItem, PageLink,
+  Progress, ProgressBar,
   type ColorName,
 } from '../src'
 
@@ -52,6 +56,35 @@ function App() {
             ← change primary or mode; everything re-skins live (color-mix + contrast).
           </span>
         </Stack>
+
+        <Section title="Navbar / Nav / Breadcrumb">
+          <Navbar variant="primary" style={{ borderRadius: 'var(--bs-border-radius)', marginBottom: 16 }}>
+            <NavbarBrand href="#">🌳 Brand</NavbarBrand>
+            <Nav>
+              <NavItem><NavLink href="#" active>Home</NavLink></NavItem>
+              <NavItem><NavLink href="#">Features</NavLink></NavItem>
+              <NavItem><NavLink href="#" disabled>Disabled</NavLink></NavItem>
+            </Nav>
+          </Navbar>
+          <Breadcrumb>
+            <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
+            <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
+            <BreadcrumbItem active>Data</BreadcrumbItem>
+          </Breadcrumb>
+        </Section>
+
+        <Section title="Pagination / Progress">
+          <Pagination style={{ marginBottom: 16 }}>
+            <PageItem><PageLink href="#" disabled>«</PageLink></PageItem>
+            <PageItem><PageLink href="#">1</PageLink></PageItem>
+            <PageItem><PageLink href="#" active>2</PageLink></PageItem>
+            <PageItem><PageLink href="#">3</PageLink></PageItem>
+            <PageItem><PageLink href="#">»</PageLink></PageItem>
+          </Pagination>
+          <Progress><ProgressBar now={45} /></Progress>
+          <div style={{ height: 8 }} />
+          <Progress><ProgressBar now={70} variant="success" /></Progress>
+        </Section>
 
         <Section title="Buttons">
           <Stack direction="horizontal" gap={2} style={{ flexWrap: 'wrap', marginBottom: 8 }}>
