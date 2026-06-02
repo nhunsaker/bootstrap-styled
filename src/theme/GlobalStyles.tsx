@@ -1,28 +1,40 @@
 import { createGlobalStyle } from 'styled-components'
+import type { Theme, ColorName } from './types'
 import { darkOverrides } from './defaultTheme'
+import { colorContrast } from './color'
 
-// Projects the theme onto Bootstrap's `--bs-*` custom properties + a base reset.
-// `theme` comes from styled-components context (typed via the DefaultTheme
-// augmentation), so no theme prop is required at the call site. Components read
-// the vars, so overriding them (color mode, Figtree preview) re-skins
-// everything without React re-rendering.
+const COLOR_NAMES: ColorName[] = [
+  'primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark',
+]
+
+// Build the :root variable block from the theme — each color plus a computed
+// `--bs-<color>-contrast` for legible on-color text.
+const rootVars = (t: Theme): string => {
+  const colors = COLOR_NAMES.map(
+    (n) => `--bs-${n}: ${t.colors[n]}; --bs-${n}-contrast: ${colorContrast(t.colors[n])};`,
+  ).join('\n    ')
+  return `
+    ${colors}
+    --bs-body-bg: ${t.body.bg};
+    --bs-body-color: ${t.body.color};
+    --bs-border-color: ${t.border.color};
+    --bs-border-radius: ${t.radius.base};
+    --bs-border-radius-sm: ${t.radius.sm};
+    --bs-border-radius-lg: ${t.radius.lg};
+    --bs-border-radius-pill: ${t.radius.pill};
+    --bs-font-sans-serif: ${t.font.sansSerif};
+    --bs-body-font-size: ${t.font.size.base};
+    --bs-font-weight-normal: ${t.font.weight.normal};
+    --bs-font-weight-semibold: ${t.font.weight.semibold};
+    --bs-font-weight-bold: ${t.font.weight.bold};
+  `
+}
+
+// `theme` comes from styled-components context (typed via DefaultTheme), so no
+// theme prop is required at the call site.
 export const GlobalStyles = createGlobalStyle`
   :root {
-    --bs-primary: ${(p) => p.theme.colors.primary};
-    --bs-secondary: ${(p) => p.theme.colors.secondary};
-    --bs-success: ${(p) => p.theme.colors.success};
-    --bs-danger: ${(p) => p.theme.colors.danger};
-    --bs-warning: ${(p) => p.theme.colors.warning};
-    --bs-info: ${(p) => p.theme.colors.info};
-    --bs-light: ${(p) => p.theme.colors.light};
-    --bs-dark: ${(p) => p.theme.colors.dark};
-
-    --bs-body-bg: ${(p) => p.theme.body.bg};
-    --bs-body-color: ${(p) => p.theme.body.color};
-    --bs-border-color: ${(p) => p.theme.border.color};
-    --bs-border-radius: ${(p) => p.theme.border.radius};
-    --bs-font-sans-serif: ${(p) => p.theme.font.sansSerif};
-    --bs-body-font-size: ${(p) => p.theme.font.size};
+    ${(p) => rootVars(p.theme)}
   }
 
   [data-bs-theme='dark'] {

@@ -13,16 +13,18 @@ export const defaultTheme: Theme = {
     dark: '#212529',
   },
   body: { bg: '#ffffff', color: '#212529' },
-  border: { color: '#dee2e6', radius: '0.375rem' },
+  border: { color: '#dee2e6' },
+  radius: { sm: '0.25rem', base: '0.375rem', lg: '0.5rem', pill: '50rem' },
+  spacing: ['0', '0.25rem', '0.5rem', '1rem', '1.5rem', '3rem'],
   font: {
     sansSerif:
       'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-    size: '1rem',
+    size: { base: '1rem', sm: '0.875rem', lg: '1.25rem' },
+    weight: { normal: 400, semibold: 600, bold: 700 },
   },
 }
 
-// Minimal dark-mode overrides (data-bs-theme="dark"). Concrete shape so the
-// GlobalStyles layer can read each field without optional-chaining.
+// Minimal dark-mode overrides (data-bs-theme="dark").
 export const darkOverrides = {
   body: { bg: '#212529', color: '#dee2e6' },
   border: { color: '#495057' },
