@@ -13,6 +13,8 @@ import {
   Stack,
 } from '../../src'
 
+export default { title: 'Getting Started' }
+
 // ── Introduction ─────────────────────────────────────────────────────────────
 
 export const Introduction: Story = () => (
