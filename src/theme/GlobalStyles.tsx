@@ -43,6 +43,12 @@ export const GlobalStyles = createGlobalStyle`
     --bs-border-color: ${darkOverrides.border.color};
   }
 
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   body {
     margin: 0;
     font-family: var(--bs-font-sans-serif);
