@@ -22,8 +22,4 @@ describe('Dropdown', () => {
     await user.click(screen.getByRole('menuitem', { name: 'Action' }))
     expect(screen.queryByRole('menu')).toBeNull()
   })
-
-  // Keyboard arrow-key navigation is implemented via floating-ui's
-  // useListNavigation, but jsdom doesn't reliably replicate its focus/keydown
-  // handling — that behavior is verified in the browser review instead.
 })

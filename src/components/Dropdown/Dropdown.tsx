@@ -1,10 +1,9 @@
-import React, { createContext, useContext, useRef, useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import styled from 'styled-components'
 import {
   autoUpdate,
   flip,
   FloatingFocusManager,
-  FloatingList,
   FloatingPortal,
   offset,
   shift,
@@ -12,8 +11,6 @@ import {
   useDismiss,
   useFloating,
   useInteractions,
-  useListItem,
-  useListNavigation,
   useRole,
 } from '@floating-ui/react'
 import { Button } from '../Button/Button'
@@ -25,12 +22,8 @@ interface DropdownContextValue {
   refs: ReturnType<typeof useFloating>['refs']
   floatingStyles: React.CSSProperties
   context: ReturnType<typeof useFloating>['context']
-  activeIndex: number | null
   getReferenceProps: (p?: Record<string, unknown>) => Record<string, unknown>
   getFloatingProps: (p?: Record<string, unknown>) => Record<string, unknown>
-  getItemProps: (p?: Record<string, unknown>) => Record<string, unknown>
-  elementsRef: React.MutableRefObject<Array<HTMLElement | null>>
-  labelsRef: React.MutableRefObject<Array<string | null>>
 }
 
 const DropdownCtx = createContext<DropdownContextValue | null>(null)
@@ -46,10 +39,6 @@ export interface DropdownProps {
 
 export function Dropdown({ children }: DropdownProps) {
   const [open, setOpen] = useState(false)
-  const [activeIndex, setActiveIndex] = useState<number | null>(null)
-  const elementsRef = useRef<Array<HTMLElement | null>>([])
-  const labelsRef = useRef<Array<string | null>>([])
-
   const { refs, floatingStyles, context } = useFloating({
     open,
     onOpenChange: setOpen,
@@ -60,34 +49,11 @@ export function Dropdown({ children }: DropdownProps) {
   const click = useClick(context)
   const dismiss = useDismiss(context)
   const role = useRole(context, { role: 'menu' })
-  const listNav = useListNavigation(context, {
-    listRef: elementsRef,
-    activeIndex,
-    onNavigate: setActiveIndex,
-    loop: true,
-  })
-  const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions([
-    click,
-    dismiss,
-    role,
-    listNav,
-  ])
+  const { getReferenceProps, getFloatingProps } = useInteractions([click, dismiss, role])
 
   return (
     <DropdownCtx.Provider
-      value={{
-        open,
-        setOpen,
-        refs,
-        floatingStyles,
-        context,
-        activeIndex,
-        getReferenceProps,
-        getFloatingProps,
-        getItemProps,
-        elementsRef,
-        labelsRef,
-      }}
+      value={{ open, setOpen, refs, floatingStyles, context, getReferenceProps, getFloatingProps }}
     >
       <span style={{ display: 'inline-block', position: 'relative' }}>{children}</span>
     </DropdownCtx.Provider>
@@ -124,36 +90,30 @@ const Menu = styled.div`
 `
 
 export function DropdownMenu({ children }: { children: React.ReactNode }) {
-  const { open, refs, floatingStyles, context, getFloatingProps, elementsRef, labelsRef } =
-    useDropdown()
+  const { open, refs, floatingStyles, context, getFloatingProps } = useDropdown()
   if (!open) return null
   return (
     <FloatingPortal>
       <FloatingFocusManager context={context} modal={false}>
         <Menu ref={refs.setFloating} style={floatingStyles} {...(getFloatingProps() as object)}>
-          <FloatingList elementsRef={elementsRef} labelsRef={labelsRef}>
-            {children}
-          </FloatingList>
+          {children}
         </Menu>
       </FloatingFocusManager>
     </FloatingPortal>
   )
 }
 
-const Item = styled.button<{ $active?: boolean }>`
+const Item = styled.button`
   display: block;
   width: 100%;
   padding: 0.25rem 1rem;
   font: inherit;
   text-align: left;
   color: var(--bs-body-color);
-  background: ${(p) =>
-    p.$active ? 'color-mix(in srgb, var(--bs-body-color) 8%, var(--bs-body-bg))' : 'none'};
+  background: none;
   border: 0;
   cursor: pointer;
-  &:hover {
-    background-color: color-mix(in srgb, var(--bs-body-color) 8%, var(--bs-body-bg));
-  }
+  &:hover,
   &:focus {
     outline: 0;
     background-color: color-mix(in srgb, var(--bs-body-color) 8%, var(--bs-body-bg));
@@ -166,29 +126,18 @@ const Item = styled.button<{ $active?: boolean }>`
 
 export interface DropdownItemProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
-export function DropdownItem({ children, onClick, disabled, ...rest }: DropdownItemProps) {
-  const { activeIndex, getItemProps, setOpen } = useDropdown()
-  const { ref, index } = useListItem({
-    label: typeof children === 'string' ? children : undefined,
-  })
-  const isActive = activeIndex === index
+export function DropdownItem({ onClick, disabled, ...rest }: DropdownItemProps) {
+  const { setOpen } = useDropdown()
   return (
     <Item
-      ref={ref}
+      role="menuitem"
       disabled={disabled}
       {...rest}
-      {...(getItemProps({
-        onClick(e: React.MouseEvent<HTMLButtonElement>) {
-          onClick?.(e)
-          if (!disabled) setOpen(false)
-        },
-      }) as object)}
-      role="menuitem"
-      tabIndex={isActive ? 0 : -1}
-      $active={isActive}
-    >
-      {children}
-    </Item>
+      onClick={(e) => {
+        onClick?.(e)
+        if (!disabled) setOpen(false)
+      }}
+    />
   )
 }
 
