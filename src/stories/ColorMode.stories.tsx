@@ -5,7 +5,7 @@ import {
   FormControl, FormGroup, FormLabel, Stack,
 } from '../../src'
 
-export default { title: 'Getting Started/Color Modes' }
+export default { title: 'Theming/Light and Dark Modes' }
 
 // Side-by-side light + dark so the contrast is immediately visible
 export const LightAndDark: Story = () => (
