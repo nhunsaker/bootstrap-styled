@@ -21,7 +21,7 @@ export default {
     display: block;
     height: 112px;
     background: #6e2c92;
-    background-image: url('./assets/transparent-logo.svg');
+    background-image: url('./transparent-logo.svg');
     background-size: 72px 72px;
     background-repeat: no-repeat;
     background-position: center 12px;
