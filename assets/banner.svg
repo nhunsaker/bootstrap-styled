@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280">
   <!-- background -->
-  <rect width="1200" height="280" fill="#0D0E0C"/>
+  <rect width="1200" height="280" fill="#6e2c92"/>
 
   <!-- cube icon — original viewBox 1024x1024, icon occupies ~x:290-710, y:230-650 -->
   <!-- crop to icon only: viewBox="290 225 430 430", scale to 128x128, center at x=600 -->
@@ -373,8 +373,8 @@ C 573.292 342.54 573.843 346.601 573.475 350.618 Z"
     font-family="ui-sans-serif, system-ui, -apple-system, sans-serif"
     font-size="14"
     letter-spacing="0.5"
-    fill="#6868AA">Bootstrap 5 · styled-components 6 · React 18 · TypeScript</text>
+    fill="#ffffff">Bootstrap 5 · styled-components 6 · React 18 · TypeScript</text>
 
   <!-- subtle bottom rule -->
-  <line x1="480" y1="234" x2="720" y2="234" stroke="#1E1E2E" stroke-width="1"/>
+  <line x1="480" y1="234" x2="720" y2="234" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
 </svg>
