@@ -1,4 +1,20 @@
-# @metatoy/bootstrap-styled
+<p align="center">
+  <a href="https://www.npmjs.com/package/@metatoy/bootstrap-styled">
+    <img src="./assets/banner.svg" alt="@metatoy/bootstrap-styled" width="800" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@metatoy/bootstrap-styled">
+    <img src="https://img.shields.io/npm/v/@metatoy/bootstrap-styled?style=flat-square&color=6868AA&labelColor=0D0E0C" alt="npm version" />
+  </a>
+  <a href="https://www.npmjs.com/package/@metatoy/bootstrap-styled">
+    <img src="https://img.shields.io/npm/l/@metatoy/bootstrap-styled?style=flat-square&color=6868AA&labelColor=0D0E0C" alt="license" />
+  </a>
+  <a href="https://github.com/nhunsaker/bootstrap-styled/actions/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/nhunsaker/bootstrap-styled/ci.yml?branch=main&style=flat-square&color=6868AA&labelColor=0D0E0C&label=CI" alt="CI" />
+  </a>
+</p>
 
 Bootstrap 5 components implemented in **styled-components**, **theme-driven** —
 a modern rewrite of the abandoned [`bootstrap-styled/v4`](https://github.com/bootstrap-styled/v4)
