@@ -1,13 +1,21 @@
-# @nhunsaker/bootstrap-styled
+# @metatoy/bootstrap-styled
 
 Bootstrap 5 components implemented in **styled-components**, **theme-driven** —
 a modern rewrite of the abandoned [`bootstrap-styled/v4`](https://github.com/bootstrap-styled/v4)
 targeting **Bootstrap 5.3 · React 18 · styled-components 6 · TypeScript**.
 
-> Status: **early (M1–M2)**. Foundation + **Phase 1 Core** (Button, Badge,
-> Alert, Card (+ sub-parts), Spinner, Container/Row/Col grid, Stack) + **Phase 2
-> Forms** (FormControl, FormSelect, FormCheck (checkbox/radio/switch),
-> FormLabel/FormText/FormGroup, InputGroup). See the rewrite spec for phasing.
+> Status: **pre-release (0.0.0)**. Component surface complete across:
+> - **Core** — Button, Badge, Alert, Card (+sub-parts), Spinner, Grid
+>   (Container/Row/Col), Stack, CloseButton.
+> - **Forms** — FormControl, FormSelect, FormCheck (checkbox/radio/switch),
+>   FormLabel/FormText/FormGroup, InputGroup.
+> - **Navigation & feedback** — Nav/Navbar, Breadcrumb, Pagination, Progress,
+>   Tabs, Accordion.
+> - **Overlays** — Modal, Offcanvas, Dropdown, Tooltip, Popover (on
+>   `@floating-ui/react`).
+>
+> Core/Forms/Nav are browser-verified; the overlay set is built but pending
+> interaction/a11y review. See the rewrite spec for phasing.
 
 ## Why
 
@@ -19,13 +27,13 @@ including color modes and live token overrides — cascades at runtime.
 ## Install
 
 ```bash
-npm i @nhunsaker/bootstrap-styled styled-components react react-dom
+npm i @metatoy/bootstrap-styled styled-components react react-dom
 ```
 
 ## Usage
 
 ```tsx
-import { BootstrapStyledProvider, Button, createTheme } from '@nhunsaker/bootstrap-styled'
+import { BootstrapStyledProvider, Button, createTheme } from '@metatoy/bootstrap-styled'
 
 const theme = createTheme({ colors: { primary: '#7c3aed' } })
 

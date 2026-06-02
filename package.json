@@ -1,8 +1,11 @@
 {
-  "name": "@nhunsaker/bootstrap-styled",
+  "name": "@metatoy/bootstrap-styled",
   "version": "0.0.0",
   "description": "Bootstrap 5 components implemented in styled-components, theme-driven. A modern rewrite of bootstrap-styled/v4.",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "sideEffects": false,
   "main": "./dist/index.cjs",
