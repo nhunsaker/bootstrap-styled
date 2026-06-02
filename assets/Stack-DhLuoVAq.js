@@ -1,4 +1,4 @@
-import{R as o,j as r,g as c}from"./index-BgozbNnj.js";const n=c.div`
+import{R as o,j as r,g as c}from"./index-B90HX0O5.js";const n=c.div`
   display: flex;
   flex-direction: ${t=>t.$direction==="horizontal"?"row":"column"};
   ${t=>t.$direction==="horizontal"?"align-items: center;":"justify-content: flex-start;"}

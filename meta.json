@@ -5,6 +5,87 @@
     "version": 1
   },
   "stories": {
+    "getting-started--color-modes--light--dark-side-by-side": {
+      "name": "Dark side by side",
+      "levels": [
+        "Getting started",
+        "Color modes",
+        "Light"
+      ],
+      "locStart": 11,
+      "locEnd": 46,
+      "filePath": "src/stories/0-ColorMode.stories.tsx",
+      "namedExport": "LightAndDark",
+      "meta": {}
+    },
+    "getting-started--color-modes--toggle": {
+      "name": "Toggle",
+      "levels": [
+        "Getting started",
+        "Color modes"
+      ],
+      "locStart": 49,
+      "locEnd": 86,
+      "filePath": "src/stories/0-ColorMode.stories.tsx",
+      "namedExport": "Toggle",
+      "meta": {}
+    },
+    "getting-started--figtree-integration--live-preview-simulation": {
+      "name": "Live preview simulation",
+      "levels": [
+        "Getting started",
+        "Figtree integration"
+      ],
+      "locStart": 16,
+      "locEnd": 73,
+      "filePath": "src/stories/0-FigtreeIntegration.stories.tsx",
+      "namedExport": "LivePreviewSimulation",
+      "meta": {}
+    },
+    "getting-started--installation": {
+      "name": "Installation",
+      "levels": [
+        "Getting started"
+      ],
+      "locStart": 47,
+      "locEnd": 77,
+      "filePath": "src/stories/0-GettingStarted.stories.tsx",
+      "namedExport": "Installation",
+      "meta": {}
+    },
+    "getting-started--introduction": {
+      "name": "Introduction",
+      "levels": [
+        "Getting started"
+      ],
+      "locStart": 20,
+      "locEnd": 42,
+      "filePath": "src/stories/0-GettingStarted.stories.tsx",
+      "namedExport": "Introduction",
+      "meta": {}
+    },
+    "getting-started--quick-start": {
+      "name": "Quick start",
+      "levels": [
+        "Getting started"
+      ],
+      "locStart": 82,
+      "locEnd": 108,
+      "filePath": "src/stories/0-GettingStarted.stories.tsx",
+      "namedExport": "QuickStart",
+      "meta": {}
+    },
+    "getting-started--theming": {
+      "name": "Theming",
+      "levels": [
+        "Getting started"
+      ],
+      "locStart": 113,
+      "locEnd": 165,
+      "filePath": "src/stories/0-GettingStarted.stories.tsx",
+      "namedExport": "Theming",
+      "meta": {}
+    },
     "core--alert--variants": {
       "name": "Variants",
       "levels": [
@@ -125,43 +206,6 @@
       "namedExport": "WithHeaderFooter",
       "meta": {}
     },
-    "getting-started--color-modes--light--dark-side-by-side": {
-      "name": "Dark side by side",
-      "levels": [
-        "Getting started",
-        "Color modes",
-        "Light"
-      ],
-      "locStart": 11,
-      "locEnd": 46,
-      "filePath": "src/stories/ColorMode.stories.tsx",
-      "namedExport": "LightAndDark",
-      "meta": {}
-    },
-    "getting-started--color-modes--toggle": {
-      "name": "Toggle",
-      "levels": [
-        "Getting started",
-        "Color modes"
-      ],
-      "locStart": 49,
-      "locEnd": 86,
-      "filePath": "src/stories/ColorMode.stories.tsx",
-      "namedExport": "Toggle",
-      "meta": {}
-    },
-    "getting-started--figtree-integration--live-preview-simulation": {
-      "name": "Live preview simulation",
-      "levels": [
-        "Getting started",
-        "Figtree integration"
-      ],
-      "locStart": 16,
-      "locEnd": 73,
-      "filePath": "src/stories/FigtreeIntegration.stories.tsx",
-      "namedExport": "LivePreviewSimulation",
-      "meta": {}
-    },
     "forms--formcontrol--checks": {
       "name": "Checks",
       "levels": [
@@ -232,50 +276,6 @@
       "locEnd": 29,
       "filePath": "src/stories/Forms.stories.tsx",
       "namedExport": "Validation",
-      "meta": {}
-    },
-    "getting-started--installation": {
-      "name": "Installation",
-      "levels": [
-        "Getting started"
-      ],
-      "locStart": 45,
-      "locEnd": 75,
-      "filePath": "src/stories/GettingStarted.stories.tsx",
-      "namedExport": "Installation",
-      "meta": {}
-    },
-    "getting-started--introduction": {
-      "name": "Introduction",
-      "levels": [
-        "Getting started"
-      ],
-      "locStart": 18,
-      "locEnd": 40,
-      "filePath": "src/stories/GettingStarted.stories.tsx",
-      "namedExport": "Introduction",
-      "meta": {}
-    },
-    "getting-started--quick-start": {
-      "name": "Quick start",
-      "levels": [
-        "Getting started"
-      ],
-      "locStart": 80,
-      "locEnd": 106,
-      "filePath": "src/stories/GettingStarted.stories.tsx",
-      "namedExport": "QuickStart",
-      "meta": {}
-    },
-    "getting-started--theming": {
-      "name": "Theming",
-      "levels": [
-        "Getting started"
-      ],
-      "locStart": 111,
-      "locEnd": 163,
-      "filePath": "src/stories/GettingStarted.stories.tsx",
-      "namedExport": "Theming",
       "meta": {}
     },
     "layout--grid--col": {

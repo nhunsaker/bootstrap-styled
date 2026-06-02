@@ -1,4 +1,4 @@
-import{R as b,j as l,g as a}from"./index-BgozbNnj.js";const n=o=>o==="sm"?"0.25rem 0.5rem":o==="lg"?"0.5rem 1rem":"0.375rem 0.75rem",d=o=>o==="sm"?"0.875rem":o==="lg"?"1.25rem":"1rem",c=(o,s)=>{const r=o?"var(--bs-danger)":s?"var(--bs-success)":null;return r?`
+import{R as b,j as l,g as a}from"./index-B90HX0O5.js";const n=o=>o==="sm"?"0.25rem 0.5rem":o==="lg"?"0.5rem 1rem":"0.375rem 0.75rem",d=o=>o==="sm"?"0.875rem":o==="lg"?"1.25rem":"1rem",c=(o,s)=>{const r=o?"var(--bs-danger)":s?"var(--bs-success)":null;return r?`
     border-color: ${r};
     &:focus {
       border-color: ${r};

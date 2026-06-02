@@ -1,4 +1,4 @@
-import{R as i,j as o,g as t}from"./index-BgozbNnj.js";const b=t.span`
+import{R as i,j as o,g as t}from"./index-B90HX0O5.js";const b=t.span`
   ${a=>`
     --bs-badge-bg: var(--bs-${a.$variant});
     --bs-badge-color: var(--bs-${a.$variant}-contrast);

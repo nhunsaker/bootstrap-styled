@@ -1,4 +1,4 @@
-import{g as r}from"./index-BgozbNnj.js";const d=r.div`
+import{g as r}from"./index-B90HX0O5.js";const d=r.div`
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -32,4 +32,4 @@ import{g as r}from"./index-BgozbNnj.js";const d=r.div`
   padding: 0.5rem 1rem;
   background-color: color-mix(in srgb, var(--bs-body-color) 3%, var(--bs-body-bg));
   border-top: 1px solid var(--bs-border-color);
-`;export{d as C,a,b,s as c,e as d,i as e,t as f};
+`;export{d as C,a,b,e as c,s as d,i as e,t as f};

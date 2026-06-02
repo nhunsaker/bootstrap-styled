@@ -1,4 +1,4 @@
-import{R as e,j as s,g as b}from"./index-BgozbNnj.js";const i=b.div`
+import{R as e,j as s,g as b}from"./index-B90HX0O5.js";const i=b.div`
   ${r=>`
     --bs-alert-bg: color-mix(in srgb, var(--bs-${r.$variant}) 12%, var(--bs-body-bg));
     --bs-alert-border-color: color-mix(in srgb, var(--bs-${r.$variant}) 30%, var(--bs-body-bg));
