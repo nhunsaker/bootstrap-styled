@@ -52,7 +52,9 @@ export function Offcanvas({ show, onHide, placement = 'start', children }: Offca
       if (!o) onHide()
     },
   })
-  const dismiss = useDismiss(context, { outsidePress: true, escapeKey: true })
+  // Referenceless (external trigger) — Escape via useDismiss + explicit backdrop
+  // mousedown below (outsidePress would dismiss on the opening click).
+  const dismiss = useDismiss(context, { outsidePress: false, escapeKey: true })
   const role = useRole(context)
   const { getFloatingProps } = useInteractions([dismiss, role])
 
@@ -60,7 +62,13 @@ export function Offcanvas({ show, onHide, placement = 'start', children }: Offca
 
   return (
     <FloatingPortal>
-      <FloatingOverlay lockScroll style={{ background: 'rgba(0, 0, 0, 0.5)', zIndex: 1044 }}>
+      <FloatingOverlay
+        lockScroll
+        style={{ background: 'rgba(0, 0, 0, 0.5)', zIndex: 1044 }}
+        onMouseDown={(e) => {
+          if (e.target === e.currentTarget) onHide()
+        }}
+      >
         <FloatingFocusManager context={context} modal>
           <Panel ref={refs.setFloating} $placement={placement} aria-modal="true" {...getFloatingProps()}>
             {children}

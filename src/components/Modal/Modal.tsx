@@ -48,11 +48,10 @@ export function Modal({ show, onHide, size, centered, staticBackdrop, children }
       if (!o) onHide()
     },
   })
-  const dismiss = useDismiss(context, {
-    outsidePressEvent: 'mousedown',
-    outsidePress: !staticBackdrop,
-    escapeKey: true,
-  })
+  // No reference element (opened by an external button), so outsidePress would
+  // treat the opening click as a dismiss. Use Escape here + an explicit backdrop
+  // mousedown below instead.
+  const dismiss = useDismiss(context, { outsidePress: false, escapeKey: true })
   const role = useRole(context)
   const { getFloatingProps } = useInteractions([dismiss, role])
 
@@ -60,7 +59,13 @@ export function Modal({ show, onHide, size, centered, staticBackdrop, children }
 
   return (
     <FloatingPortal>
-      <Overlay lockScroll $centered={centered}>
+      <Overlay
+        lockScroll
+        $centered={centered}
+        onMouseDown={(e) => {
+          if (!staticBackdrop && e.target === e.currentTarget) onHide()
+        }}
+      >
         <FloatingFocusManager context={context} modal>
           <Dialog ref={refs.setFloating} $size={size} aria-modal="true" {...getFloatingProps()}>
             {children}
