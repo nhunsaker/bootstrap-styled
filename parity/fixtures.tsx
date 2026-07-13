@@ -28,6 +28,21 @@ import {
   NavbarBrand,
   Tabs,
   Tab,
+  ButtonGroup,
+  ButtonToolbar,
+  ListGroup,
+  ListGroupItem,
+  Placeholder,
+  PlaceholderGlow,
+  Toast,
+  ToastHeader,
+  ToastBody,
+  ToastContainer,
+  Collapse,
+  ScrollspyNav,
+  Carousel,
+  CarouselItem,
+  CarouselCaption,
   type ColorName,
 } from '../src'
 
@@ -528,6 +543,500 @@ const tabsCells: Cell[] = [
 ]
 
 // ---------------------------------------------------------------------------
+// ButtonGroup — default · sizes sm/lg · vertical · toolbar
+// ---------------------------------------------------------------------------
+const bgBtns = (variant: string, labels: string[]) =>
+  labels.map((l) => `<button type="button" class="btn btn-${variant}">${l}</button>`).join('')
+
+const buttonGroupCells: Cell[] = [
+  {
+    id: 'buttongroup--default',
+    component: 'ButtonGroup',
+    label: 'default',
+    native: `<div class="btn-group" role="group" aria-label="Basic example">${bgBtns(
+      'primary',
+      ['Left', 'Middle', 'Right'],
+    )}</div>`,
+    styled: (
+      <ButtonGroup aria-label="Basic example">
+        <Button variant="primary">Left</Button>
+        <Button variant="primary">Middle</Button>
+        <Button variant="primary">Right</Button>
+      </ButtonGroup>
+    ),
+  },
+  {
+    id: 'buttongroup--sm',
+    component: 'ButtonGroup',
+    label: 'sm',
+    note: 'Bootstrap sizes the group via .btn-group-sm>.btn tokens; styled resizes children with a doubled-specificity rule.',
+    native: `<div class="btn-group btn-group-sm" role="group" aria-label="Small">${bgBtns(
+      'secondary',
+      ['Left', 'Middle', 'Right'],
+    )}</div>`,
+    styled: (
+      <ButtonGroup size="sm" aria-label="Small">
+        <Button variant="secondary">Left</Button>
+        <Button variant="secondary">Middle</Button>
+        <Button variant="secondary">Right</Button>
+      </ButtonGroup>
+    ),
+  },
+  {
+    id: 'buttongroup--lg',
+    component: 'ButtonGroup',
+    label: 'lg',
+    native: `<div class="btn-group btn-group-lg" role="group" aria-label="Large">${bgBtns(
+      'secondary',
+      ['Left', 'Middle', 'Right'],
+    )}</div>`,
+    styled: (
+      <ButtonGroup size="lg" aria-label="Large">
+        <Button variant="secondary">Left</Button>
+        <Button variant="secondary">Middle</Button>
+        <Button variant="secondary">Right</Button>
+      </ButtonGroup>
+    ),
+  },
+  {
+    id: 'buttongroup--vertical',
+    component: 'ButtonGroup',
+    label: 'vertical',
+    native: `<div class="btn-group-vertical" role="group" aria-label="Vertical example">${bgBtns(
+      'primary',
+      ['Top', 'Middle', 'Bottom'],
+    )}</div>`,
+    styled: (
+      <ButtonGroup vertical aria-label="Vertical example">
+        <Button variant="primary">Top</Button>
+        <Button variant="primary">Middle</Button>
+        <Button variant="primary">Bottom</Button>
+      </ButtonGroup>
+    ),
+  },
+  {
+    id: 'buttongroup--toolbar',
+    component: 'ButtonGroup',
+    label: 'toolbar',
+    native: `<div class="btn-toolbar" role="toolbar" aria-label="Toolbar" style="gap: 0.5rem">
+      <div class="btn-group" role="group" aria-label="First group">${bgBtns('primary', [
+        '1',
+        '2',
+        '3',
+      ])}</div>
+      <div class="btn-group" role="group" aria-label="Second group">${bgBtns('secondary', [
+        '4',
+        '5',
+      ])}</div>
+    </div>`,
+    styled: (
+      <ButtonToolbar aria-label="Toolbar" style={{ gap: '0.5rem' }}>
+        <ButtonGroup aria-label="First group">
+          <Button variant="primary">1</Button>
+          <Button variant="primary">2</Button>
+          <Button variant="primary">3</Button>
+        </ButtonGroup>
+        <ButtonGroup aria-label="Second group">
+          <Button variant="secondary">4</Button>
+          <Button variant="secondary">5</Button>
+        </ButtonGroup>
+      </ButtonToolbar>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// ListGroup — default · action states · flush · numbered · horizontal · variants
+// ---------------------------------------------------------------------------
+const listGroupCells: Cell[] = [
+  {
+    id: 'listgroup--default',
+    component: 'ListGroup',
+    label: 'default (active+disabled)',
+    native: `<ul class="list-group" style="max-width: 400px">
+      <li class="list-group-item active" aria-current="true">An active item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+      <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
+    </ul>`,
+    styled: (
+      <ListGroup style={{ maxWidth: 400 }}>
+        <ListGroupItem active>An active item</ListGroupItem>
+        <ListGroupItem>A second item</ListGroupItem>
+        <ListGroupItem>A third item</ListGroupItem>
+        <ListGroupItem disabled>A disabled item</ListGroupItem>
+      </ListGroup>
+    ),
+  },
+  {
+    id: 'listgroup--action',
+    component: 'ListGroup',
+    label: 'action (links)',
+    native: `<div class="list-group" style="max-width: 400px">
+      <a href="#" class="list-group-item list-group-item-action active" aria-current="true">The current link item</a>
+      <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+      <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+      <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
+    </div>`,
+    styled: (
+      <ListGroup as="div" style={{ maxWidth: 400 }}>
+        <ListGroupItem as="a" href="#" action active>
+          The current link item
+        </ListGroupItem>
+        <ListGroupItem as="a" href="#" action>
+          A second link item
+        </ListGroupItem>
+        <ListGroupItem as="a" href="#" action>
+          A third link item
+        </ListGroupItem>
+        <ListGroupItem as="a" action disabled>
+          A disabled link item
+        </ListGroupItem>
+      </ListGroup>
+    ),
+  },
+  {
+    id: 'listgroup--flush',
+    component: 'ListGroup',
+    label: 'flush',
+    native: `<ul class="list-group list-group-flush" style="max-width: 400px">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+    </ul>`,
+    styled: (
+      <ListGroup flush style={{ maxWidth: 400 }}>
+        <ListGroupItem>An item</ListGroupItem>
+        <ListGroupItem>A second item</ListGroupItem>
+        <ListGroupItem>A third item</ListGroupItem>
+      </ListGroup>
+    ),
+  },
+  {
+    id: 'listgroup--numbered',
+    component: 'ListGroup',
+    label: 'numbered',
+    native: `<ol class="list-group list-group-numbered" style="max-width: 400px">
+      <li class="list-group-item">First item</li>
+      <li class="list-group-item">Second item</li>
+      <li class="list-group-item">Third item</li>
+    </ol>`,
+    styled: (
+      <ListGroup numbered style={{ maxWidth: 400 }}>
+        <ListGroupItem>First item</ListGroupItem>
+        <ListGroupItem>Second item</ListGroupItem>
+        <ListGroupItem>Third item</ListGroupItem>
+      </ListGroup>
+    ),
+  },
+  {
+    id: 'listgroup--horizontal',
+    component: 'ListGroup',
+    label: 'horizontal',
+    native: `<ul class="list-group list-group-horizontal">
+      <li class="list-group-item">An item</li>
+      <li class="list-group-item">A second item</li>
+      <li class="list-group-item">A third item</li>
+    </ul>`,
+    styled: (
+      <ListGroup horizontal>
+        <ListGroupItem>An item</ListGroupItem>
+        <ListGroupItem>A second item</ListGroupItem>
+        <ListGroupItem>A third item</ListGroupItem>
+      </ListGroup>
+    ),
+  },
+  {
+    id: 'listgroup--variants',
+    component: 'ListGroup',
+    label: 'contextual variants',
+    note: 'contextual items remap --bs-list-group-* to the color -subtle/-emphasis tokens (styled reads runtime --bs-* var, falls back to 5.3.8 default).',
+    native: `<ul class="list-group" style="max-width: 400px">
+      <li class="list-group-item">A simple default list group item</li>
+      <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+      <li class="list-group-item list-group-item-success">A simple success list group item</li>
+      <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+    </ul>`,
+    styled: (
+      <ListGroup style={{ maxWidth: 400 }}>
+        <ListGroupItem>A simple default list group item</ListGroupItem>
+        <ListGroupItem variant="primary">A simple primary list group item</ListGroupItem>
+        <ListGroupItem variant="success">A simple success list group item</ListGroupItem>
+        <ListGroupItem variant="danger">A simple danger list group item</ListGroupItem>
+      </ListGroup>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Placeholder — sizes xs/sm/lg/default · glow (static frame) · col-widths
+// (animations frozen by the harness → glow rests at base opacity 0.5)
+// ---------------------------------------------------------------------------
+const phColStack = { width: '18rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' } as const
+
+const placeholderCells: Cell[] = [
+  {
+    id: 'placeholder--sizes',
+    component: 'Placeholder',
+    label: 'sizes xs/sm/md/lg',
+    native: `<div style="width: 18rem; display: flex; flex-direction: column; gap: 0.5rem">
+      <span class="placeholder placeholder-xs col-12"></span>
+      <span class="placeholder placeholder-sm col-12"></span>
+      <span class="placeholder col-12"></span>
+      <span class="placeholder placeholder-lg col-12"></span>
+    </div>`,
+    styled: (
+      <div style={phColStack}>
+        <Placeholder size="xs" col={12} />
+        <Placeholder size="sm" col={12} />
+        <Placeholder col={12} />
+        <Placeholder size="lg" col={12} />
+      </div>
+    ),
+  },
+  {
+    id: 'placeholder--widths',
+    component: 'Placeholder',
+    label: 'col widths',
+    native: `<div style="width: 18rem; display: flex; flex-direction: column; gap: 0.5rem">
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-8"></span>
+    </div>`,
+    styled: (
+      <div style={phColStack}>
+        <Placeholder col={6} />
+        <Placeholder col={4} />
+        <Placeholder col={8} />
+      </div>
+    ),
+  },
+  {
+    id: 'placeholder--glow',
+    component: 'Placeholder',
+    label: 'glow (frozen frame)',
+    note: 'animation frozen by the harness → glow rests at base opacity 0.5 on both sides.',
+    native: `<div class="placeholder-glow" style="width: 18rem">
+      <span class="placeholder col-7"></span> <span class="placeholder col-4"></span> <span class="placeholder col-4"></span> <span class="placeholder col-6"></span> <span class="placeholder col-8"></span>
+    </div>`,
+    styled: (
+      <PlaceholderGlow style={{ width: '18rem' }}>
+        <Placeholder col={7} /> <Placeholder col={4} /> <Placeholder col={4} />{' '}
+        <Placeholder col={6} /> <Placeholder col={8} />
+      </PlaceholderGlow>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Toast — shown (header + body + close) · container position (in a relative box)
+// ---------------------------------------------------------------------------
+const toastCells: Cell[] = [
+  {
+    id: 'toast--shown',
+    component: 'Toast',
+    label: 'shown (header+body+close)',
+    note: 'close button: Bootstrap btn-close is an SVG background-image; styled CloseButton renders a × glyph (same pre-existing CloseButton gap).',
+    native: `<div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong style="margin-right: auto">Bootstrap</strong>
+        <small style="color: var(--bs-secondary-color)">11 mins ago</small>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">Hello, world! This is a toast message.</div>
+    </div>`,
+    styled: (
+      <Toast>
+        <ToastHeader>
+          <strong style={{ marginRight: 'auto' }}>Bootstrap</strong>
+          <small style={{ color: 'var(--bs-secondary-color)' }}>11 mins ago</small>
+        </ToastHeader>
+        <ToastBody>Hello, world! This is a toast message.</ToastBody>
+      </Toast>
+    ),
+  },
+  {
+    id: 'toast--container',
+    component: 'Toast',
+    label: 'container top-end',
+    note: 'container placed absolutely inside a relative box (viewport-fixed placement escapes the per-cell capture); styled position="top-end" overridden to absolute to match .position-absolute utilities.',
+    native: `<div style="position: relative; width: 22rem; height: 9rem; background: #dee2e6; border-radius: 0.375rem">
+      <div class="toast-container position-absolute top-0 end-0" style="padding: 1rem">
+        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong style="margin-right: auto">Bootstrap</strong>
+            <small style="color: var(--bs-secondary-color)">just now</small>
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">Positioned toast in a container.</div>
+        </div>
+      </div>
+    </div>`,
+    styled: (
+      <div
+        style={{
+          position: 'relative',
+          width: '22rem',
+          height: '9rem',
+          background: '#dee2e6',
+          borderRadius: '0.375rem',
+        }}
+      >
+        <ToastContainer position="top-end" style={{ position: 'absolute', padding: '1rem' }}>
+          <Toast>
+            <ToastHeader>
+              <strong style={{ marginRight: 'auto' }}>Bootstrap</strong>
+              <small style={{ color: 'var(--bs-secondary-color)' }}>just now</small>
+            </ToastHeader>
+            <ToastBody>Positioned toast in a container.</ToastBody>
+          </Toast>
+        </ToastContainer>
+      </div>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Collapse — the .show (expanded) static state
+// ---------------------------------------------------------------------------
+const collapseInner = {
+  padding: '1rem',
+  border: '1px solid #dee2e6',
+  borderRadius: '0.375rem',
+} as const
+const collapseInnerStr = 'padding: 1rem; border: 1px solid #dee2e6; border-radius: 0.375rem'
+
+const collapseCells: Cell[] = [
+  {
+    id: 'collapse--show',
+    component: 'Collapse',
+    label: 'expanded (show)',
+    native: `<div style="width: 18rem">
+      <div class="collapse show"><div style="${collapseInnerStr}">Some placeholder content for the collapse.</div></div>
+    </div>`,
+    styled: (
+      <div style={{ width: '18rem' }}>
+        <Collapse show>
+          <div style={collapseInner}>Some placeholder content for the collapse.</div>
+        </Collapse>
+      </div>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Scrollspy — static activeId highlighted nav (nav-pills + list-group variants)
+// ---------------------------------------------------------------------------
+const ssItems = [
+  { id: 'ss-first', label: 'First' },
+  { id: 'ss-second', label: 'Second' },
+  { id: 'ss-third', label: 'Third' },
+]
+
+const scrollspyCells: Cell[] = [
+  {
+    id: 'scrollspy--nav',
+    component: 'Scrollspy',
+    label: 'nav (activeId)',
+    native: `<ul class="nav nav-pills flex-column">
+      <li class="nav-item"><a class="nav-link active" href="#ss-first" aria-current="true">First</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ss-second">Second</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ss-third">Third</a></li>
+    </ul>`,
+    styled: <ScrollspyNav activeId="ss-first" items={ssItems} variant="nav" />,
+  },
+  {
+    id: 'scrollspy--list-group',
+    component: 'Scrollspy',
+    label: 'list-group (activeId)',
+    note: 'Bootstrap scrollspy list-group uses .list-group-item-action (gray link color); ScrollspyNav renders plain body-color list items — a real minor color gap.',
+    native: `<div class="list-group">
+      <a href="#ss-first" class="list-group-item list-group-item-action active" aria-current="true">First</a>
+      <a href="#ss-second" class="list-group-item list-group-item-action">Second</a>
+      <a href="#ss-third" class="list-group-item list-group-item-action">Third</a>
+    </div>`,
+    styled: <ScrollspyNav activeId="ss-first" items={ssItems} variant="list-group" />,
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Carousel — static activeIndex=0 (indicators + controls + caption) + dark
+// ---------------------------------------------------------------------------
+const CARO_COLORS = ['#6f42c1', '#0d6efd', '#198754']
+const slideStyleStr = (color: string) =>
+  `height: 320px; display: flex; align-items: center; justify-content: center; background: ${color}; color: #fff; font-size: 2rem`
+const slideStyle = (color: string) =>
+  ({
+    height: '320px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: color,
+    color: '#fff',
+    fontSize: '2rem',
+  }) as const
+
+const nativeCarousel = (dark: boolean): string => `<div style="width: 640px"><div class="carousel slide${
+  dark ? ' carousel-dark' : ''
+}">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    ${CARO_COLORS.map(
+      (c, i) => `<div class="carousel-item${i === 0 ? ' active' : ''}">
+      <div style="${slideStyleStr(c)}">Slide ${i + 1}</div>
+      <div class="carousel-caption"><h5>Slide ${i + 1} label</h5><p>Some representative placeholder content.</p></div>
+    </div>`,
+    ).join('')}
+  </div>
+  <button class="carousel-control-prev" type="button">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div></div>`
+
+const styledCarousel = (dark: boolean) => (
+  <div style={{ width: 640 }}>
+    <Carousel activeIndex={0} dark={dark}>
+      {CARO_COLORS.map((c, i) => (
+        <CarouselItem key={i}>
+          <div style={slideStyle(c)}>Slide {i + 1}</div>
+          <CarouselCaption>
+            <h5>Slide {i + 1} label</h5>
+            <p>Some representative placeholder content.</p>
+          </CarouselCaption>
+        </CarouselItem>
+      ))}
+    </Carousel>
+  </div>
+)
+
+const carouselCells: Cell[] = [
+  {
+    id: 'carousel--slide',
+    component: 'Carousel',
+    label: 'slide 1 (indicators+controls+caption)',
+    note: 'control icons are the verbatim 5.3.8 SVG data-URIs; caption h5/p use default browser margins (styled side has no Reboot reset).',
+    native: nativeCarousel(false),
+    styled: styledCarousel(false),
+  },
+  {
+    id: 'carousel--dark',
+    component: 'Carousel',
+    label: 'dark variant',
+    native: nativeCarousel(true),
+    styled: styledCarousel(true),
+  },
+]
+
+// ---------------------------------------------------------------------------
 // NOT captured here (by design — behavioral/portal, deferred to P3):
 //   Modal · Offcanvas · Dropdown · Tooltip · Popover
 // Dropdown/Tooltip/Popover expose no open/defaultOpen prop (internal
@@ -554,6 +1063,13 @@ export const cells: Cell[] = [
   ...navCells,
   ...navbarCells,
   ...tabsCells,
+  ...buttonGroupCells,
+  ...listGroupCells,
+  ...placeholderCells,
+  ...toastCells,
+  ...collapseCells,
+  ...scrollspyCells,
+  ...carouselCells,
 ]
 
 /** Distinct component names in fixture order (for scorecard grouping). */

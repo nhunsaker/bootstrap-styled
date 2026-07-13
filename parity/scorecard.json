@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T04:55:55.172Z",
+  "generatedAt": "2026-07-13T05:32:53.890Z",
   "bootstrapVersion": "5.3.8",
   "viewport": {
     "width": 1280,
@@ -11,7 +11,7 @@
     "includeAA": false,
     "note": "padded-to-common-canvas white bg"
   },
-  "cellCount": 137,
+  "cellCount": 158,
   "components": [
     {
       "component": "Button",
@@ -129,6 +129,69 @@
       "minDiffPct": 0.241,
       "axeStyledViolations": 0,
       "axeNativeViolations": 0
+    },
+    {
+      "component": "ButtonGroup",
+      "cellCount": 5,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "ListGroup",
+      "cellCount": 6,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Placeholder",
+      "cellCount": 3,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Toast",
+      "cellCount": 2,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Collapse",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Scrollspy",
+      "cellCount": 2,
+      "avgDiffPct": 0.65,
+      "maxDiffPct": 1.3,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Carousel",
+      "cellCount": 2,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 1,
+      "axeNativeViolations": 1
     }
   ],
   "cells": [
@@ -3608,6 +3671,535 @@
       "axeStyledViolations": 0,
       "axeNativeRules": [],
       "axeStyledRules": []
+    },
+    {
+      "id": "buttongroup--default",
+      "component": "ButtonGroup",
+      "label": "default",
+      "note": "",
+      "sizeNative": {
+        "w": 446,
+        "h": 142
+      },
+      "sizeStyled": {
+        "w": 446,
+        "h": 142
+      },
+      "canvas": {
+        "w": 446,
+        "h": 142
+      },
+      "diffPixels": 0,
+      "totalPixels": 63332,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "buttongroup--sm",
+      "component": "ButtonGroup",
+      "label": "sm",
+      "note": "Bootstrap sizes the group via .btn-group-sm>.btn tokens; styled resizes children with a doubled-specificity rule.",
+      "sizeNative": {
+        "w": 376,
+        "h": 128
+      },
+      "sizeStyled": {
+        "w": 376,
+        "h": 128
+      },
+      "canvas": {
+        "w": 376,
+        "h": 128
+      },
+      "diffPixels": 0,
+      "totalPixels": 48128,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "buttongroup--lg",
+      "component": "ButtonGroup",
+      "label": "lg",
+      "note": "",
+      "sizeNative": {
+        "w": 544,
+        "h": 162
+      },
+      "sizeStyled": {
+        "w": 544,
+        "h": 162
+      },
+      "canvas": {
+        "w": 544,
+        "h": 162
+      },
+      "diffPixels": 0,
+      "totalPixels": 88128,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "buttongroup--vertical",
+      "component": "ButtonGroup",
+      "label": "vertical",
+      "note": "",
+      "sizeNative": {
+        "w": 224,
+        "h": 290
+      },
+      "sizeStyled": {
+        "w": 224,
+        "h": 290
+      },
+      "canvas": {
+        "w": 224,
+        "h": 290
+      },
+      "diffPixels": 0,
+      "totalPixels": 64960,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "buttongroup--toolbar",
+      "component": "ButtonGroup",
+      "label": "toolbar",
+      "note": "",
+      "sizeNative": {
+        "w": 426,
+        "h": 142
+      },
+      "sizeStyled": {
+        "w": 426,
+        "h": 142
+      },
+      "canvas": {
+        "w": 426,
+        "h": 142
+      },
+      "diffPixels": 0,
+      "totalPixels": 60492,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "listgroup--default",
+      "component": "ListGroup",
+      "label": "default (active+disabled)",
+      "note": "",
+      "sizeNative": {
+        "w": 358,
+        "h": 396
+      },
+      "sizeStyled": {
+        "w": 358,
+        "h": 396
+      },
+      "canvas": {
+        "w": 358,
+        "h": 396
+      },
+      "diffPixels": 0,
+      "totalPixels": 141768,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "listgroup--action",
+      "component": "ListGroup",
+      "label": "action (links)",
+      "note": "",
+      "sizeNative": {
+        "w": 432,
+        "h": 396
+      },
+      "sizeStyled": {
+        "w": 432,
+        "h": 396
+      },
+      "canvas": {
+        "w": 432,
+        "h": 396
+      },
+      "diffPixels": 0,
+      "totalPixels": 171072,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "listgroup--flush",
+      "component": "ListGroup",
+      "label": "flush",
+      "note": "",
+      "sizeNative": {
+        "w": 336,
+        "h": 310
+      },
+      "sizeStyled": {
+        "w": 336,
+        "h": 310
+      },
+      "canvas": {
+        "w": 336,
+        "h": 310
+      },
+      "diffPixels": 0,
+      "totalPixels": 104160,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "listgroup--numbered",
+      "component": "ListGroup",
+      "label": "numbered",
+      "note": "",
+      "sizeNative": {
+        "w": 350,
+        "h": 314
+      },
+      "sizeStyled": {
+        "w": 350,
+        "h": 314
+      },
+      "canvas": {
+        "w": 350,
+        "h": 314
+      },
+      "diffPixels": 0,
+      "totalPixels": 109900,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "listgroup--horizontal",
+      "component": "ListGroup",
+      "label": "horizontal",
+      "note": "",
+      "sizeNative": {
+        "w": 752,
+        "h": 150
+      },
+      "sizeStyled": {
+        "w": 752,
+        "h": 150
+      },
+      "canvas": {
+        "w": 752,
+        "h": 150
+      },
+      "diffPixels": 0,
+      "totalPixels": 112800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "listgroup--variants",
+      "component": "ListGroup",
+      "label": "contextual variants",
+      "note": "contextual items remap --bs-list-group-* to the color -subtle/-emphasis tokens (styled reads runtime --bs-* var, falls back to 5.3.8 default).",
+      "sizeNative": {
+        "w": 600,
+        "h": 396
+      },
+      "sizeStyled": {
+        "w": 600,
+        "h": 396
+      },
+      "canvas": {
+        "w": 600,
+        "h": 396
+      },
+      "diffPixels": 0,
+      "totalPixels": 237600,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "placeholder--sizes",
+      "component": "Placeholder",
+      "label": "sizes xs/sm/md/lg",
+      "note": "",
+      "sizeNative": {
+        "w": 640,
+        "h": 228
+      },
+      "sizeStyled": {
+        "w": 640,
+        "h": 228
+      },
+      "canvas": {
+        "w": 640,
+        "h": 228
+      },
+      "diffPixels": 0,
+      "totalPixels": 145920,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "placeholder--widths",
+      "component": "Placeholder",
+      "label": "col widths",
+      "note": "",
+      "sizeNative": {
+        "w": 640,
+        "h": 194
+      },
+      "sizeStyled": {
+        "w": 640,
+        "h": 194
+      },
+      "canvas": {
+        "w": 640,
+        "h": 194
+      },
+      "diffPixels": 0,
+      "totalPixels": 124160,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "placeholder--glow",
+      "component": "Placeholder",
+      "label": "glow (frozen frame)",
+      "note": "animation frozen by the harness → glow rests at base opacity 0.5 on both sides.",
+      "sizeNative": {
+        "w": 640,
+        "h": 210
+      },
+      "sizeStyled": {
+        "w": 640,
+        "h": 210
+      },
+      "canvas": {
+        "w": 640,
+        "h": 210
+      },
+      "diffPixels": 0,
+      "totalPixels": 134400,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "toast--shown",
+      "component": "Toast",
+      "label": "shown (header+body+close)",
+      "note": "close button: Bootstrap btn-close is an SVG background-image; styled CloseButton renders a × glyph (same pre-existing CloseButton gap).",
+      "sizeNative": {
+        "w": 764,
+        "h": 236
+      },
+      "sizeStyled": {
+        "w": 764,
+        "h": 236
+      },
+      "canvas": {
+        "w": 764,
+        "h": 236
+      },
+      "diffPixels": 0,
+      "totalPixels": 180304,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "toast--container",
+      "component": "Toast",
+      "label": "container top-end",
+      "note": "container placed absolutely inside a relative box (viewport-fixed placement escapes the per-cell capture); styled position=\"top-end\" overridden to absolute to match .position-absolute utilities.",
+      "sizeNative": {
+        "w": 768,
+        "h": 354
+      },
+      "sizeStyled": {
+        "w": 768,
+        "h": 354
+      },
+      "canvas": {
+        "w": 768,
+        "h": 354
+      },
+      "diffPixels": 0,
+      "totalPixels": 271872,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "collapse--show",
+      "component": "Collapse",
+      "label": "expanded (show)",
+      "note": "",
+      "sizeNative": {
+        "w": 640,
+        "h": 230
+      },
+      "sizeStyled": {
+        "w": 640,
+        "h": 230
+      },
+      "canvas": {
+        "w": 640,
+        "h": 230
+      },
+      "diffPixels": 0,
+      "totalPixels": 147200,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "scrollspy--nav",
+      "component": "Scrollspy",
+      "label": "nav (activeId)",
+      "note": "",
+      "sizeNative": {
+        "w": 240,
+        "h": 306
+      },
+      "sizeStyled": {
+        "w": 240,
+        "h": 306
+      },
+      "canvas": {
+        "w": 240,
+        "h": 306
+      },
+      "diffPixels": 0,
+      "totalPixels": 73440,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "scrollspy--list-group",
+      "component": "Scrollspy",
+      "label": "list-group (activeId)",
+      "note": "Bootstrap scrollspy list-group uses .list-group-item-action (gray link color); ScrollspyNav renders plain body-color list items — a real minor color gap.",
+      "sizeNative": {
+        "w": 244,
+        "h": 314
+      },
+      "sizeStyled": {
+        "w": 244,
+        "h": 314
+      },
+      "canvas": {
+        "w": 244,
+        "h": 314
+      },
+      "diffPixels": 996,
+      "totalPixels": 76616,
+      "diffPct": 1.3,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "carousel--slide",
+      "component": "Carousel",
+      "label": "slide 1 (indicators+controls+caption)",
+      "note": "control icons are the verbatim 5.3.8 SVG data-URIs; caption h5/p use default browser margins (styled side has no Reboot reset).",
+      "sizeNative": {
+        "w": 1346,
+        "h": 706
+      },
+      "sizeStyled": {
+        "w": 1346,
+        "h": 706
+      },
+      "canvas": {
+        "w": 1346,
+        "h": 706
+      },
+      "diffPixels": 0,
+      "totalPixels": 950276,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "carousel--dark",
+      "component": "Carousel",
+      "label": "dark variant",
+      "note": "",
+      "sizeNative": {
+        "w": 1344,
+        "h": 706
+      },
+      "sizeStyled": {
+        "w": 1344,
+        "h": 706
+      },
+      "canvas": {
+        "w": 1344,
+        "h": 706
+      },
+      "diffPixels": 0,
+      "totalPixels": 948864,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(2)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(2)"
+      ]
     }
   ]
 }

@@ -1,6 +1,6 @@
 # bootstrap-styled — parity baseline scorecard (P0 proof set)
 
-> Generated 2026-07-13T04:55:55.172Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
+> Generated 2026-07-13T05:32:53.890Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
 
 Visual-diff % = fraction of pixels differing between the native Bootstrap cell and the equivalent bootstrap-styled cell (each padded to a common white canvas so size deltas count). Lower is better. 🟢 ≤0.5% · 🟡 ≤3% · 🔴 >3%. Axe = WCAG 2.0/2.1 A/AA violations on that cell subtree.
 
@@ -21,6 +21,13 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | Nav | 4 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Navbar | 2 | 🟢 0.188 | 🟢 0.376 | 0 | 0 |
 | Tabs | 1 | 🟢 0.241 | 🟢 0.241 | 0 | 0 |
+| ButtonGroup | 5 | 🟢 0 | 🟢 0 | 0 | 0 |
+| ListGroup | 6 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Placeholder | 3 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Toast | 2 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Collapse | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Scrollspy | 2 | 🟡 0.65 | 🟡 1.3 | 0 | 0 |
+| Carousel | 2 | 🟢 0 | 🟢 0 | 1 | 1 |
 
 ## Per-cell detail
 
@@ -163,6 +170,27 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | navbar--basic | Navbar | brand only | 🟢 0.376 | 0 | 0 | styled Navbar is a bare flex shell: padding 0.5rem 1rem vs Bootstrap 0.5rem 0; NavbarBrand has no py/margin-right vs Bootstrap brand py 0.3125rem + mr 1rem. No expand/toggler/container/NavbarNav. |
 | navbar--dark | Navbar | dark | 🟢 0 | 0 | 0 | color variant maps (bg-dark ≈ variant="dark"); remaining diff is the same brand/padding geometry gap as navbar--basic. |
 | tabs--basic | Tabs | first active | 🟢 0.241 | 0 | 0 | styled TabPanel adds 1rem 0 padding; Bootstrap .tab-pane has none → panel content sits ~1rem lower. Tab buttons themselves mirror nav-tabs closely. |
+| buttongroup--default | ButtonGroup | default | 🟢 0 | 0 | 0 |  |
+| buttongroup--sm | ButtonGroup | sm | 🟢 0 | 0 | 0 | Bootstrap sizes the group via .btn-group-sm>.btn tokens; styled resizes children with a doubled-specificity rule. |
+| buttongroup--lg | ButtonGroup | lg | 🟢 0 | 0 | 0 |  |
+| buttongroup--vertical | ButtonGroup | vertical | 🟢 0 | 0 | 0 |  |
+| buttongroup--toolbar | ButtonGroup | toolbar | 🟢 0 | 0 | 0 |  |
+| listgroup--default | ListGroup | default (active+disabled) | 🟢 0 | 0 | 0 |  |
+| listgroup--action | ListGroup | action (links) | 🟢 0 | 0 | 0 |  |
+| listgroup--flush | ListGroup | flush | 🟢 0 | 0 | 0 |  |
+| listgroup--numbered | ListGroup | numbered | 🟢 0 | 0 | 0 |  |
+| listgroup--horizontal | ListGroup | horizontal | 🟢 0 | 0 | 0 |  |
+| listgroup--variants | ListGroup | contextual variants | 🟢 0 | 0 | 0 | contextual items remap --bs-list-group-* to the color -subtle/-emphasis tokens (styled reads runtime --bs-* var, falls back to 5.3.8 default). |
+| placeholder--sizes | Placeholder | sizes xs/sm/md/lg | 🟢 0 | 0 | 0 |  |
+| placeholder--widths | Placeholder | col widths | 🟢 0 | 0 | 0 |  |
+| placeholder--glow | Placeholder | glow (frozen frame) | 🟢 0 | 0 | 0 | animation frozen by the harness → glow rests at base opacity 0.5 on both sides. |
+| toast--shown | Toast | shown (header+body+close) | 🟢 0 | 0 | 0 | close button: Bootstrap btn-close is an SVG background-image; styled CloseButton renders a × glyph (same pre-existing CloseButton gap). |
+| toast--container | Toast | container top-end | 🟢 0 | 0 | 0 | container placed absolutely inside a relative box (viewport-fixed placement escapes the per-cell capture); styled position="top-end" overridden to absolute to match .position-absolute utilities. |
+| collapse--show | Collapse | expanded (show) | 🟢 0 | 0 | 0 |  |
+| scrollspy--nav | Scrollspy | nav (activeId) | 🟢 0 | 0 | 0 |  |
+| scrollspy--list-group | Scrollspy | list-group (activeId) | 🟡 1.3 | 0 | 0 | Bootstrap scrollspy list-group uses .list-group-item-action (gray link color); ScrollspyNav renders plain body-color list items — a real minor color gap. |
+| carousel--slide | Carousel | slide 1 (indicators+controls+caption) | 🟢 0 | 0 | 0 | control icons are the verbatim 5.3.8 SVG data-URIs; caption h5/p use default browser margins (styled side has no Reboot reset). |
+| carousel--dark | Carousel | dark variant | 🟢 0 | 1 (color-contrast(2)) | 1 (color-contrast(2)) |  |
 
 ## Behavior checklist (P0 scaffold — filled in P2/P3)
 
@@ -183,3 +211,10 @@ The proof set is deterministic-visual; the behavior oracle (`bootstrap.bundle.mi
 | Nav | — | — | — | — | scaffold (visual+axe only in P0) |
 | Navbar | — | — | — | — | scaffold (visual+axe only in P0) |
 | Tabs | — | — | — | — | scaffold (visual+axe only in P0) |
+| ButtonGroup | — | — | — | — | scaffold (visual+axe only in P0) |
+| ListGroup | — | — | — | — | scaffold (visual+axe only in P0) |
+| Placeholder | — | — | — | — | scaffold (visual+axe only in P0) |
+| Toast | — | — | — | — | scaffold (visual+axe only in P0) |
+| Collapse | — | — | — | — | scaffold (visual+axe only in P0) |
+| Scrollspy | — | — | — | — | scaffold (visual+axe only in P0) |
+| Carousel | — | — | — | — | scaffold (visual+axe only in P0) |
