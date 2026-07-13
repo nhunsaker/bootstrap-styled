@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T07:08:23.668Z",
+  "generatedAt": "2026-07-13T07:35:33.855Z",
   "bootstrapVersion": "5.3.8",
   "viewport": {
     "width": 1280,
@@ -11,7 +11,7 @@
     "includeAA": false,
     "note": "padded-to-common-canvas white bg"
   },
-  "cellCount": 206,
+  "cellCount": 220,
   "components": [
     {
       "component": "Button",
@@ -309,6 +309,87 @@
       "minDiffPct": 0,
       "axeStyledViolations": 1,
       "axeNativeViolations": 1
+    },
+    {
+      "component": "Icon",
+      "cellCount": 4,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "TextBg",
+      "cellCount": 2,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Vr",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "TextTruncate",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "StretchedLink",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "VisuallyHidden",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Clearfix",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "TranslateMiddle",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Box",
+      "cellCount": 2,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 2,
+      "axeNativeViolations": 2
     },
     {
       "component": "Modal",
@@ -5488,6 +5569,364 @@
       ],
       "axeStyledRules": [
         "label(1)"
+      ]
+    },
+    {
+      "id": "icon--alarm-dynamic",
+      "component": "Icon",
+      "label": "<Icon name=\"alarm\"/> (dynamic, 1em)",
+      "note": "",
+      "sizeNative": {
+        "w": 98,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 98,
+        "h": 114
+      },
+      "canvas": {
+        "w": 98,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 11172,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "icon--chevron-per-icon",
+      "component": "Icon",
+      "label": "<BsIconChevronDown/> (per-icon, 1em)",
+      "note": "",
+      "sizeNative": {
+        "w": 98,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 98,
+        "h": 114
+      },
+      "canvas": {
+        "w": 98,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 11172,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "icon--alarm-sized",
+      "component": "Icon",
+      "label": "<Icon name=\"alarm\" size={32}/>",
+      "note": "",
+      "sizeNative": {
+        "w": 130,
+        "h": 130
+      },
+      "sizeStyled": {
+        "w": 130,
+        "h": 130
+      },
+      "canvas": {
+        "w": 130,
+        "h": 130
+      },
+      "diffPixels": 0,
+      "totalPixels": 16900,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "icon--alarm-colored",
+      "component": "Icon",
+      "label": "currentColor via parent (danger, 24px)",
+      "note": "",
+      "sizeNative": {
+        "w": 114,
+        "h": 118
+      },
+      "sizeStyled": {
+        "w": 114,
+        "h": 118
+      },
+      "canvas": {
+        "w": 114,
+        "h": 118
+      },
+      "diffPixels": 0,
+      "totalPixels": 13452,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "helper-textbg--primary",
+      "component": "TextBg",
+      "label": ".text-bg-primary",
+      "note": "",
+      "sizeNative": {
+        "w": 254,
+        "h": 130
+      },
+      "sizeStyled": {
+        "w": 254,
+        "h": 130
+      },
+      "canvas": {
+        "w": 254,
+        "h": 130
+      },
+      "diffPixels": 0,
+      "totalPixels": 33020,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "helper-textbg--warning",
+      "component": "TextBg",
+      "label": ".text-bg-warning (dark contrast text)",
+      "note": "",
+      "sizeNative": {
+        "w": 258,
+        "h": 130
+      },
+      "sizeStyled": {
+        "w": 258,
+        "h": 130
+      },
+      "canvas": {
+        "w": 258,
+        "h": 130
+      },
+      "diffPixels": 0,
+      "totalPixels": 33540,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "helper-vr--between-text",
+      "component": "Vr",
+      "label": ".vr vertical rule between text",
+      "note": "",
+      "sizeNative": {
+        "w": 142,
+        "h": 130
+      },
+      "sizeStyled": {
+        "w": 142,
+        "h": 130
+      },
+      "canvas": {
+        "w": 142,
+        "h": 130
+      },
+      "diffPixels": 0,
+      "totalPixels": 18460,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "helper-text-truncate--narrow",
+      "component": "TextTruncate",
+      "label": ".text-truncate (max-width 120px)",
+      "note": "",
+      "sizeNative": {
+        "w": 306,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 306,
+        "h": 114
+      },
+      "canvas": {
+        "w": 306,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 34884,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "helper-stretched-link--card",
+      "component": "StretchedLink",
+      "label": "card + .stretched-link overlay",
+      "note": "",
+      "sizeNative": {
+        "w": 450,
+        "h": 246
+      },
+      "sizeStyled": {
+        "w": 450,
+        "h": 246
+      },
+      "canvas": {
+        "w": 450,
+        "h": 246
+      },
+      "diffPixels": 0,
+      "totalPixels": 110700,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "helper-visually-hidden--offscreen",
+      "component": "VisuallyHidden",
+      "label": ".visually-hidden (off-screen; only visible text shows)",
+      "note": "",
+      "sizeNative": {
+        "w": 226,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 226,
+        "h": 114
+      },
+      "canvas": {
+        "w": 226,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 25764,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "helper-clearfix--floats",
+      "component": "Clearfix",
+      "label": ".clearfix wraps floated children",
+      "note": "",
+      "sizeNative": {
+        "w": 322,
+        "h": 162
+      },
+      "sizeStyled": {
+        "w": 322,
+        "h": 162
+      },
+      "canvas": {
+        "w": 322,
+        "h": 162
+      },
+      "diffPixels": 0,
+      "totalPixels": 52164,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "helper-translate-middle--badge",
+      "component": "TranslateMiddle",
+      "label": ".position-absolute .top-0 .start-100 .translate-middle",
+      "note": "",
+      "sizeNative": {
+        "w": 256,
+        "h": 258
+      },
+      "sizeStyled": {
+        "w": 256,
+        "h": 258
+      },
+      "canvas": {
+        "w": 256,
+        "h": 258
+      },
+      "diffPixels": 0,
+      "totalPixels": 66048,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "box--flex-bg-primary",
+      "component": "Box",
+      "label": "<Box m={3} p={2} d=\"flex\" bg=\"primary\"/> → m-3 p-2 d-flex bg-primary",
+      "note": "utility CSS scoped inline (verbatim oracle rules); class-map pixel check",
+      "sizeNative": {
+        "w": 216,
+        "h": 210
+      },
+      "sizeStyled": {
+        "w": 216,
+        "h": 210
+      },
+      "canvas": {
+        "w": 216,
+        "h": 210
+      },
+      "diffPixels": 0,
+      "totalPixels": 45360,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
+      ]
+    },
+    {
+      "id": "box--rounded-bg-success",
+      "component": "Box",
+      "label": "<Box p={3} bg=\"success\" rounded/> → p-3 bg-success rounded",
+      "note": "utility CSS scoped inline (verbatim oracle rules); class-map pixel check",
+      "sizeNative": {
+        "w": 184,
+        "h": 178
+      },
+      "sizeStyled": {
+        "w": 184,
+        "h": 178
+      },
+      "canvas": {
+        "w": 184,
+        "h": 178
+      },
+      "diffPixels": 0,
+      "totalPixels": 32752,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
       ]
     },
     {

@@ -30,6 +30,7 @@
     "play": "vite",
     "play:build": "vite build",
     "prepublishOnly": "npm run build",
+    "gen:icons": "node scripts/gen-icons.mjs",
     "parity": "node parity/run.mjs",
     "parity:dev": "vite --config parity/vite.config.ts",
     "docs": "ladle serve",
@@ -37,7 +38,8 @@
     "docs:preview": "ladle preview"
   },
   "dependencies": {
-    "@floating-ui/react": "^0.26.0"
+    "@floating-ui/react": "^0.26.0",
+    "bootstrap-icons": "1.13.1"
   },
   "peerDependencies": {
     "react": ">=18",

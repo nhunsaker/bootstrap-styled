@@ -34,3 +34,19 @@ export * from './components/Typography'
 export * from './components/Table'
 export * from './components/Image'
 export * from './components/Figure'
+
+// GFP RC1 Part 1 (Q4) — Icon · Box/Utilities · Helpers
+export * from './components/Icon'
+export * from './components/Box'
+export * from './helpers'
+
+// Collision resolution for the `export *` merges above. Each colliding name is
+// pinned to a single primary module here; the duplicate is still reachable from
+// its own module's deep import (e.g. `Box`'s `Breakpoint`/`Display` types, or
+// `helpers`' `Breakpoint`/`ThemeColor`). Mirrors the Q3 ColSpan/GutterScale fix.
+//   - Breakpoint : primary = ListGroup (Box + Position/helpers also define one)
+//   - Display    : primary = Typography component (Box also has a Display union type)
+//   - ThemeColor : primary = Box (helpers/colors also defines an identical union)
+export type { Breakpoint } from './components/ListGroup'
+export { Display } from './components/Typography'
+export type { ThemeColor } from './components/Box'

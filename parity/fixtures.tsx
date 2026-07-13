@@ -84,6 +84,17 @@ import {
   FloatingLabel,
   FormFeedback,
   type ColorName,
+  // GFP RC1 Part 1 (Q4) — Icon · Box · Helpers
+  Icon,
+  BsIconChevronDown,
+  Box,
+  TextBg,
+  Vr,
+  TextTruncate,
+  StretchedLink,
+  VisuallyHidden,
+  Clearfix,
+  TranslateMiddle,
 } from '../src'
 
 /**
@@ -1903,6 +1914,221 @@ const formCells: Cell[] = [
   },
 ]
 
+// ---------------------------------------------------------------------------
+// Icon — dynamic <Icon name/> · per-icon <BsIcon…/> · sized · colored.
+// Native side = the SAME vendored bootstrap-icons inline SVG (viewBox 0 0 16 16,
+// fill=currentColor). Both forms delegate to IconBase, so this should be 0%.
+// The bootstrap-icons `.bi`/`.bi-*` classes carry no CSS in the oracle
+// (bootstrap.min.css ≠ the icon font sheet), so omitting them native-side is
+// pixel-neutral.
+// ---------------------------------------------------------------------------
+const ALARM_SVG =
+  '<path d="M8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9z"/>\n  <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1zm1.038 3.018a6 6 0 0 1 .924 0 6 6 0 1 1-.924 0M0 3.5c0 .753.333 1.429.86 1.887A8.04 8.04 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5M13.5 1c-.753 0-1.429.333-1.887.86a8.04 8.04 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1"/>'
+const CHEVRON_DOWN_SVG =
+  '<path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>'
+const nativeSvg = (inner: string, size: string) =>
+  `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 16 16" fill="currentColor">${inner}</svg>`
+
+const iconCells: Cell[] = [
+  {
+    id: 'icon--alarm-dynamic',
+    component: 'Icon',
+    label: '<Icon name="alarm"/> (dynamic, 1em)',
+    native: nativeSvg(ALARM_SVG, '1em'),
+    styled: <Icon name="alarm" />,
+  },
+  {
+    id: 'icon--chevron-per-icon',
+    component: 'Icon',
+    label: '<BsIconChevronDown/> (per-icon, 1em)',
+    native: nativeSvg(CHEVRON_DOWN_SVG, '1em'),
+    styled: <BsIconChevronDown />,
+  },
+  {
+    id: 'icon--alarm-sized',
+    component: 'Icon',
+    label: '<Icon name="alarm" size={32}/>',
+    native: nativeSvg(ALARM_SVG, '32'),
+    styled: <Icon name="alarm" size={32} />,
+  },
+  {
+    id: 'icon--alarm-colored',
+    component: 'Icon',
+    label: 'currentColor via parent (danger, 24px)',
+    native: `<div style="color:#dc3545">${nativeSvg(ALARM_SVG, '24')}</div>`,
+    styled: (
+      <div style={{ color: '#dc3545' }}>
+        <Icon name="alarm" size={24} />
+      </div>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Helpers — the visually-distinct ones. Each helper self-inlines the oracle
+// rule (so it renders without the utility CSS); the native control is the
+// equivalent `<div class="…">` styled by the oracle sheet.
+// Skipped (viewport/interaction-bound; CSS is unit/eyeball-verified, not a
+// static pixel cell): FixedTop/FixedBottom, StickyTop/StickyBottom (scroll +
+// fixed positioning corrupt the grid), FocusRing (a :focus-only ring), and
+// IconLink (hover/gap wrapper). VisuallyHidden IS included as an off-screen
+// assertion (both sides must show only the visible text).
+// ---------------------------------------------------------------------------
+const helperCells: Cell[] = [
+  {
+    id: 'helper-textbg--primary',
+    component: 'TextBg',
+    label: '.text-bg-primary',
+    native: `<div class="text-bg-primary" style="padding:.25rem .5rem">primary bg</div>`,
+    styled: <TextBg color="primary" style={{ padding: '.25rem .5rem' }}>primary bg</TextBg>,
+  },
+  {
+    id: 'helper-textbg--warning',
+    component: 'TextBg',
+    label: '.text-bg-warning (dark contrast text)',
+    native: `<div class="text-bg-warning" style="padding:.25rem .5rem">warning bg</div>`,
+    styled: <TextBg color="warning" style={{ padding: '.25rem .5rem' }}>warning bg</TextBg>,
+  },
+  {
+    id: 'helper-vr--between-text',
+    component: 'Vr',
+    label: '.vr vertical rule between text',
+    native: `<div style="display:flex;height:2rem;align-items:stretch">
+      <span>A</span><div class="vr" style="margin:0 .5rem"></div><span>B</span>
+    </div>`,
+    styled: (
+      <div style={{ display: 'flex', height: '2rem', alignItems: 'stretch' }}>
+        <span>A</span>
+        <Vr style={{ margin: '0 .5rem' }} />
+        <span>B</span>
+      </div>
+    ),
+  },
+  {
+    id: 'helper-text-truncate--narrow',
+    component: 'TextTruncate',
+    label: '.text-truncate (max-width 120px)',
+    native: `<div class="text-truncate" style="max-width:120px">This line is long enough to truncate</div>`,
+    styled: (
+      <TextTruncate style={{ maxWidth: 120 }}>This line is long enough to truncate</TextTruncate>
+    ),
+  },
+  {
+    id: 'helper-stretched-link--card',
+    component: 'StretchedLink',
+    label: 'card + .stretched-link overlay',
+    native: `<div style="position:relative;width:12rem;padding:1rem;border:1px solid #dee2e6">
+      <p style="margin:0 0 .5rem">Card body</p>
+      <a href="#stretched" class="stretched-link">Go somewhere</a>
+    </div>`,
+    styled: (
+      <div style={{ position: 'relative', width: '12rem', padding: '1rem', border: '1px solid #dee2e6' }}>
+        <p style={{ margin: '0 0 .5rem' }}>Card body</p>
+        <StretchedLink href="#stretched">Go somewhere</StretchedLink>
+      </div>
+    ),
+  },
+  {
+    id: 'helper-visually-hidden--offscreen',
+    component: 'VisuallyHidden',
+    label: '.visually-hidden (off-screen; only visible text shows)',
+    native: `<div>Visible <span class="visually-hidden">hidden from view</span>text</div>`,
+    styled: (
+      <div>
+        Visible <VisuallyHidden>hidden from view</VisuallyHidden>text
+      </div>
+    ),
+  },
+  {
+    id: 'helper-clearfix--floats',
+    component: 'Clearfix',
+    label: '.clearfix wraps floated children',
+    native: `<div class="clearfix" style="width:8rem;background:#e9ecef">
+      <div style="float:left;width:3rem;height:3rem;background:#0d6efd"></div>
+      <div style="float:right;width:3rem;height:3rem;background:#198754"></div>
+    </div>`,
+    styled: (
+      <Clearfix style={{ width: '8rem', background: '#e9ecef' }}>
+        <div style={{ float: 'left', width: '3rem', height: '3rem', background: '#0d6efd' }} />
+        <div style={{ float: 'right', width: '3rem', height: '3rem', background: '#198754' }} />
+      </Clearfix>
+    ),
+  },
+  {
+    id: 'helper-translate-middle--badge',
+    component: 'TranslateMiddle',
+    label: '.position-absolute .top-0 .start-100 .translate-middle',
+    native: `<div style="position:relative;width:6rem;height:6rem;background:#e9ecef">
+      <span class="position-absolute top-0 start-100 translate-middle" style="width:1.5rem;height:1.5rem;border-radius:50%;background:#dc3545"></span>
+    </div>`,
+    styled: (
+      <div style={{ position: 'relative', width: '6rem', height: '6rem', background: '#e9ecef' }}>
+        <TranslateMiddle
+          as="span"
+          absolute
+          top={0}
+          start={100}
+          style={{ width: '1.5rem', height: '1.5rem', borderRadius: '50%', background: '#dc3545' }}
+        />
+      </div>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Box — the utility-class primitive. <Box> emits Bootstrap utility CLASSES and
+// injects NO CSS of its own, so the styled harness page (Provider only, no
+// oracle sheet) lacks the rules. Approach: scope the exact oracle rules for the
+// utilities used into the styled cell via an inline <style> (pulled VERBATIM
+// from parity/oracle/bootstrap.min.css; the color/radius vars they reference are
+// supplied by the Provider's ThemeVars). This makes it a TRUE class→CSS map
+// verification: identical CSS on both sides ⇒ a pixel match iff Box emits the
+// same class string as the native `<div class="…">`. The <style> element is
+// display:none (UA sheet), so it never enters the captured pixels.
+// (Breadth of the class map is separately covered by Box's 17 unit tests.)
+// ---------------------------------------------------------------------------
+const BOX_UTIL_CSS = `
+.m-3{margin:1rem!important}
+.p-2{padding:.5rem!important}
+.p-3{padding:1rem!important}
+.d-flex{display:flex!important}
+.bg-primary{--bs-bg-opacity:1;background-color:rgba(var(--bs-primary-rgb),var(--bs-bg-opacity))!important}
+.bg-success{--bs-bg-opacity:1;background-color:rgba(var(--bs-success-rgb),var(--bs-bg-opacity))!important}
+.rounded{border-radius:var(--bs-border-radius)!important}
+`
+const boxCells: Cell[] = [
+  {
+    id: 'box--flex-bg-primary',
+    component: 'Box',
+    label: '<Box m={3} p={2} d="flex" bg="primary"/> → m-3 p-2 d-flex bg-primary',
+    native: `<div class="m-3 p-2 d-flex bg-primary">Box</div>`,
+    styled: (
+      <>
+        <style>{BOX_UTIL_CSS}</style>
+        <Box m={3} p={2} d="flex" bg="primary">
+          Box
+        </Box>
+      </>
+    ),
+    note: 'utility CSS scoped inline (verbatim oracle rules); class-map pixel check',
+  },
+  {
+    id: 'box--rounded-bg-success',
+    component: 'Box',
+    label: '<Box p={3} bg="success" rounded/> → p-3 bg-success rounded',
+    native: `<div class="p-3 bg-success rounded">Box</div>`,
+    styled: (
+      <>
+        <style>{BOX_UTIL_CSS}</style>
+        <Box p={3} bg="success" rounded>
+          Box
+        </Box>
+      </>
+    ),
+    note: 'utility CSS scoped inline (verbatim oracle rules); class-map pixel check',
+  },
+]
+
 export const cells: Cell[] = [
   ...buttonCells,
   ...alertCells,
@@ -1931,6 +2157,9 @@ export const cells: Cell[] = [
   ...imageCells,
   ...figureCells,
   ...formCells,
+  ...iconCells,
+  ...helperCells,
+  ...boxCells,
 ]
 
 /** Distinct component names in fixture order (for scorecard grouping). */

@@ -1,6 +1,6 @@
 # bootstrap-styled — parity baseline scorecard (P0 proof set)
 
-> Generated 2026-07-13T07:08:23.668Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
+> Generated 2026-07-13T07:35:33.855Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
 
 Visual-diff % = fraction of pixels differing between the native Bootstrap cell and the equivalent bootstrap-styled cell (each padded to a common white canvas so size deltas count). Lower is better. 🟢 ≤0.5% · 🟡 ≤3% · 🔴 >3%. Axe = WCAG 2.0/2.1 A/AA violations on that cell subtree.
 
@@ -41,6 +41,15 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | InputGroup | 4 | 🟢 0 | 🟢 0 | 4 | 4 |
 | FloatingLabel | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | FormFeedback | 1 | 🟢 0 | 🟢 0 | 1 | 1 |
+| Icon | 4 | 🟢 0 | 🟢 0 | 0 | 0 |
+| TextBg | 2 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Vr | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| TextTruncate | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| StretchedLink | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| VisuallyHidden | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Clearfix | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| TranslateMiddle | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Box | 2 | 🟢 0 | 🟢 0 | 2 | 2 |
 | Modal | 1 | 🟢 0.089 | 🟢 0.089 | 0 | 0 |
 | Offcanvas | 1 | 🟢 0.088 | 🟢 0.088 | 0 | 0 |
 | Dropdown | 1 | 🟢 0.424 | 🟢 0.424 | 0 | 0 |
@@ -252,6 +261,20 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | input-group--lg | InputGroup | lg | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
 | floating-label--filled | FloatingLabel | filled | 🟢 0 | 0 | 0 |  |
 | form-feedback--invalid | FormFeedback | is-invalid + invalid-feedback | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| icon--alarm-dynamic | Icon | <Icon name="alarm"/> (dynamic, 1em) | 🟢 0 | 0 | 0 |  |
+| icon--chevron-per-icon | Icon | <BsIconChevronDown/> (per-icon, 1em) | 🟢 0 | 0 | 0 |  |
+| icon--alarm-sized | Icon | <Icon name="alarm" size={32}/> | 🟢 0 | 0 | 0 |  |
+| icon--alarm-colored | Icon | currentColor via parent (danger, 24px) | 🟢 0 | 0 | 0 |  |
+| helper-textbg--primary | TextBg | .text-bg-primary | 🟢 0 | 0 | 0 |  |
+| helper-textbg--warning | TextBg | .text-bg-warning (dark contrast text) | 🟢 0 | 0 | 0 |  |
+| helper-vr--between-text | Vr | .vr vertical rule between text | 🟢 0 | 0 | 0 |  |
+| helper-text-truncate--narrow | TextTruncate | .text-truncate (max-width 120px) | 🟢 0 | 0 | 0 |  |
+| helper-stretched-link--card | StretchedLink | card + .stretched-link overlay | 🟢 0 | 0 | 0 |  |
+| helper-visually-hidden--offscreen | VisuallyHidden | .visually-hidden (off-screen; only visible text shows) | 🟢 0 | 0 | 0 |  |
+| helper-clearfix--floats | Clearfix | .clearfix wraps floated children | 🟢 0 | 0 | 0 |  |
+| helper-translate-middle--badge | TranslateMiddle | .position-absolute .top-0 .start-100 .translate-middle | 🟢 0 | 0 | 0 |  |
+| box--flex-bg-primary | Box | <Box m={3} p={2} d="flex" bg="primary"/> → m-3 p-2 d-flex bg-primary | 🟢 0 | 1 (color-contrast(1)) | 1 (color-contrast(1)) | utility CSS scoped inline (verbatim oracle rules); class-map pixel check |
+| box--rounded-bg-success | Box | <Box p={3} bg="success" rounded/> → p-3 bg-success rounded | 🟢 0 | 1 (color-contrast(1)) | 1 (color-contrast(1)) | utility CSS scoped inline (verbatim oracle rules); class-map pixel check |
 | modal--basic | Modal | shown (header/body/footer + backdrop) | 🟢 0.089 | 0 | 0 | native = static .modal.show + .modal-backdrop.show; clip captures dialog box + shadow over the 50% backdrop. |
 | offcanvas--start | Offcanvas | shown from start (+ backdrop) | 🟢 0.088 | 0 | 0 | native = static .offcanvas.offcanvas-start.show + backdrop; panel spans the left edge, clip clamped to viewport. |
 | dropdown--open | Dropdown | menu open (items + divider) | 🟢 0.424 | 0 | 0 | native = static .dropdown-menu.show; default dropdown menu carries no box-shadow. |
@@ -297,6 +320,15 @@ The proof set is deterministic-visual; the behavior oracle (`bootstrap.bundle.mi
 | InputGroup | — | — | — | — | scaffold (visual+axe only in P0) |
 | FloatingLabel | — | — | — | — | scaffold (visual+axe only in P0) |
 | FormFeedback | — | — | — | — | scaffold (visual+axe only in P0) |
+| Icon | — | — | — | — | scaffold (visual+axe only in P0) |
+| TextBg | — | — | — | — | scaffold (visual+axe only in P0) |
+| Vr | — | — | — | — | scaffold (visual+axe only in P0) |
+| TextTruncate | — | — | — | — | scaffold (visual+axe only in P0) |
+| StretchedLink | — | — | — | — | scaffold (visual+axe only in P0) |
+| VisuallyHidden | — | — | — | — | scaffold (visual+axe only in P0) |
+| Clearfix | — | — | — | — | scaffold (visual+axe only in P0) |
+| TranslateMiddle | — | — | — | — | scaffold (visual+axe only in P0) |
+| Box | — | — | — | — | scaffold (visual+axe only in P0) |
 | Modal | — | — | — | — | scaffold (visual+axe only in P0) |
 | Offcanvas | — | — | — | — | scaffold (visual+axe only in P0) |
 | Dropdown | — | — | — | — | scaffold (visual+axe only in P0) |
