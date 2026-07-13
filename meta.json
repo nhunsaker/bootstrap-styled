@@ -5,6 +5,1674 @@
     "version": 1
   },
   "stories": {
+    "utilities--box--as-polymorphism": {
+      "name": "As polymorphism",
+      "levels": [
+        "Utilities",
+        "Box"
+      ],
+      "locStart": 91,
+      "locEnd": 108,
+      "filePath": "src/components/Box/Box.stories.tsx",
+      "namedExport": "AsPolymorphism",
+      "meta": {}
+    },
+    "utilities--box--background-and-text": {
+      "name": "Background and text",
+      "levels": [
+        "Utilities",
+        "Box"
+      ],
+      "locStart": 41,
+      "locEnd": 56,
+      "filePath": "src/components/Box/Box.stories.tsx",
+      "namedExport": "BackgroundAndText",
+      "meta": {}
+    },
+    "utilities--box--border-rounded-shadow": {
+      "name": "Border rounded shadow",
+      "levels": [
+        "Utilities",
+        "Box"
+      ],
+      "locStart": 58,
+      "locEnd": 73,
+      "filePath": "src/components/Box/Box.stories.tsx",
+      "namedExport": "BorderRoundedShadow",
+      "meta": {}
+    },
+    "utilities--box--class-name-passthrough": {
+      "name": "Class name passthrough",
+      "levels": [
+        "Utilities",
+        "Box"
+      ],
+      "locStart": 110,
+      "locEnd": 120,
+      "filePath": "src/components/Box/Box.stories.tsx",
+      "namedExport": "ClassNamePassthrough",
+      "meta": {}
+    },
+    "utilities--box--display-and-flex": {
+      "name": "Display and flex",
+      "levels": [
+        "Utilities",
+        "Box"
+      ],
+      "locStart": 27,
+      "locEnd": 39,
+      "filePath": "src/components/Box/Box.stories.tsx",
+      "namedExport": "DisplayAndFlex",
+      "meta": {}
+    },
+    "utilities--box--responsive-object-value": {
+      "name": "Responsive object value",
+      "levels": [
+        "Utilities",
+        "Box"
+      ],
+      "locStart": 75,
+      "locEnd": 89,
+      "filePath": "src/components/Box/Box.stories.tsx",
+      "namedExport": "ResponsiveObjectValue",
+      "meta": {}
+    },
+    "utilities--box--spacing": {
+      "name": "Spacing",
+      "levels": [
+        "Utilities",
+        "Box"
+      ],
+      "locStart": 16,
+      "locEnd": 25,
+      "filePath": "src/components/Box/Box.stories.tsx",
+      "namedExport": "Spacing",
+      "meta": {}
+    },
+    "components--buttongroup--basic": {
+      "name": "Basic",
+      "levels": [
+        "Components",
+        "Buttongroup"
+      ],
+      "locStart": 7,
+      "locEnd": 13,
+      "filePath": "src/components/ButtonGroup/ButtonGroup.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "components--buttongroup--outlined": {
+      "name": "Outlined",
+      "levels": [
+        "Components",
+        "Buttongroup"
+      ],
+      "locStart": 15,
+      "locEnd": 21,
+      "filePath": "src/components/ButtonGroup/ButtonGroup.stories.tsx",
+      "namedExport": "Outlined",
+      "meta": {}
+    },
+    "components--buttongroup--sizes": {
+      "name": "Sizes",
+      "levels": [
+        "Components",
+        "Buttongroup"
+      ],
+      "locStart": 23,
+      "locEnd": 41,
+      "filePath": "src/components/ButtonGroup/ButtonGroup.stories.tsx",
+      "namedExport": "Sizes",
+      "meta": {}
+    },
+    "components--buttongroup--toolbar": {
+      "name": "Toolbar",
+      "levels": [
+        "Components",
+        "Buttongroup"
+      ],
+      "locStart": 51,
+      "locEnd": 63,
+      "filePath": "src/components/ButtonGroup/ButtonGroup.stories.tsx",
+      "namedExport": "Toolbar",
+      "meta": {}
+    },
+    "components--buttongroup--vertical": {
+      "name": "Vertical",
+      "levels": [
+        "Components",
+        "Buttongroup"
+      ],
+      "locStart": 43,
+      "locEnd": 49,
+      "filePath": "src/components/ButtonGroup/ButtonGroup.stories.tsx",
+      "namedExport": "Vertical",
+      "meta": {}
+    },
+    "components--carousel--autoplay-fade": {
+      "name": "Autoplay fade",
+      "levels": [
+        "Components",
+        "Carousel"
+      ],
+      "locStart": 43,
+      "locEnd": 53,
+      "filePath": "src/components/Carousel/Carousel.stories.tsx",
+      "namedExport": "AutoplayFade",
+      "meta": {}
+    },
+    "components--carousel--basic": {
+      "name": "Basic",
+      "levels": [
+        "Components",
+        "Carousel"
+      ],
+      "locStart": 26,
+      "locEnd": 40,
+      "filePath": "src/components/Carousel/Carousel.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "components--carousel--controlled": {
+      "name": "Controlled",
+      "levels": [
+        "Components",
+        "Carousel"
+      ],
+      "locStart": 56,
+      "locEnd": 76,
+      "filePath": "src/components/Carousel/Carousel.stories.tsx",
+      "namedExport": "Controlled",
+      "meta": {}
+    },
+    "components--carousel--static-slide-dark": {
+      "name": "Static slide dark",
+      "levels": [
+        "Components",
+        "Carousel"
+      ],
+      "locStart": 79,
+      "locEnd": 89,
+      "filePath": "src/components/Carousel/Carousel.stories.tsx",
+      "namedExport": "StaticSlideDark",
+      "meta": {}
+    },
+    "components--collapse--horizontal": {
+      "name": "Horizontal",
+      "levels": [
+        "Components",
+        "Collapse"
+      ],
+      "locStart": 48,
+      "locEnd": 64,
+      "filePath": "src/components/Collapse/Collapse.stories.tsx",
+      "namedExport": "Horizontal",
+      "meta": {}
+    },
+    "components--collapse--shown-static": {
+      "name": "Shown static",
+      "levels": [
+        "Components",
+        "Collapse"
+      ],
+      "locStart": 67,
+      "locEnd": 71,
+      "filePath": "src/components/Collapse/Collapse.stories.tsx",
+      "namedExport": "ShownStatic",
+      "meta": {}
+    },
+    "components--collapse--vertical": {
+      "name": "Vertical",
+      "levels": [
+        "Components",
+        "Collapse"
+      ],
+      "locStart": 30,
+      "locEnd": 45,
+      "filePath": "src/components/Collapse/Collapse.stories.tsx",
+      "namedExport": "Vertical",
+      "meta": {}
+    },
+    "content--figure--basic": {
+      "name": "Basic",
+      "levels": [
+        "Content",
+        "Figure"
+      ],
+      "locStart": 12,
+      "locEnd": 17,
+      "filePath": "src/components/Figure/Figure.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "forms--floatinglabel--disabled": {
+      "name": "Disabled",
+      "levels": [
+        "Forms",
+        "Floatinglabel"
+      ],
+      "locStart": 42,
+      "locEnd": 48,
+      "filePath": "src/components/Form/FloatingLabel.stories.tsx",
+      "namedExport": "Disabled",
+      "meta": {}
+    },
+    "forms--floatinglabel--input": {
+      "name": "Input",
+      "levels": [
+        "Forms",
+        "Floatinglabel"
+      ],
+      "locStart": 8,
+      "locEnd": 20,
+      "filePath": "src/components/Form/FloatingLabel.stories.tsx",
+      "namedExport": "Input",
+      "meta": {}
+    },
+    "forms--floatinglabel--select": {
+      "name": "Select",
+      "levels": [
+        "Forms",
+        "Floatinglabel"
+      ],
+      "locStart": 22,
+      "locEnd": 32,
+      "filePath": "src/components/Form/FloatingLabel.stories.tsx",
+      "namedExport": "Select",
+      "meta": {}
+    },
+    "forms--floatinglabel--textarea": {
+      "name": "Textarea",
+      "levels": [
+        "Forms",
+        "Floatinglabel"
+      ],
+      "locStart": 34,
+      "locEnd": 40,
+      "filePath": "src/components/Form/FloatingLabel.stories.tsx",
+      "namedExport": "Textarea",
+      "meta": {}
+    },
+    "forms--formcheck--button-style": {
+      "name": "Button style",
+      "levels": [
+        "Forms",
+        "Formcheck"
+      ],
+      "locStart": 45,
+      "locEnd": 52,
+      "filePath": "src/components/Form/FormCheck.stories.tsx",
+      "namedExport": "ButtonStyle",
+      "meta": {}
+    },
+    "forms--formcheck--checkbox": {
+      "name": "Checkbox",
+      "levels": [
+        "Forms",
+        "Formcheck"
+      ],
+      "locStart": 6,
+      "locEnd": 12,
+      "filePath": "src/components/Form/FormCheck.stories.tsx",
+      "namedExport": "Checkbox",
+      "meta": {}
+    },
+    "forms--formcheck--inline": {
+      "name": "Inline",
+      "levels": [
+        "Forms",
+        "Formcheck"
+      ],
+      "locStart": 30,
+      "locEnd": 36,
+      "filePath": "src/components/Form/FormCheck.stories.tsx",
+      "namedExport": "Inline",
+      "meta": {}
+    },
+    "forms--formcheck--radio": {
+      "name": "Radio",
+      "levels": [
+        "Forms",
+        "Formcheck"
+      ],
+      "locStart": 14,
+      "locEnd": 20,
+      "filePath": "src/components/Form/FormCheck.stories.tsx",
+      "namedExport": "Radio",
+      "meta": {}
+    },
+    "forms--formcheck--reverse": {
+      "name": "Reverse",
+      "levels": [
+        "Forms",
+        "Formcheck"
+      ],
+      "locStart": 38,
+      "locEnd": 43,
+      "filePath": "src/components/Form/FormCheck.stories.tsx",
+      "namedExport": "Reverse",
+      "meta": {}
+    },
+    "forms--formcheck--switch": {
+      "name": "Switch",
+      "levels": [
+        "Forms",
+        "Formcheck"
+      ],
+      "locStart": 22,
+      "locEnd": 28,
+      "filePath": "src/components/Form/FormCheck.stories.tsx",
+      "namedExport": "Switch",
+      "meta": {}
+    },
+    "forms--formcheck--validation": {
+      "name": "Validation",
+      "levels": [
+        "Forms",
+        "Formcheck"
+      ],
+      "locStart": 54,
+      "locEnd": 59,
+      "filePath": "src/components/Form/FormCheck.stories.tsx",
+      "namedExport": "Validation",
+      "meta": {}
+    },
+    "forms--formcontrol--basic": {
+      "name": "Basic",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 7,
+      "locEnd": 13,
+      "filePath": "src/components/Form/FormControl.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "forms--formcontrol--disabled-readonly": {
+      "name": "Disabled readonly",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 30,
+      "locEnd": 36,
+      "filePath": "src/components/Form/FormControl.stories.tsx",
+      "namedExport": "DisabledReadonly",
+      "meta": {}
+    },
+    "forms--formcontrol--file-and-color": {
+      "name": "File and color",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 38,
+      "locEnd": 44,
+      "filePath": "src/components/Form/FormControl.stories.tsx",
+      "namedExport": "FileAndColor",
+      "meta": {}
+    },
+    "forms--formcontrol--sizes": {
+      "name": "Sizes",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 15,
+      "locEnd": 21,
+      "filePath": "src/components/Form/FormControl.stories.tsx",
+      "namedExport": "Sizes",
+      "meta": {}
+    },
+    "forms--formcontrol--textarea": {
+      "name": "Textarea",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 23,
+      "locEnd": 28,
+      "filePath": "src/components/Form/FormControl.stories.tsx",
+      "namedExport": "Textarea",
+      "meta": {}
+    },
+    "forms--formcontrol--validation": {
+      "name": "Validation",
+      "levels": [
+        "Forms",
+        "Formcontrol"
+      ],
+      "locStart": 46,
+      "locEnd": 52,
+      "filePath": "src/components/Form/FormControl.stories.tsx",
+      "namedExport": "Validation",
+      "meta": {}
+    },
+    "forms--validation-feedback--invalid": {
+      "name": "Invalid",
+      "levels": [
+        "Forms",
+        "Validation feedback"
+      ],
+      "locStart": 12,
+      "locEnd": 18,
+      "filePath": "src/components/Form/FormFeedback.stories.tsx",
+      "namedExport": "Invalid",
+      "meta": {}
+    },
+    "forms--validation-feedback--tooltip": {
+      "name": "Tooltip",
+      "levels": [
+        "Forms",
+        "Validation feedback"
+      ],
+      "locStart": 28,
+      "locEnd": 43,
+      "filePath": "src/components/Form/FormFeedback.stories.tsx",
+      "namedExport": "Tooltip",
+      "meta": {}
+    },
+    "forms--validation-feedback--valid": {
+      "name": "Valid",
+      "levels": [
+        "Forms",
+        "Validation feedback"
+      ],
+      "locStart": 20,
+      "locEnd": 26,
+      "filePath": "src/components/Form/FormFeedback.stories.tsx",
+      "namedExport": "Valid",
+      "meta": {}
+    },
+    "forms--validation-feedback--was-validated": {
+      "name": "Was validated",
+      "levels": [
+        "Forms",
+        "Validation feedback"
+      ],
+      "locStart": 47,
+      "locEnd": 53,
+      "filePath": "src/components/Form/FormFeedback.stories.tsx",
+      "namedExport": "WasValidated",
+      "meta": {}
+    },
+    "forms--layout--grid-gutters": {
+      "name": "Grid gutters",
+      "levels": [
+        "Forms",
+        "Layout"
+      ],
+      "locStart": 55,
+      "locEnd": 68,
+      "filePath": "src/components/Form/FormParts.stories.tsx",
+      "namedExport": "GridGutters",
+      "meta": {}
+    },
+    "forms--layout--horizontal-form": {
+      "name": "Horizontal form",
+      "levels": [
+        "Forms",
+        "Layout"
+      ],
+      "locStart": 7,
+      "locEnd": 26,
+      "filePath": "src/components/Form/FormParts.stories.tsx",
+      "namedExport": "HorizontalForm",
+      "meta": {}
+    },
+    "forms--layout--horizontal-sizes": {
+      "name": "Horizontal sizes",
+      "levels": [
+        "Forms",
+        "Layout"
+      ],
+      "locStart": 28,
+      "locEnd": 53,
+      "filePath": "src/components/Form/FormParts.stories.tsx",
+      "namedExport": "HorizontalSizes",
+      "meta": {}
+    },
+    "forms--layout--vertical-group": {
+      "name": "Vertical group",
+      "levels": [
+        "Forms",
+        "Layout"
+      ],
+      "locStart": 70,
+      "locEnd": 78,
+      "filePath": "src/components/Form/FormParts.stories.tsx",
+      "namedExport": "VerticalGroup",
+      "meta": {}
+    },
+    "forms--formrange--basic": {
+      "name": "Basic",
+      "levels": [
+        "Forms",
+        "Formrange"
+      ],
+      "locStart": 7,
+      "locEnd": 12,
+      "filePath": "src/components/Form/FormRange.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "forms--formrange--disabled": {
+      "name": "Disabled",
+      "levels": [
+        "Forms",
+        "Formrange"
+      ],
+      "locStart": 21,
+      "locEnd": 26,
+      "filePath": "src/components/Form/FormRange.stories.tsx",
+      "namedExport": "Disabled",
+      "meta": {}
+    },
+    "forms--formrange--min-max-step": {
+      "name": "Min max step",
+      "levels": [
+        "Forms",
+        "Formrange"
+      ],
+      "locStart": 14,
+      "locEnd": 19,
+      "filePath": "src/components/Form/FormRange.stories.tsx",
+      "namedExport": "MinMaxStep",
+      "meta": {}
+    },
+    "forms--formselect--basic": {
+      "name": "Basic",
+      "levels": [
+        "Forms",
+        "Formselect"
+      ],
+      "locStart": 15,
+      "locEnd": 19,
+      "filePath": "src/components/Form/FormSelect.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "forms--formselect--disabled": {
+      "name": "Disabled",
+      "levels": [
+        "Forms",
+        "Formselect"
+      ],
+      "locStart": 41,
+      "locEnd": 47,
+      "filePath": "src/components/Form/FormSelect.stories.tsx",
+      "namedExport": "Disabled",
+      "meta": {}
+    },
+    "forms--formselect--multiple": {
+      "name": "Multiple",
+      "levels": [
+        "Forms",
+        "Formselect"
+      ],
+      "locStart": 33,
+      "locEnd": 39,
+      "filePath": "src/components/Form/FormSelect.stories.tsx",
+      "namedExport": "Multiple",
+      "meta": {}
+    },
+    "forms--formselect--sizes": {
+      "name": "Sizes",
+      "levels": [
+        "Forms",
+        "Formselect"
+      ],
+      "locStart": 21,
+      "locEnd": 31,
+      "filePath": "src/components/Form/FormSelect.stories.tsx",
+      "namedExport": "Sizes",
+      "meta": {}
+    },
+    "forms--formselect--validation": {
+      "name": "Validation",
+      "levels": [
+        "Forms",
+        "Formselect"
+      ],
+      "locStart": 49,
+      "locEnd": 58,
+      "filePath": "src/components/Form/FormSelect.stories.tsx",
+      "namedExport": "Validation",
+      "meta": {}
+    },
+    "forms--inputgroup--basic": {
+      "name": "Basic",
+      "levels": [
+        "Forms",
+        "Inputgroup"
+      ],
+      "locStart": 9,
+      "locEnd": 25,
+      "filePath": "src/components/Form/InputGroup.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "forms--inputgroup--sizes": {
+      "name": "Sizes",
+      "levels": [
+        "Forms",
+        "Inputgroup"
+      ],
+      "locStart": 40,
+      "locEnd": 55,
+      "filePath": "src/components/Form/InputGroup.stories.tsx",
+      "namedExport": "Sizes",
+      "meta": {}
+    },
+    "forms--inputgroup--with-button": {
+      "name": "With button",
+      "levels": [
+        "Forms",
+        "Inputgroup"
+      ],
+      "locStart": 27,
+      "locEnd": 38,
+      "filePath": "src/components/Form/InputGroup.stories.tsx",
+      "namedExport": "WithButton",
+      "meta": {}
+    },
+    "forms--inputgroup--with-checkbox": {
+      "name": "With checkbox",
+      "levels": [
+        "Forms",
+        "Inputgroup"
+      ],
+      "locStart": 72,
+      "locEnd": 87,
+      "filePath": "src/components/Form/InputGroup.stories.tsx",
+      "namedExport": "WithCheckbox",
+      "meta": {}
+    },
+    "forms--inputgroup--with-select": {
+      "name": "With select",
+      "levels": [
+        "Forms",
+        "Inputgroup"
+      ],
+      "locStart": 57,
+      "locEnd": 70,
+      "filePath": "src/components/Form/InputGroup.stories.tsx",
+      "namedExport": "WithSelect",
+      "meta": {}
+    },
+    "forms--inputgroup--wrapping": {
+      "name": "Wrapping",
+      "levels": [
+        "Forms",
+        "Inputgroup"
+      ],
+      "locStart": 89,
+      "locEnd": 96,
+      "filePath": "src/components/Form/InputGroup.stories.tsx",
+      "namedExport": "Wrapping",
+      "meta": {}
+    },
+    "layout--grid--containers": {
+      "name": "Containers",
+      "levels": [
+        "Layout",
+        "Grid"
+      ],
+      "locStart": 153,
+      "locEnd": 165,
+      "filePath": "src/components/Grid/Grid.stories.tsx",
+      "namedExport": "Containers",
+      "meta": {}
+    },
+    "layout--grid--equal-width": {
+      "name": "Equal width",
+      "levels": [
+        "Layout",
+        "Grid"
+      ],
+      "locStart": 21,
+      "locEnd": 35,
+      "filePath": "src/components/Grid/Grid.stories.tsx",
+      "namedExport": "EqualWidth",
+      "meta": {}
+    },
+    "layout--grid--gutters": {
+      "name": "Gutters",
+      "levels": [
+        "Layout",
+        "Grid"
+      ],
+      "locStart": 120,
+      "locEnd": 151,
+      "filePath": "src/components/Grid/Grid.stories.tsx",
+      "namedExport": "Gutters",
+      "meta": {}
+    },
+    "layout--grid--offset": {
+      "name": "Offset",
+      "levels": [
+        "Layout",
+        "Grid"
+      ],
+      "locStart": 74,
+      "locEnd": 90,
+      "filePath": "src/components/Grid/Grid.stories.tsx",
+      "namedExport": "Offset",
+      "meta": {}
+    },
+    "layout--grid--order": {
+      "name": "Order",
+      "levels": [
+        "Layout",
+        "Grid"
+      ],
+      "locStart": 92,
+      "locEnd": 106,
+      "filePath": "src/components/Grid/Grid.stories.tsx",
+      "namedExport": "Order",
+      "meta": {}
+    },
+    "layout--grid--responsive": {
+      "name": "Responsive",
+      "levels": [
+        "Layout",
+        "Grid"
+      ],
+      "locStart": 58,
+      "locEnd": 72,
+      "filePath": "src/components/Grid/Grid.stories.tsx",
+      "namedExport": "Responsive",
+      "meta": {}
+    },
+    "layout--grid--row-cols": {
+      "name": "Row cols",
+      "levels": [
+        "Layout",
+        "Grid"
+      ],
+      "locStart": 108,
+      "locEnd": 118,
+      "filePath": "src/components/Grid/Grid.stories.tsx",
+      "namedExport": "RowCols",
+      "meta": {}
+    },
+    "layout--grid--spans": {
+      "name": "Spans",
+      "levels": [
+        "Layout",
+        "Grid"
+      ],
+      "locStart": 37,
+      "locEnd": 56,
+      "filePath": "src/components/Grid/Grid.stories.tsx",
+      "namedExport": "Spans",
+      "meta": {}
+    },
+    "content--image--fluid": {
+      "name": "Fluid",
+      "levels": [
+        "Content",
+        "Image"
+      ],
+      "locStart": 13,
+      "locEnd": 13,
+      "filePath": "src/components/Image/Image.stories.tsx",
+      "namedExport": "Fluid",
+      "meta": {}
+    },
+    "content--image--rounded": {
+      "name": "Rounded",
+      "levels": [
+        "Content",
+        "Image"
+      ],
+      "locStart": 17,
+      "locEnd": 17,
+      "filePath": "src/components/Image/Image.stories.tsx",
+      "namedExport": "Rounded",
+      "meta": {}
+    },
+    "content--image--thumbnail": {
+      "name": "Thumbnail",
+      "levels": [
+        "Content",
+        "Image"
+      ],
+      "locStart": 15,
+      "locEnd": 15,
+      "filePath": "src/components/Image/Image.stories.tsx",
+      "namedExport": "Thumbnail",
+      "meta": {}
+    },
+    "components--listgroup--actionable": {
+      "name": "Actionable",
+      "levels": [
+        "Components",
+        "Listgroup"
+      ],
+      "locStart": 17,
+      "locEnd": 32,
+      "filePath": "src/components/ListGroup/ListGroup.stories.tsx",
+      "namedExport": "Actionable",
+      "meta": {}
+    },
+    "components--listgroup--basic": {
+      "name": "Basic",
+      "levels": [
+        "Components",
+        "Listgroup"
+      ],
+      "locStart": 8,
+      "locEnd": 15,
+      "filePath": "src/components/ListGroup/ListGroup.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "components--listgroup--flush": {
+      "name": "Flush",
+      "levels": [
+        "Components",
+        "Listgroup"
+      ],
+      "locStart": 34,
+      "locEnd": 40,
+      "filePath": "src/components/ListGroup/ListGroup.stories.tsx",
+      "namedExport": "Flush",
+      "meta": {}
+    },
+    "components--listgroup--horizontal": {
+      "name": "Horizontal",
+      "levels": [
+        "Components",
+        "Listgroup"
+      ],
+      "locStart": 50,
+      "locEnd": 56,
+      "filePath": "src/components/ListGroup/ListGroup.stories.tsx",
+      "namedExport": "Horizontal",
+      "meta": {}
+    },
+    "components--listgroup--numbered": {
+      "name": "Numbered",
+      "levels": [
+        "Components",
+        "Listgroup"
+      ],
+      "locStart": 42,
+      "locEnd": 48,
+      "filePath": "src/components/ListGroup/ListGroup.stories.tsx",
+      "namedExport": "Numbered",
+      "meta": {}
+    },
+    "components--listgroup--variants": {
+      "name": "Variants",
+      "levels": [
+        "Components",
+        "Listgroup"
+      ],
+      "locStart": 58,
+      "locEnd": 67,
+      "filePath": "src/components/ListGroup/ListGroup.stories.tsx",
+      "namedExport": "Variants",
+      "meta": {}
+    },
+    "components--placeholder--glow": {
+      "name": "Glow",
+      "levels": [
+        "Components",
+        "Placeholder"
+      ],
+      "locStart": 32,
+      "locEnd": 39,
+      "filePath": "src/components/Placeholder/Placeholder.stories.tsx",
+      "namedExport": "Glow",
+      "meta": {}
+    },
+    "components--placeholder--sizes": {
+      "name": "Sizes",
+      "levels": [
+        "Components",
+        "Placeholder"
+      ],
+      "locStart": 14,
+      "locEnd": 21,
+      "filePath": "src/components/Placeholder/Placeholder.stories.tsx",
+      "namedExport": "Sizes",
+      "meta": {}
+    },
+    "components--placeholder--wave": {
+      "name": "Wave",
+      "levels": [
+        "Components",
+        "Placeholder"
+      ],
+      "locStart": 41,
+      "locEnd": 48,
+      "filePath": "src/components/Placeholder/Placeholder.stories.tsx",
+      "namedExport": "Wave",
+      "meta": {}
+    },
+    "components--placeholder--widths": {
+      "name": "Widths",
+      "levels": [
+        "Components",
+        "Placeholder"
+      ],
+      "locStart": 23,
+      "locEnd": 30,
+      "filePath": "src/components/Placeholder/Placeholder.stories.tsx",
+      "namedExport": "Widths",
+      "meta": {}
+    },
+    "layout--ratio--custom-ratio": {
+      "name": "Custom ratio",
+      "levels": [
+        "Layout",
+        "Ratio"
+      ],
+      "locStart": 50,
+      "locEnd": 57,
+      "filePath": "src/components/Ratio/Ratio.stories.tsx",
+      "namedExport": "CustomRatio",
+      "meta": {}
+    },
+    "layout--ratio--embed": {
+      "name": "Embed",
+      "levels": [
+        "Layout",
+        "Ratio"
+      ],
+      "locStart": 38,
+      "locEnd": 48,
+      "filePath": "src/components/Ratio/Ratio.stories.tsx",
+      "namedExport": "Embed",
+      "meta": {}
+    },
+    "layout--ratio--named": {
+      "name": "Named",
+      "levels": [
+        "Layout",
+        "Ratio"
+      ],
+      "locStart": 21,
+      "locEnd": 36,
+      "filePath": "src/components/Ratio/Ratio.stories.tsx",
+      "namedExport": "Named",
+      "meta": {}
+    },
+    "components--scrollspy--active-static": {
+      "name": "Active static",
+      "levels": [
+        "Components",
+        "Scrollspy"
+      ],
+      "locStart": 37,
+      "locEnd": 39,
+      "filePath": "src/components/Scrollspy/Scrollspy.stories.tsx",
+      "namedExport": "ActiveStatic",
+      "meta": {}
+    },
+    "components--scrollspy--list-group-static": {
+      "name": "List group static",
+      "levels": [
+        "Components",
+        "Scrollspy"
+      ],
+      "locStart": 42,
+      "locEnd": 44,
+      "filePath": "src/components/Scrollspy/Scrollspy.stories.tsx",
+      "namedExport": "ListGroupStatic",
+      "meta": {}
+    },
+    "components--scrollspy--live": {
+      "name": "Live",
+      "levels": [
+        "Components",
+        "Scrollspy"
+      ],
+      "locStart": 23,
+      "locEnd": 34,
+      "filePath": "src/components/Scrollspy/Scrollspy.stories.tsx",
+      "namedExport": "Live",
+      "meta": {}
+    },
+    "content--table--basic": {
+      "name": "Basic",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 41,
+      "locEnd": 45,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "content--table--bordered": {
+      "name": "Bordered",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 65,
+      "locEnd": 69,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "Bordered",
+      "meta": {}
+    },
+    "content--table--borderless": {
+      "name": "Borderless",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 71,
+      "locEnd": 75,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "Borderless",
+      "meta": {}
+    },
+    "content--table--contextual": {
+      "name": "Contextual",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 83,
+      "locEnd": 99,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "Contextual",
+      "meta": {}
+    },
+    "content--table--group-divider": {
+      "name": "Group divider",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 107,
+      "locEnd": 120,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "GroupDivider",
+      "meta": {}
+    },
+    "content--table--hover": {
+      "name": "Hover",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 59,
+      "locEnd": 63,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "Hover",
+      "meta": {}
+    },
+    "content--table--responsive": {
+      "name": "Responsive",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 129,
+      "locEnd": 133,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "Responsive",
+      "meta": {}
+    },
+    "content--table--small": {
+      "name": "Small",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 77,
+      "locEnd": 81,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "Small",
+      "meta": {}
+    },
+    "content--table--striped": {
+      "name": "Striped",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 47,
+      "locEnd": 51,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "Striped",
+      "meta": {}
+    },
+    "content--table--striped-columns": {
+      "name": "Striped columns",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 53,
+      "locEnd": 57,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "StripedColumns",
+      "meta": {}
+    },
+    "content--table--variant-table": {
+      "name": "Variant table",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 101,
+      "locEnd": 105,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "VariantTable",
+      "meta": {}
+    },
+    "content--table--with-caption": {
+      "name": "With caption",
+      "levels": [
+        "Content",
+        "Table"
+      ],
+      "locStart": 122,
+      "locEnd": 127,
+      "filePath": "src/components/Table/Table.stories.tsx",
+      "namedExport": "WithCaption",
+      "meta": {}
+    },
+    "components--toast--basic": {
+      "name": "Basic",
+      "levels": [
+        "Components",
+        "Toast"
+      ],
+      "locStart": 9,
+      "locEnd": 17,
+      "filePath": "src/components/Toast/Toast.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "components--toast--container": {
+      "name": "Container",
+      "levels": [
+        "Components",
+        "Toast"
+      ],
+      "locStart": 50,
+      "locEnd": 62,
+      "filePath": "src/components/Toast/Toast.stories.tsx",
+      "namedExport": "Container",
+      "meta": {}
+    },
+    "components--toast--dismissible": {
+      "name": "Dismissible",
+      "levels": [
+        "Components",
+        "Toast"
+      ],
+      "locStart": 30,
+      "locEnd": 48,
+      "filePath": "src/components/Toast/Toast.stories.tsx",
+      "namedExport": "Dismissible",
+      "meta": {}
+    },
+    "components--toast--headerless-with-color": {
+      "name": "Headerless with color",
+      "levels": [
+        "Components",
+        "Toast"
+      ],
+      "locStart": 19,
+      "locEnd": 28,
+      "filePath": "src/components/Toast/Toast.stories.tsx",
+      "namedExport": "HeaderlessWithColor",
+      "meta": {}
+    },
+    "content--typography--displays": {
+      "name": "Displays",
+      "levels": [
+        "Content",
+        "Typography"
+      ],
+      "locStart": 19,
+      "locEnd": 27,
+      "filePath": "src/components/Typography/Typography.stories.tsx",
+      "namedExport": "Displays",
+      "meta": {}
+    },
+    "content--typography--headings": {
+      "name": "Headings",
+      "levels": [
+        "Content",
+        "Typography"
+      ],
+      "locStart": 29,
+      "locEnd": 42,
+      "filePath": "src/components/Typography/Typography.stories.tsx",
+      "namedExport": "Headings",
+      "meta": {}
+    },
+    "content--typography--inline-text": {
+      "name": "Inline text",
+      "levels": [
+        "Content",
+        "Typography"
+      ],
+      "locStart": 51,
+      "locEnd": 60,
+      "filePath": "src/components/Typography/Typography.stories.tsx",
+      "namedExport": "InlineText",
+      "meta": {}
+    },
+    "content--typography--lead-text": {
+      "name": "Lead text",
+      "levels": [
+        "Content",
+        "Typography"
+      ],
+      "locStart": 44,
+      "locEnd": 49,
+      "filePath": "src/components/Typography/Typography.stories.tsx",
+      "namedExport": "LeadText",
+      "meta": {}
+    },
+    "content--typography--lists": {
+      "name": "Lists",
+      "levels": [
+        "Content",
+        "Typography"
+      ],
+      "locStart": 73,
+      "locEnd": 86,
+      "filePath": "src/components/Typography/Typography.stories.tsx",
+      "namedExport": "Lists",
+      "meta": {}
+    },
+    "content--typography--quote": {
+      "name": "Quote",
+      "levels": [
+        "Content",
+        "Typography"
+      ],
+      "locStart": 62,
+      "locEnd": 71,
+      "filePath": "src/components/Typography/Typography.stories.tsx",
+      "namedExport": "Quote",
+      "meta": {}
+    },
+    "examples--features--comparison": {
+      "name": "Comparison",
+      "levels": [
+        "Examples",
+        "Features"
+      ],
+      "locStart": 16,
+      "locEnd": 31,
+      "filePath": "src/examples/features/Features.stories.tsx",
+      "namedExport": "Comparison",
+      "meta": {}
+    },
+    "examples--features--native": {
+      "name": "Native",
+      "levels": [
+        "Examples",
+        "Features"
+      ],
+      "locStart": 13,
+      "locEnd": 13,
+      "filePath": "src/examples/features/Features.stories.tsx",
+      "namedExport": "Native",
+      "meta": {}
+    },
+    "examples--features--styled": {
+      "name": "Styled",
+      "levels": [
+        "Examples",
+        "Features"
+      ],
+      "locStart": 10,
+      "locEnd": 10,
+      "filePath": "src/examples/features/Features.stories.tsx",
+      "namedExport": "Styled",
+      "meta": {}
+    },
+    "examples--footers--footers": {
+      "name": "Footers",
+      "levels": [
+        "Examples",
+        "Footers"
+      ],
+      "locStart": 11,
+      "locEnd": 11,
+      "filePath": "src/examples/footers/Footers.stories.tsx",
+      "namedExport": "FootersExample",
+      "meta": {}
+    },
+    "examples--headers--comparison": {
+      "name": "Comparison",
+      "levels": [
+        "Examples",
+        "Headers"
+      ],
+      "locStart": 20,
+      "locEnd": 35,
+      "filePath": "src/examples/headers/Headers.stories.tsx",
+      "namedExport": "Comparison",
+      "meta": {}
+    },
+    "examples--headers--native": {
+      "name": "Native",
+      "levels": [
+        "Examples",
+        "Headers"
+      ],
+      "locStart": 17,
+      "locEnd": 17,
+      "filePath": "src/examples/headers/Headers.stories.tsx",
+      "namedExport": "Native",
+      "meta": {}
+    },
+    "examples--headers--styled": {
+      "name": "Styled",
+      "levels": [
+        "Examples",
+        "Headers"
+      ],
+      "locStart": 14,
+      "locEnd": 14,
+      "filePath": "src/examples/headers/Headers.stories.tsx",
+      "namedExport": "Styled",
+      "meta": {}
+    },
+    "examples--heroes--comparison": {
+      "name": "Comparison",
+      "levels": [
+        "Examples",
+        "Heroes"
+      ],
+      "locStart": 16,
+      "locEnd": 31,
+      "filePath": "src/examples/heroes/Heroes.stories.tsx",
+      "namedExport": "Comparison",
+      "meta": {}
+    },
+    "examples--heroes--native": {
+      "name": "Native",
+      "levels": [
+        "Examples",
+        "Heroes"
+      ],
+      "locStart": 13,
+      "locEnd": 13,
+      "filePath": "src/examples/heroes/Heroes.stories.tsx",
+      "namedExport": "Native",
+      "meta": {}
+    },
+    "examples--heroes--styled": {
+      "name": "Styled",
+      "levels": [
+        "Examples",
+        "Heroes"
+      ],
+      "locStart": 10,
+      "locEnd": 10,
+      "filePath": "src/examples/heroes/Heroes.stories.tsx",
+      "namedExport": "Styled",
+      "meta": {}
+    },
+    "examples--jumbotron--comparison": {
+      "name": "Comparison",
+      "levels": [
+        "Examples",
+        "Jumbotron"
+      ],
+      "locStart": 20,
+      "locEnd": 35,
+      "filePath": "src/examples/jumbotron/Jumbotron.stories.tsx",
+      "namedExport": "Comparison",
+      "meta": {}
+    },
+    "examples--jumbotron--native": {
+      "name": "Native",
+      "levels": [
+        "Examples",
+        "Jumbotron"
+      ],
+      "locStart": 17,
+      "locEnd": 17,
+      "filePath": "src/examples/jumbotron/Jumbotron.stories.tsx",
+      "namedExport": "Native",
+      "meta": {}
+    },
+    "examples--jumbotron--styled": {
+      "name": "Styled",
+      "levels": [
+        "Examples",
+        "Jumbotron"
+      ],
+      "locStart": 14,
+      "locEnd": 14,
+      "filePath": "src/examples/jumbotron/Jumbotron.stories.tsx",
+      "namedExport": "Styled",
+      "meta": {}
+    },
+    "examples--kitchensink--native": {
+      "name": "Native",
+      "levels": [
+        "Examples",
+        "Kitchensink"
+      ],
+      "locStart": 17,
+      "locEnd": 17,
+      "filePath": "src/examples/kitchen-sink/KitchenSink.stories.tsx",
+      "namedExport": "Native",
+      "meta": {}
+    },
+    "examples--kitchensink--styled": {
+      "name": "Styled",
+      "levels": [
+        "Examples",
+        "Kitchensink"
+      ],
+      "locStart": 14,
+      "locEnd": 14,
+      "filePath": "src/examples/kitchen-sink/KitchenSink.stories.tsx",
+      "namedExport": "Styled",
+      "meta": {}
+    },
+    "examples--navbars--navbars": {
+      "name": "Navbars",
+      "levels": [
+        "Examples",
+        "Navbars"
+      ],
+      "locStart": 11,
+      "locEnd": 11,
+      "filePath": "src/examples/navbars/Navbars.stories.tsx",
+      "namedExport": "NavbarsExample",
+      "meta": {}
+    },
+    "examples--sidebars--sidebar": {
+      "name": "Sidebar",
+      "levels": [
+        "Examples",
+        "Sidebars"
+      ],
+      "locStart": 11,
+      "locEnd": 11,
+      "filePath": "src/examples/sidebars/Sidebar.stories.tsx",
+      "namedExport": "SidebarExample",
+      "meta": {}
+    },
+    "helpers--clearfix--basic": {
+      "name": "Basic",
+      "levels": [
+        "Helpers",
+        "Clearfix"
+      ],
+      "locStart": 6,
+      "locEnd": 15,
+      "filePath": "src/helpers/Clearfix.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "helpers--focusring--colored": {
+      "name": "Colored",
+      "levels": [
+        "Helpers",
+        "Focusring"
+      ],
+      "locStart": 22,
+      "locEnd": 30,
+      "filePath": "src/helpers/FocusRing.stories.tsx",
+      "namedExport": "Colored",
+      "meta": {}
+    },
+    "helpers--focusring--default": {
+      "name": "Default",
+      "levels": [
+        "Helpers",
+        "Focusring"
+      ],
+      "locStart": 16,
+      "locEnd": 20,
+      "filePath": "src/helpers/FocusRing.stories.tsx",
+      "namedExport": "Default",
+      "meta": {}
+    },
+    "helpers--iconlink--basic": {
+      "name": "Basic",
+      "levels": [
+        "Helpers",
+        "Iconlink"
+      ],
+      "locStart": 14,
+      "locEnd": 19,
+      "filePath": "src/helpers/IconLink.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "helpers--iconlink--hover": {
+      "name": "Hover",
+      "levels": [
+        "Helpers",
+        "Iconlink"
+      ],
+      "locStart": 21,
+      "locEnd": 26,
+      "filePath": "src/helpers/IconLink.stories.tsx",
+      "namedExport": "Hover",
+      "meta": {}
+    },
+    "helpers--position--absolute-centering": {
+      "name": "Absolute centering",
+      "levels": [
+        "Helpers",
+        "Position"
+      ],
+      "locStart": 20,
+      "locEnd": 53,
+      "filePath": "src/helpers/Position.stories.tsx",
+      "namedExport": "AbsoluteCentering",
+      "meta": {}
+    },
+    "helpers--position--sticky": {
+      "name": "Sticky",
+      "levels": [
+        "Helpers",
+        "Position"
+      ],
+      "locStart": 7,
+      "locEnd": 18,
+      "filePath": "src/helpers/Position.stories.tsx",
+      "namedExport": "Sticky",
+      "meta": {}
+    },
+    "helpers--stretchedlink--card": {
+      "name": "Card",
+      "levels": [
+        "Helpers",
+        "Stretchedlink"
+      ],
+      "locStart": 6,
+      "locEnd": 20,
+      "filePath": "src/helpers/StretchedLink.stories.tsx",
+      "namedExport": "Card",
+      "meta": {}
+    },
+    "helpers--textbg--all-colors": {
+      "name": "All colors",
+      "levels": [
+        "Helpers",
+        "Textbg"
+      ],
+      "locStart": 7,
+      "locEnd": 15,
+      "filePath": "src/helpers/TextBg.stories.tsx",
+      "namedExport": "AllColors",
+      "meta": {}
+    },
+    "helpers--textbg--as-badge": {
+      "name": "As badge",
+      "levels": [
+        "Helpers",
+        "Textbg"
+      ],
+      "locStart": 17,
+      "locEnd": 25,
+      "filePath": "src/helpers/TextBg.stories.tsx",
+      "namedExport": "AsBadge",
+      "meta": {}
+    },
+    "helpers--texttruncate--basic": {
+      "name": "Basic",
+      "levels": [
+        "Helpers",
+        "Texttruncate"
+      ],
+      "locStart": 6,
+      "locEnd": 10,
+      "filePath": "src/helpers/TextTruncate.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "helpers--visuallyhidden--basic": {
+      "name": "Basic",
+      "levels": [
+        "Helpers",
+        "Visuallyhidden"
+      ],
+      "locStart": 6,
+      "locEnd": 11,
+      "filePath": "src/helpers/VisuallyHidden.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
+    "helpers--visuallyhidden--focusable": {
+      "name": "Focusable",
+      "levels": [
+        "Helpers",
+        "Visuallyhidden"
+      ],
+      "locStart": 13,
+      "locEnd": 17,
+      "filePath": "src/helpers/VisuallyHidden.stories.tsx",
+      "namedExport": "Focusable",
+      "meta": {}
+    },
+    "helpers--vr--basic": {
+      "name": "Basic",
+      "levels": [
+        "Helpers",
+        "Vr"
+      ],
+      "locStart": 6,
+      "locEnd": 14,
+      "filePath": "src/helpers/Vr.stories.tsx",
+      "namedExport": "Basic",
+      "meta": {}
+    },
     "getting-started--installation": {
       "name": "Installation",
       "levels": [
@@ -194,11 +1862,11 @@
       "namedExport": "Toggle",
       "meta": {}
     },
-    "forms--formcontrol--checks": {
+    "forms--overview--checks": {
       "name": "Checks",
       "levels": [
         "Forms",
-        "Formcontrol"
+        "Overview"
       ],
       "locStart": 53,
       "locEnd": 62,
@@ -206,11 +1874,11 @@
       "namedExport": "Checks",
       "meta": {}
     },
-    "forms--formcontrol--input-groups": {
+    "forms--overview--input-groups": {
       "name": "Input groups",
       "levels": [
         "Forms",
-        "Formcontrol"
+        "Overview"
       ],
       "locStart": 64,
       "locEnd": 75,
@@ -218,11 +1886,11 @@
       "namedExport": "InputGroups",
       "meta": {}
     },
-    "forms--formcontrol--inputs": {
+    "forms--overview--inputs": {
       "name": "Inputs",
       "levels": [
         "Forms",
-        "Formcontrol"
+        "Overview"
       ],
       "locStart": 6,
       "locEnd": 22,
@@ -230,11 +1898,11 @@
       "namedExport": "Inputs",
       "meta": {}
     },
-    "forms--formcontrol--select": {
+    "forms--overview--select": {
       "name": "Select",
       "levels": [
         "Forms",
-        "Formcontrol"
+        "Overview"
       ],
       "locStart": 39,
       "locEnd": 51,
@@ -242,11 +1910,11 @@
       "namedExport": "Select",
       "meta": {}
     },
-    "forms--formcontrol--sizes": {
+    "forms--overview--sizes": {
       "name": "Sizes",
       "levels": [
         "Forms",
-        "Formcontrol"
+        "Overview"
       ],
       "locStart": 31,
       "locEnd": 37,
@@ -254,16 +1922,88 @@
       "namedExport": "Sizes",
       "meta": {}
     },
-    "forms--formcontrol--validation": {
+    "forms--overview--validation": {
       "name": "Validation",
       "levels": [
         "Forms",
-        "Formcontrol"
+        "Overview"
       ],
       "locStart": 24,
       "locEnd": 29,
       "filePath": "src/stories/Forms.stories.tsx",
       "namedExport": "Validation",
+      "meta": {}
+    },
+    "core--icon--colored": {
+      "name": "Colored",
+      "levels": [
+        "Core",
+        "Icon"
+      ],
+      "locStart": 21,
+      "locEnd": 33,
+      "filePath": "src/stories/Icon.stories.tsx",
+      "namedExport": "Colored",
+      "meta": {}
+    },
+    "core--icon--default": {
+      "name": "Default",
+      "levels": [
+        "Core",
+        "Icon"
+      ],
+      "locStart": 8,
+      "locEnd": 8,
+      "filePath": "src/stories/Icon.stories.tsx",
+      "namedExport": "Default",
+      "meta": {}
+    },
+    "core--icon--dynamic-names": {
+      "name": "Dynamic names",
+      "levels": [
+        "Core",
+        "Icon"
+      ],
+      "locStart": 55,
+      "locEnd": 67,
+      "filePath": "src/stories/Icon.stories.tsx",
+      "namedExport": "DynamicNames",
+      "meta": {}
+    },
+    "core--icon--labeled": {
+      "name": "Labeled",
+      "levels": [
+        "Core",
+        "Icon"
+      ],
+      "locStart": 36,
+      "locEnd": 42,
+      "filePath": "src/stories/Icon.stories.tsx",
+      "namedExport": "Labeled",
+      "meta": {}
+    },
+    "core--icon--per-icon-exports": {
+      "name": "Per icon exports",
+      "levels": [
+        "Core",
+        "Icon"
+      ],
+      "locStart": 45,
+      "locEnd": 52,
+      "filePath": "src/stories/Icon.stories.tsx",
+      "namedExport": "PerIconExports",
+      "meta": {}
+    },
+    "core--icon--sized": {
+      "name": "Sized",
+      "levels": [
+        "Core",
+        "Icon"
+      ],
+      "locStart": 11,
+      "locEnd": 18,
+      "filePath": "src/stories/Icon.stories.tsx",
+      "namedExport": "Sized",
       "meta": {}
     },
     "layout--grid--col": {
