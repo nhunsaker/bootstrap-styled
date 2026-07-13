@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T05:32:53.890Z",
+  "generatedAt": "2026-07-13T05:59:48.323Z",
   "bootstrapVersion": "5.3.8",
   "viewport": {
     "width": 1280,
@@ -11,7 +11,7 @@
     "includeAA": false,
     "note": "padded-to-common-canvas white bg"
   },
-  "cellCount": 158,
+  "cellCount": 183,
   "components": [
     {
       "component": "Button",
@@ -192,6 +192,60 @@
       "minDiffPct": 0,
       "axeStyledViolations": 1,
       "axeNativeViolations": 1
+    },
+    {
+      "component": "Grid",
+      "cellCount": 6,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Ratio",
+      "cellCount": 2,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Typography",
+      "cellCount": 6,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Table",
+      "cellCount": 8,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Image",
+      "cellCount": 2,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Figure",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
     }
   ],
   "cells": [
@@ -4200,6 +4254,631 @@
       "axeStyledRules": [
         "color-contrast(2)"
       ]
+    },
+    {
+      "id": "grid--cols",
+      "component": "Grid",
+      "label": "row cols (equal + col-6)",
+      "note": "",
+      "sizeNative": {
+        "w": 1264,
+        "h": 166
+      },
+      "sizeStyled": {
+        "w": 1264,
+        "h": 166
+      },
+      "canvas": {
+        "w": 1264,
+        "h": 166
+      },
+      "diffPixels": 0,
+      "totalPixels": 209824,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "grid--offset",
+      "component": "Grid",
+      "label": "offset-4",
+      "note": "",
+      "sizeNative": {
+        "w": 1264,
+        "h": 166
+      },
+      "sizeStyled": {
+        "w": 1264,
+        "h": 166
+      },
+      "canvas": {
+        "w": 1264,
+        "h": 166
+      },
+      "diffPixels": 0,
+      "totalPixels": 209824,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "grid--order",
+      "component": "Grid",
+      "label": "order (DOM 1,2 → visual 2,1)",
+      "note": "",
+      "sizeNative": {
+        "w": 1264,
+        "h": 166
+      },
+      "sizeStyled": {
+        "w": 1264,
+        "h": 166
+      },
+      "canvas": {
+        "w": 1264,
+        "h": 166
+      },
+      "diffPixels": 0,
+      "totalPixels": 209824,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "grid--row-cols-3",
+      "component": "Grid",
+      "label": "row-cols-3 (5 items wrap)",
+      "note": "",
+      "sizeNative": {
+        "w": 1264,
+        "h": 266
+      },
+      "sizeStyled": {
+        "w": 1264,
+        "h": 266
+      },
+      "canvas": {
+        "w": 1264,
+        "h": 266
+      },
+      "diffPixels": 0,
+      "totalPixels": 336224,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "grid--gutter-g4",
+      "component": "Grid",
+      "label": "gutter g-4",
+      "note": "",
+      "sizeNative": {
+        "w": 1264,
+        "h": 314
+      },
+      "sizeStyled": {
+        "w": 1264,
+        "h": 314
+      },
+      "canvas": {
+        "w": 1264,
+        "h": 314
+      },
+      "diffPixels": 0,
+      "totalPixels": 396896,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "grid--container-fluid",
+      "component": "Grid",
+      "label": "container-fluid",
+      "note": "",
+      "sizeNative": {
+        "w": 864,
+        "h": 166
+      },
+      "sizeStyled": {
+        "w": 864,
+        "h": 166
+      },
+      "canvas": {
+        "w": 864,
+        "h": 166
+      },
+      "diffPixels": 0,
+      "totalPixels": 143424,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "ratio--16x9",
+      "component": "Ratio",
+      "label": "16x9",
+      "note": "",
+      "sizeNative": {
+        "w": 704,
+        "h": 426
+      },
+      "sizeStyled": {
+        "w": 704,
+        "h": 426
+      },
+      "canvas": {
+        "w": 704,
+        "h": 426
+      },
+      "diffPixels": 0,
+      "totalPixels": 299904,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "ratio--1x1",
+      "component": "Ratio",
+      "label": "1x1",
+      "note": "",
+      "sizeNative": {
+        "w": 464,
+        "h": 466
+      },
+      "sizeStyled": {
+        "w": 464,
+        "h": 466
+      },
+      "canvas": {
+        "w": 464,
+        "h": 466
+      },
+      "diffPixels": 0,
+      "totalPixels": 216224,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "typography--display-1",
+      "component": "Typography",
+      "label": "display-1",
+      "note": "",
+      "sizeNative": {
+        "w": 648,
+        "h": 274
+      },
+      "sizeStyled": {
+        "w": 648,
+        "h": 274
+      },
+      "canvas": {
+        "w": 648,
+        "h": 274
+      },
+      "diffPixels": 0,
+      "totalPixels": 177552,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "typography--display-4",
+      "component": "Typography",
+      "label": "display-4",
+      "note": "",
+      "sizeNative": {
+        "w": 498,
+        "h": 216
+      },
+      "sizeStyled": {
+        "w": 498,
+        "h": 216
+      },
+      "canvas": {
+        "w": 498,
+        "h": 216
+      },
+      "diffPixels": 0,
+      "totalPixels": 107568,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "typography--lead",
+      "component": "Typography",
+      "label": "lead",
+      "note": "",
+      "sizeNative": {
+        "w": 832,
+        "h": 218
+      },
+      "sizeStyled": {
+        "w": 832,
+        "h": 218
+      },
+      "canvas": {
+        "w": 832,
+        "h": 218
+      },
+      "diffPixels": 0,
+      "totalPixels": 181376,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "typography--h1-on-p",
+      "component": "Typography",
+      "label": ".h1 look on <p>",
+      "note": "",
+      "sizeNative": {
+        "w": 538,
+        "h": 178
+      },
+      "sizeStyled": {
+        "w": 538,
+        "h": 178
+      },
+      "canvas": {
+        "w": 538,
+        "h": 178
+      },
+      "diffPixels": 0,
+      "totalPixels": 95764,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "typography--blockquote",
+      "component": "Typography",
+      "label": "blockquote + footer",
+      "note": "",
+      "sizeNative": {
+        "w": 834,
+        "h": 260
+      },
+      "sizeStyled": {
+        "w": 834,
+        "h": 260
+      },
+      "canvas": {
+        "w": 834,
+        "h": 260
+      },
+      "diffPixels": 0,
+      "totalPixels": 216840,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "typography--inline-list",
+      "component": "Typography",
+      "label": "inline list",
+      "note": "",
+      "sizeNative": {
+        "w": 346,
+        "h": 146
+      },
+      "sizeStyled": {
+        "w": 346,
+        "h": 146
+      },
+      "canvas": {
+        "w": 346,
+        "h": 146
+      },
+      "diffPixels": 0,
+      "totalPixels": 50516,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "table--base",
+      "component": "Table",
+      "label": "base",
+      "note": "",
+      "sizeNative": {
+        "w": 962,
+        "h": 426
+      },
+      "sizeStyled": {
+        "w": 962,
+        "h": 426
+      },
+      "canvas": {
+        "w": 962,
+        "h": 426
+      },
+      "diffPixels": 0,
+      "totalPixels": 409812,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "table--striped",
+      "component": "Table",
+      "label": "striped",
+      "note": "",
+      "sizeNative": {
+        "w": 962,
+        "h": 426
+      },
+      "sizeStyled": {
+        "w": 962,
+        "h": 426
+      },
+      "canvas": {
+        "w": 962,
+        "h": 426
+      },
+      "diffPixels": 0,
+      "totalPixels": 409812,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "table--bordered",
+      "component": "Table",
+      "label": "bordered",
+      "note": "",
+      "sizeNative": {
+        "w": 960,
+        "h": 428
+      },
+      "sizeStyled": {
+        "w": 960,
+        "h": 428
+      },
+      "canvas": {
+        "w": 960,
+        "h": 428
+      },
+      "diffPixels": 0,
+      "totalPixels": 410880,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "table--sm",
+      "component": "Table",
+      "label": "sm",
+      "note": "",
+      "sizeNative": {
+        "w": 960,
+        "h": 362
+      },
+      "sizeStyled": {
+        "w": 960,
+        "h": 362
+      },
+      "canvas": {
+        "w": 960,
+        "h": 362
+      },
+      "diffPixels": 0,
+      "totalPixels": 347520,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "table--hover",
+      "component": "Table",
+      "label": "hover (static, at rest)",
+      "note": "hover accent only appears on :hover; captured statically at rest → both sides render the base table.",
+      "sizeNative": {
+        "w": 960,
+        "h": 426
+      },
+      "sizeStyled": {
+        "w": 960,
+        "h": 426
+      },
+      "canvas": {
+        "w": 960,
+        "h": 426
+      },
+      "diffPixels": 0,
+      "totalPixels": 408960,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "table--primary",
+      "component": "Table",
+      "label": "variant primary",
+      "note": "",
+      "sizeNative": {
+        "w": 960,
+        "h": 426
+      },
+      "sizeStyled": {
+        "w": 960,
+        "h": 426
+      },
+      "canvas": {
+        "w": 960,
+        "h": 426
+      },
+      "diffPixels": 0,
+      "totalPixels": 408960,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "table--active-row",
+      "component": "Table",
+      "label": "active row (row 2)",
+      "note": "",
+      "sizeNative": {
+        "w": 960,
+        "h": 426
+      },
+      "sizeStyled": {
+        "w": 960,
+        "h": 426
+      },
+      "canvas": {
+        "w": 960,
+        "h": 426
+      },
+      "diffPixels": 0,
+      "totalPixels": 408960,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "table--dark",
+      "component": "Table",
+      "label": "dark + striped (emphasis-rgb fix)",
+      "note": "exercises the dark-mode striping fix: --bs-emphasis-color-rgb now emits 255,255,255 under [data-bs-theme=dark] so the striped accent matches the oracle.",
+      "sizeNative": {
+        "w": 960,
+        "h": 426
+      },
+      "sizeStyled": {
+        "w": 960,
+        "h": 426
+      },
+      "canvas": {
+        "w": 960,
+        "h": 426
+      },
+      "diffPixels": 0,
+      "totalPixels": 408960,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "image--thumbnail",
+      "component": "Image",
+      "label": "thumbnail",
+      "note": "",
+      "sizeNative": {
+        "w": 344,
+        "h": 272
+      },
+      "sizeStyled": {
+        "w": 344,
+        "h": 272
+      },
+      "canvas": {
+        "w": 344,
+        "h": 272
+      },
+      "diffPixels": 0,
+      "totalPixels": 93568,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "image--rounded",
+      "component": "Image",
+      "label": "rounded",
+      "note": "",
+      "sizeNative": {
+        "w": 344,
+        "h": 266
+      },
+      "sizeStyled": {
+        "w": 344,
+        "h": 266
+      },
+      "canvas": {
+        "w": 344,
+        "h": 266
+      },
+      "diffPixels": 0,
+      "totalPixels": 91504,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "figure--basic",
+      "component": "Figure",
+      "label": "figure + img + caption",
+      "note": "",
+      "sizeNative": {
+        "w": 460,
+        "h": 356
+      },
+      "sizeStyled": {
+        "w": 460,
+        "h": 356
+      },
+      "canvas": {
+        "w": 460,
+        "h": 356
+      },
+      "diffPixels": 0,
+      "totalPixels": 163760,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
     }
   ]
 }

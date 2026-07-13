@@ -43,6 +43,22 @@ import {
   Carousel,
   CarouselItem,
   CarouselCaption,
+  Container,
+  Row,
+  Col,
+  Ratio,
+  Display,
+  Lead,
+  Heading,
+  Blockquote,
+  BlockquoteFooter,
+  List,
+  ListInlineItem,
+  Table,
+  Image,
+  Figure,
+  FigureImage,
+  FigureCaption,
   type ColorName,
 } from '../src'
 
@@ -1049,6 +1065,433 @@ const carouselCells: Cell[] = [
 // would break the run for no honest measurement — see scorecard/report.
 // ---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------
+// Grid — cols (equal+span) · offset · order · row-cols-3 · gutter · container
+// Each demo is wrapped in a FIXED-WIDTH box so col percentages render
+// deterministically regardless of the harness viewport. Cols carry a colored
+// inner box (identical both sides) so their geometry is visible to the diff.
+// ---------------------------------------------------------------------------
+const gBoxStr = 'padding:0.75rem;background:#cfe2ff;border:1px solid #9ec5fe;border-radius:0.25rem'
+const gBox = {
+  padding: '0.75rem',
+  background: '#cfe2ff',
+  border: '1px solid #9ec5fe',
+  borderRadius: '0.25rem',
+} as const
+const gWrapStr = (w: number) => `width:${w}px`
+const gWrap = (w: number) => ({ width: `${w}px` }) as const
+
+const gridCells: Cell[] = [
+  {
+    id: 'grid--cols',
+    component: 'Grid',
+    label: 'row cols (equal + col-6)',
+    native: `<div style="${gWrapStr(600)}"><div class="row">
+      <div class="col"><div style="${gBoxStr}">.col</div></div>
+      <div class="col-6"><div style="${gBoxStr}">.col-6</div></div>
+      <div class="col"><div style="${gBoxStr}">.col</div></div>
+    </div></div>`,
+    styled: (
+      <div style={gWrap(600)}>
+        <Row>
+          <Col>
+            <div style={gBox}>.col</div>
+          </Col>
+          <Col span={6}>
+            <div style={gBox}>.col-6</div>
+          </Col>
+          <Col>
+            <div style={gBox}>.col</div>
+          </Col>
+        </Row>
+      </div>
+    ),
+  },
+  {
+    id: 'grid--offset',
+    component: 'Grid',
+    label: 'offset-4',
+    native: `<div style="${gWrapStr(600)}"><div class="row">
+      <div class="col-4 offset-4"><div style="${gBoxStr}">.col-4 .offset-4</div></div>
+    </div></div>`,
+    styled: (
+      <div style={gWrap(600)}>
+        <Row>
+          <Col span={4} offset={4}>
+            <div style={gBox}>.col-4 .offset-4</div>
+          </Col>
+        </Row>
+      </div>
+    ),
+  },
+  {
+    id: 'grid--order',
+    component: 'Grid',
+    label: 'order (DOM 1,2 → visual 2,1)',
+    native: `<div style="${gWrapStr(600)}"><div class="row">
+      <div class="col order-2"><div style="${gBoxStr}">DOM 1 / order-2</div></div>
+      <div class="col order-1"><div style="${gBoxStr}">DOM 2 / order-1</div></div>
+    </div></div>`,
+    styled: (
+      <div style={gWrap(600)}>
+        <Row>
+          <Col order={2}>
+            <div style={gBox}>DOM 1 / order-2</div>
+          </Col>
+          <Col order={1}>
+            <div style={gBox}>DOM 2 / order-1</div>
+          </Col>
+        </Row>
+      </div>
+    ),
+  },
+  {
+    id: 'grid--row-cols-3',
+    component: 'Grid',
+    label: 'row-cols-3 (5 items wrap)',
+    native: `<div style="${gWrapStr(600)}"><div class="row row-cols-3">
+      ${[1, 2, 3, 4, 5]
+        .map((n) => `<div class="col"><div style="${gBoxStr}">item ${n}</div></div>`)
+        .join('')}
+    </div></div>`,
+    styled: (
+      <div style={gWrap(600)}>
+        <Row cols={3}>
+          {[1, 2, 3, 4, 5].map((n) => (
+            <Col key={n}>
+              <div style={gBox}>item {n}</div>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    ),
+  },
+  {
+    id: 'grid--gutter-g4',
+    component: 'Grid',
+    label: 'gutter g-4',
+    native: `<div style="${gWrapStr(600)}"><div class="row g-4 row-cols-2">
+      ${[1, 2, 3, 4]
+        .map((n) => `<div class="col"><div style="${gBoxStr}">g-4 ${n}</div></div>`)
+        .join('')}
+    </div></div>`,
+    styled: (
+      <div style={gWrap(600)}>
+        <Row g={4} cols={2}>
+          {[1, 2, 3, 4].map((n) => (
+            <Col key={n}>
+              <div style={gBox}>g-4 {n}</div>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    ),
+  },
+  {
+    id: 'grid--container-fluid',
+    component: 'Grid',
+    label: 'container-fluid',
+    native: `<div style="${gWrapStr(400)}"><div class="container-fluid"><div style="${gBoxStr}">.container-fluid</div></div></div>`,
+    styled: (
+      <div style={gWrap(400)}>
+        <Container fluid>
+          <div style={gBox}>.container-fluid</div>
+        </Container>
+      </div>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Ratio — 16x9 + 1x1 (bordered child so the positioned box is visible)
+// ---------------------------------------------------------------------------
+const ratioChildStr = 'border:2px solid #0d6efd;background:rgba(13,110,253,0.1)'
+const ratioChild = { border: '2px solid #0d6efd', background: 'rgba(13,110,253,0.1)' } as const
+
+const ratioCells: Cell[] = [
+  {
+    id: 'ratio--16x9',
+    component: 'Ratio',
+    label: '16x9',
+    native: `<div style="width:320px"><div class="ratio ratio-16x9"><div style="${ratioChildStr}"></div></div></div>`,
+    styled: (
+      <div style={{ width: 320 }}>
+        <Ratio ratio="16x9">
+          <div style={ratioChild} />
+        </Ratio>
+      </div>
+    ),
+  },
+  {
+    id: 'ratio--1x1',
+    component: 'Ratio',
+    label: '1x1',
+    native: `<div style="width:200px"><div class="ratio ratio-1x1"><div style="${ratioChildStr}"></div></div></div>`,
+    styled: (
+      <div style={{ width: 200 }}>
+        <Ratio ratio="1x1">
+          <div style={ratioChild} />
+        </Ratio>
+      </div>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Typography — display · lead · h1-look-on-p · blockquote+footer · inline list
+// ---------------------------------------------------------------------------
+const typographyCells: Cell[] = [
+  {
+    id: 'typography--display-1',
+    component: 'Typography',
+    label: 'display-1',
+    native: `<h1 class="display-1">Display 1</h1>`,
+    styled: <Display size={1}>Display 1</Display>,
+  },
+  {
+    id: 'typography--display-4',
+    component: 'Typography',
+    label: 'display-4',
+    native: `<h1 class="display-4">Display 4</h1>`,
+    styled: <Display size={4}>Display 4</Display>,
+  },
+  {
+    id: 'typography--lead',
+    component: 'Typography',
+    label: 'lead',
+    native: `<div style="width:24rem"><p class="lead">This is a lead paragraph. It stands out from regular paragraphs.</p></div>`,
+    styled: (
+      <div style={{ width: '24rem' }}>
+        <Lead>This is a lead paragraph. It stands out from regular paragraphs.</Lead>
+      </div>
+    ),
+  },
+  {
+    id: 'typography--h1-on-p',
+    component: 'Typography',
+    label: '.h1 look on <p>',
+    native: `<p class="h1">h1 look on a p</p>`,
+    styled: (
+      <Heading as="p" size={1}>
+        h1 look on a p
+      </Heading>
+    ),
+  },
+  {
+    id: 'typography--blockquote',
+    component: 'Typography',
+    label: 'blockquote + footer',
+    native: `<div style="width:24rem">
+      <blockquote class="blockquote"><p>A well-known quote, contained in a blockquote element.</p></blockquote>
+      <footer class="blockquote-footer">Someone famous</footer>
+    </div>`,
+    styled: (
+      <div style={{ width: '24rem' }}>
+        <Blockquote>
+          <p>A well-known quote, contained in a blockquote element.</p>
+        </Blockquote>
+        <BlockquoteFooter>Someone famous</BlockquoteFooter>
+      </div>
+    ),
+  },
+  {
+    id: 'typography--inline-list',
+    component: 'Typography',
+    label: 'inline list',
+    native: `<ul class="list-inline"><li class="list-inline-item">First</li><li class="list-inline-item">Second</li><li class="list-inline-item">Third</li></ul>`,
+    styled: (
+      <List inline>
+        <ListInlineItem>First</ListInlineItem>
+        <ListInlineItem>Second</ListInlineItem>
+        <ListInlineItem>Third</ListInlineItem>
+      </List>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Table — base · striped · bordered · sm · hover · variant · active row · dark
+// ---------------------------------------------------------------------------
+const TABLE_ROWS: Array<[string, string, string]> = [
+  ['1', 'Mark', 'Otto'],
+  ['2', 'Jacob', 'Thornton'],
+  ['3', 'Larry', 'Bird'],
+]
+const nativeTable = (cls = '', opts: { activeRow?: number; theme?: string } = {}) =>
+  `<div style="width:28rem"><table class="table${cls}"${
+    opts.theme ? ` data-bs-theme="${opts.theme}"` : ''
+  }>
+    <thead><tr><th scope="col">#</th><th scope="col">First</th><th scope="col">Last</th></tr></thead>
+    <tbody>
+      ${TABLE_ROWS.map(
+        (r, i) =>
+          `<tr${opts.activeRow === i ? ' class="table-active"' : ''}><th scope="row">${
+            r[0]
+          }</th><td>${r[1]}</td><td>${r[2]}</td></tr>`,
+      ).join('')}
+    </tbody>
+  </table></div>`
+
+const StyledTableBody = ({ activeRow }: { activeRow?: number } = {}) => (
+  <>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+      </tr>
+    </thead>
+    <tbody>
+      {TABLE_ROWS.map((r, i) => (
+        <tr key={r[0]} className={activeRow === i ? 'table-active' : undefined}>
+          <th scope="row">{r[0]}</th>
+          <td>{r[1]}</td>
+          <td>{r[2]}</td>
+        </tr>
+      ))}
+    </tbody>
+  </>
+)
+
+const tableCells: Cell[] = [
+  {
+    id: 'table--base',
+    component: 'Table',
+    label: 'base',
+    native: nativeTable(),
+    styled: (
+      <div style={{ width: '28rem' }}>
+        <Table>{StyledTableBody()}</Table>
+      </div>
+    ),
+  },
+  {
+    id: 'table--striped',
+    component: 'Table',
+    label: 'striped',
+    native: nativeTable(' table-striped'),
+    styled: (
+      <div style={{ width: '28rem' }}>
+        <Table striped>{StyledTableBody()}</Table>
+      </div>
+    ),
+  },
+  {
+    id: 'table--bordered',
+    component: 'Table',
+    label: 'bordered',
+    native: nativeTable(' table-bordered'),
+    styled: (
+      <div style={{ width: '28rem' }}>
+        <Table bordered>{StyledTableBody()}</Table>
+      </div>
+    ),
+  },
+  {
+    id: 'table--sm',
+    component: 'Table',
+    label: 'sm',
+    native: nativeTable(' table-sm'),
+    styled: (
+      <div style={{ width: '28rem' }}>
+        <Table size="sm">{StyledTableBody()}</Table>
+      </div>
+    ),
+  },
+  {
+    id: 'table--hover',
+    component: 'Table',
+    label: 'hover (static, at rest)',
+    note: 'hover accent only appears on :hover; captured statically at rest → both sides render the base table.',
+    native: nativeTable(' table-hover'),
+    styled: (
+      <div style={{ width: '28rem' }}>
+        <Table hover>{StyledTableBody()}</Table>
+      </div>
+    ),
+  },
+  {
+    id: 'table--primary',
+    component: 'Table',
+    label: 'variant primary',
+    native: nativeTable(' table-primary'),
+    styled: (
+      <div style={{ width: '28rem' }}>
+        <Table variant="primary">{StyledTableBody()}</Table>
+      </div>
+    ),
+  },
+  {
+    id: 'table--active-row',
+    component: 'Table',
+    label: 'active row (row 2)',
+    native: nativeTable('', { activeRow: 1 }),
+    styled: (
+      <div style={{ width: '28rem' }}>
+        <Table>{StyledTableBody({ activeRow: 1 })}</Table>
+      </div>
+    ),
+  },
+  {
+    id: 'table--dark',
+    component: 'Table',
+    label: 'dark + striped (emphasis-rgb fix)',
+    note: 'exercises the dark-mode striping fix: --bs-emphasis-color-rgb now emits 255,255,255 under [data-bs-theme=dark] so the striped accent matches the oracle.',
+    native: nativeTable(' table-striped', { theme: 'dark' }),
+    styled: (
+      <div style={{ width: '28rem' }}>
+        <Table striped data-bs-theme="dark">
+          {StyledTableBody()}
+        </Table>
+      </div>
+    ),
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Image — thumbnail · rounded (inline-SVG data-URI src → deterministic)
+// ---------------------------------------------------------------------------
+const IMG_SRC =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='100'%3E%3Crect width='140' height='100' fill='%230d6efd'/%3E%3Ccircle cx='70' cy='50' r='30' fill='%23ffc107'/%3E%3C/svg%3E"
+
+const imageCells: Cell[] = [
+  {
+    id: 'image--thumbnail',
+    component: 'Image',
+    label: 'thumbnail',
+    native: `<img src="${IMG_SRC}" width="140" height="100" class="img-thumbnail" alt="swatch">`,
+    styled: <Image src={IMG_SRC} width={140} height={100} thumbnail alt="swatch" />,
+  },
+  {
+    id: 'image--rounded',
+    component: 'Image',
+    label: 'rounded',
+    native: `<img src="${IMG_SRC}" width="140" height="100" class="rounded" alt="swatch">`,
+    styled: <Image src={IMG_SRC} width={140} height={100} rounded alt="swatch" />,
+  },
+]
+
+// ---------------------------------------------------------------------------
+// Figure — figure + img + caption
+// ---------------------------------------------------------------------------
+const figureCells: Cell[] = [
+  {
+    id: 'figure--basic',
+    component: 'Figure',
+    label: 'figure + img + caption',
+    native: `<figure class="figure">
+      <img src="${IMG_SRC}" width="140" height="100" class="figure-img" alt="swatch">
+      <figcaption class="figure-caption">A caption for the above image.</figcaption>
+    </figure>`,
+    styled: (
+      <Figure>
+        <FigureImage src={IMG_SRC} width={140} height={100} alt="swatch" />
+        <FigureCaption>A caption for the above image.</FigureCaption>
+      </Figure>
+    ),
+  },
+]
+
 export const cells: Cell[] = [
   ...buttonCells,
   ...alertCells,
@@ -1070,6 +1513,12 @@ export const cells: Cell[] = [
   ...collapseCells,
   ...scrollspyCells,
   ...carouselCells,
+  ...gridCells,
+  ...ratioCells,
+  ...typographyCells,
+  ...tableCells,
+  ...imageCells,
+  ...figureCells,
 ]
 
 /** Distinct component names in fixture order (for scorecard grouping). */

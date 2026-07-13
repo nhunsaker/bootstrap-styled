@@ -1,2 +1,13 @@
 export { Container, Row, Col } from './Grid'
-export type { ContainerProps, RowProps, ColProps, ColSpan } from './Grid'
+export type {
+  ContainerProps,
+  ContainerBreakpoint,
+  RowProps,
+  ColProps,
+  ColSpan,
+  ColValue,
+  OffsetSpan,
+  OrderValue,
+  GutterScale,
+  RowColsValue,
+} from './Grid'

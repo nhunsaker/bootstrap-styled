@@ -39,6 +39,9 @@ const lightBlock = (t: Theme): string => `
     --bs-body-color-rgb: ${t.body.colorRgb};
     --bs-body-bg-rgb: ${t.body.bgRgb};
     --bs-emphasis-color: ${t.emphasisColor};
+    --bs-emphasis-color-rgb: 0, 0, 0;
+    --bs-highlight-color: #212529;
+    --bs-highlight-bg: #fff3cd;
     --bs-secondary-color: ${t.secondary.color};
     --bs-secondary-bg: ${t.secondary.bg};
     --bs-tertiary-color: ${t.tertiary.color};
@@ -70,6 +73,9 @@ const darkBlock = (t: Theme): string => `
     --bs-body-bg: ${t.dark.body.bg};
     --bs-body-bg-rgb: ${t.dark.body.bgRgb};
     --bs-emphasis-color: ${t.dark.emphasisColor};
+    --bs-emphasis-color-rgb: 255, 255, 255;
+    --bs-highlight-color: #dee2e6;
+    --bs-highlight-bg: #664d03;
     --bs-secondary-color: ${t.dark.secondary.color};
     --bs-secondary-bg: ${t.dark.secondary.bg};
     --bs-tertiary-color: ${t.dark.tertiary.color};

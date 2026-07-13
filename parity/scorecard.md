@@ -1,6 +1,6 @@
 # bootstrap-styled — parity baseline scorecard (P0 proof set)
 
-> Generated 2026-07-13T05:32:53.890Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
+> Generated 2026-07-13T05:59:48.323Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
 
 Visual-diff % = fraction of pixels differing between the native Bootstrap cell and the equivalent bootstrap-styled cell (each padded to a common white canvas so size deltas count). Lower is better. 🟢 ≤0.5% · 🟡 ≤3% · 🔴 >3%. Axe = WCAG 2.0/2.1 A/AA violations on that cell subtree.
 
@@ -28,6 +28,12 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | Collapse | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Scrollspy | 2 | 🟡 0.65 | 🟡 1.3 | 0 | 0 |
 | Carousel | 2 | 🟢 0 | 🟢 0 | 1 | 1 |
+| Grid | 6 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Ratio | 2 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Typography | 6 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Table | 8 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Image | 2 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Figure | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 
 ## Per-cell detail
 
@@ -191,6 +197,31 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | scrollspy--list-group | Scrollspy | list-group (activeId) | 🟡 1.3 | 0 | 0 | Bootstrap scrollspy list-group uses .list-group-item-action (gray link color); ScrollspyNav renders plain body-color list items — a real minor color gap. |
 | carousel--slide | Carousel | slide 1 (indicators+controls+caption) | 🟢 0 | 0 | 0 | control icons are the verbatim 5.3.8 SVG data-URIs; caption h5/p use default browser margins (styled side has no Reboot reset). |
 | carousel--dark | Carousel | dark variant | 🟢 0 | 1 (color-contrast(2)) | 1 (color-contrast(2)) |  |
+| grid--cols | Grid | row cols (equal + col-6) | 🟢 0 | 0 | 0 |  |
+| grid--offset | Grid | offset-4 | 🟢 0 | 0 | 0 |  |
+| grid--order | Grid | order (DOM 1,2 → visual 2,1) | 🟢 0 | 0 | 0 |  |
+| grid--row-cols-3 | Grid | row-cols-3 (5 items wrap) | 🟢 0 | 0 | 0 |  |
+| grid--gutter-g4 | Grid | gutter g-4 | 🟢 0 | 0 | 0 |  |
+| grid--container-fluid | Grid | container-fluid | 🟢 0 | 0 | 0 |  |
+| ratio--16x9 | Ratio | 16x9 | 🟢 0 | 0 | 0 |  |
+| ratio--1x1 | Ratio | 1x1 | 🟢 0 | 0 | 0 |  |
+| typography--display-1 | Typography | display-1 | 🟢 0 | 0 | 0 |  |
+| typography--display-4 | Typography | display-4 | 🟢 0 | 0 | 0 |  |
+| typography--lead | Typography | lead | 🟢 0 | 0 | 0 |  |
+| typography--h1-on-p | Typography | .h1 look on <p> | 🟢 0 | 0 | 0 |  |
+| typography--blockquote | Typography | blockquote + footer | 🟢 0 | 0 | 0 |  |
+| typography--inline-list | Typography | inline list | 🟢 0 | 0 | 0 |  |
+| table--base | Table | base | 🟢 0 | 0 | 0 |  |
+| table--striped | Table | striped | 🟢 0 | 0 | 0 |  |
+| table--bordered | Table | bordered | 🟢 0 | 0 | 0 |  |
+| table--sm | Table | sm | 🟢 0 | 0 | 0 |  |
+| table--hover | Table | hover (static, at rest) | 🟢 0 | 0 | 0 | hover accent only appears on :hover; captured statically at rest → both sides render the base table. |
+| table--primary | Table | variant primary | 🟢 0 | 0 | 0 |  |
+| table--active-row | Table | active row (row 2) | 🟢 0 | 0 | 0 |  |
+| table--dark | Table | dark + striped (emphasis-rgb fix) | 🟢 0 | 0 | 0 | exercises the dark-mode striping fix: --bs-emphasis-color-rgb now emits 255,255,255 under [data-bs-theme=dark] so the striped accent matches the oracle. |
+| image--thumbnail | Image | thumbnail | 🟢 0 | 0 | 0 |  |
+| image--rounded | Image | rounded | 🟢 0 | 0 | 0 |  |
+| figure--basic | Figure | figure + img + caption | 🟢 0 | 0 | 0 |  |
 
 ## Behavior checklist (P0 scaffold — filled in P2/P3)
 
@@ -218,3 +249,9 @@ The proof set is deterministic-visual; the behavior oracle (`bootstrap.bundle.mi
 | Collapse | — | — | — | — | scaffold (visual+axe only in P0) |
 | Scrollspy | — | — | — | — | scaffold (visual+axe only in P0) |
 | Carousel | — | — | — | — | scaffold (visual+axe only in P0) |
+| Grid | — | — | — | — | scaffold (visual+axe only in P0) |
+| Ratio | — | — | — | — | scaffold (visual+axe only in P0) |
+| Typography | — | — | — | — | scaffold (visual+axe only in P0) |
+| Table | — | — | — | — | scaffold (visual+axe only in P0) |
+| Image | — | — | — | — | scaffold (visual+axe only in P0) |
+| Figure | — | — | — | — | scaffold (visual+axe only in P0) |
