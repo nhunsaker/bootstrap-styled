@@ -156,7 +156,11 @@ export function KitchenSinkNative() {
                 </div>
               </div>
               <nav aria-label="Page navigation">
-                <ul className="pagination">
+                {/* `.mb-0` neutralizes Reboot's incidental `ul { margin-bottom: 1rem }`
+                    (which Bootstrap's `.pagination` never resets) so this twin is 1:1
+                    with the styled <Pagination>, whose margin-bottom is 0. Without it
+                    the native card is 16px taller, shifting the Form/Modal row below. */}
+                <ul className="pagination mb-0">
                   <li className="page-item disabled">
                     <a className="page-link" href="#" tabIndex={-1} aria-disabled="true">
                       Previous

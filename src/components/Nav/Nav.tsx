@@ -84,19 +84,24 @@ export interface NavLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorEleme
   as?: React.ElementType
 }
 
+// Colors read the --bs-nav-link-* custom props (Bootstrap's `.nav-link` tokens)
+// with the plain link colors as fallbacks, so a bare Nav is unchanged but a
+// Navbar can cascade its --bs-navbar-* link theming down through .navbar-nav.
 const StyledNavLink = styled.a<{ $disabled?: boolean }>`
   display: block;
   padding: var(--bs-nav-link-padding-y, 0.5rem) var(--bs-nav-link-padding-x, 1rem);
   text-decoration: none;
-  color: var(--bs-link-color);
+  color: var(--bs-nav-link-color, var(--bs-link-color));
   background: none;
   border: 0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   &:hover {
-    color: var(--bs-link-hover-color);
+    color: var(--bs-nav-link-hover-color, var(--bs-link-hover-color));
   }
   ${(p) =>
-    p.$disabled ? 'color: var(--bs-secondary-color); pointer-events: none; cursor: default;' : ''}
+    p.$disabled
+      ? 'color: var(--bs-nav-link-disabled-color, var(--bs-secondary-color)); pointer-events: none; cursor: default;'
+      : ''}
 `
 
 export const NavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(

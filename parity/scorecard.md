@@ -1,6 +1,6 @@
 # bootstrap-styled — parity baseline scorecard (P0 proof set)
 
-> Generated 2026-07-13T08:07:29.830Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
+> Generated 2026-07-13T08:49:02.371Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
 
 Visual-diff % = fraction of pixels differing between the native Bootstrap cell and the equivalent bootstrap-styled cell (each padded to a common white canvas so size deltas count). Lower is better. 🟢 ≤0.5% · 🟡 ≤3% · 🔴 >3%. Axe = WCAG 2.0/2.1 A/AA violations on that cell subtree.
 
@@ -16,7 +16,7 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | Progress | 4 | 🟢 0 | 🟢 0 | 4 | 4 |
 | CloseButton | 2 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Accordion | 1 | 🟢 0.008 | 🟢 0.008 | 0 | 0 |
-| Breadcrumb | 1 | 🟡 0.593 | 🟡 0.593 | 0 | 0 |
+| Breadcrumb | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Pagination | 3 | 🟢 0.15 | 🟢 0.17 | 0 | 0 |
 | Nav | 4 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Navbar | 2 | 🟢 0.188 | 🟢 0.376 | 0 | 0 |
@@ -53,11 +53,11 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | ExHeaders | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | ExHeroes | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | ExFeatures | 1 | 🟢 0.156 | 🟢 0.156 | 0 | 0 |
-| ExJumbotron | 1 | 🟢 0.045 | 🟢 0.045 | 0 | 0 |
+| ExJumbotron | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | ExNavbars | 1 | 🟢 0 | 🟢 0 | 1 | 1 |
 | ExSidebars | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | ExFooters | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
-| ExKitchenSink | 1 | 🟡 2.629 | 🟡 2.629 | 0 | 0 |
+| ExKitchenSink | 1 | 🟢 0.022 | 🟢 0.022 | 0 | 0 |
 | Modal | 1 | 🟢 0.089 | 🟢 0.089 | 0 | 0 |
 | Offcanvas | 1 | 🟢 0.088 | 🟢 0.088 | 0 | 0 |
 | Dropdown | 1 | 🟢 0.424 | 🟢 0.424 | 0 | 0 |
@@ -194,7 +194,7 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | closebutton--default | CloseButton | default | 🟢 0 | 0 | 0 | Bootstrap btn-close uses an SVG background-image; styled renders a × glyph |
 | closebutton--disabled | CloseButton | disabled | 🟢 0 | 0 | 0 | Bootstrap btn-close uses an SVG background-image; styled renders a × glyph |
 | accordion--first-open | Accordion | first open | 🟢 0.008 | 0 | 0 | styled chevron is a CSS border-rotate + open bg via color-mix(primary 10%); Bootstrap uses an SVG-mask chevron + --bs-accordion-active-bg/-active-color tokens |
-| breadcrumb--default | Breadcrumb | default | 🟡 0.593 | 0 | 0 | Bootstrap divider is the --bs-breadcrumb-divider var (default "/") on ::before; styled hardcodes "/" — same glyph, but no divider-override token |
+| breadcrumb--default | Breadcrumb | default | 🟢 0 | 0 | 0 | Bootstrap divider is the --bs-breadcrumb-divider var (default "/") on ::before; styled hardcodes "/" — same glyph, but no divider-override token |
 | pagination--default | Pagination | default (active+disabled) | 🟢 0.155 | 0 | 0 |  |
 | pagination--sm | Pagination | sm | 🟢 0.17 | 0 | 0 |  |
 | pagination--lg | Pagination | lg | 🟢 0.125 | 0 | 0 |  |
@@ -286,11 +286,11 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | example--headers | ExHeaders | Headers — logo + centred pills + auth buttons bar | 🟢 0 | 0 | 0 |  |
 | example--heroes | ExHeroes | Heroes — centred hero with lead + CTA buttons | 🟢 0 | 0 | 0 |  |
 | example--features | ExFeatures | Features — icon-grid feature sections | 🟢 0.156 | 0 | 0 |  |
-| example--jumbotron | ExJumbotron | Jumbotron — rounded hero panel | 🟢 0.045 | 0 | 0 |  |
+| example--jumbotron | ExJumbotron | Jumbotron — rounded hero panel | 🟢 0 | 0 | 0 |  |
 | example--navbars | ExNavbars | Navbars — brand + collapsible nav variants | 🟢 0 | 1 (color-contrast(3)) | 1 (color-contrast(3)) |  |
 | example--sidebars | ExSidebars | Sidebars — fixed vertical nav shell | 🟢 0 | 0 | 0 |  |
 | example--footers | ExFooters | Footers — multi-column links + bottom social bar | 🟢 0 | 0 | 0 |  |
-| example--kitchen-sink | ExKitchenSink | Kitchen sink — buttons · badges · alerts · list group · dropdown · pagination · tabs · form · modal | 🟡 2.629 | 0 | 0 | carries known component gaps: CloseButton SVG glyph (modal) + Tabs panel padding |
+| example--kitchen-sink | ExKitchenSink | Kitchen sink — buttons · badges · alerts · list group · dropdown · pagination · tabs · form · modal | 🟢 0.022 | 0 | 0 | carries known component gaps: CloseButton SVG glyph (modal) + Tabs panel padding |
 | modal--basic | Modal | shown (header/body/footer + backdrop) | 🟢 0.089 | 0 | 0 | native = static .modal.show + .modal-backdrop.show; clip captures dialog box + shadow over the 50% backdrop. |
 | offcanvas--start | Offcanvas | shown from start (+ backdrop) | 🟢 0.088 | 0 | 0 | native = static .offcanvas.offcanvas-start.show + backdrop; panel spans the left edge, clip clamped to viewport. |
 | dropdown--open | Dropdown | menu open (items + divider) | 🟢 0.424 | 0 | 0 | native = static .dropdown-menu.show; default dropdown menu carries no box-shadow. |

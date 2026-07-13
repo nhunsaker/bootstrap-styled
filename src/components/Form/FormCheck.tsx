@@ -266,10 +266,12 @@ export const FormCheck = React.forwardRef<HTMLInputElement, FormCheckProps>(
   ) => {
     const isSwitch = type === 'switch'
     const nativeType = isSwitch ? 'checkbox' : type
-    // Emit `.is-invalid` / `.is-valid` so a sibling FormFeedback reacts.
-    const cls = [className, isInvalid && 'is-invalid', isValid && 'is-valid']
-      .filter(Boolean)
-      .join(' ')
+    // Emit `.is-invalid` / `.is-valid` on the INPUT so a sibling FormFeedback
+    // reacts (`.is-invalid ~ .invalid-feedback`). The caller's `className` (e.g.
+    // spacing utilities like `mb-3`) belongs on the `.form-check` WRAPPER —
+    // matching Bootstrap's `<div class="form-check mb-3">` — not the input.
+    const inputCls =
+      [isInvalid && 'is-invalid', isValid && 'is-valid'].filter(Boolean).join(' ') || undefined
 
     if (button) {
       return (
@@ -288,7 +290,7 @@ export const FormCheck = React.forwardRef<HTMLInputElement, FormCheckProps>(
         id={id}
         type={nativeType}
         role={isSwitch ? 'switch' : undefined}
-        className={cls || undefined}
+        className={inputCls}
         $switch={isSwitch}
         $reverse={reverse}
         $invalid={isInvalid}
@@ -305,7 +307,7 @@ export const FormCheck = React.forwardRef<HTMLInputElement, FormCheckProps>(
     // DOM order stays input-then-label; `.form-check-reverse` floats the input
     // right (matching Bootstrap markup, which keeps this order + uses float).
     return (
-      <Wrapper $inline={inline} $reverse={reverse} $switch={isSwitch}>
+      <Wrapper className={className} $inline={inline} $reverse={reverse} $switch={isSwitch}>
         {input}
         {labelEl}
       </Wrapper>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T08:07:29.830Z",
+  "generatedAt": "2026-07-13T08:49:02.371Z",
   "bootstrapVersion": "5.3.8",
   "viewport": {
     "width": 1280,
@@ -88,9 +88,9 @@
     {
       "component": "Breadcrumb",
       "cellCount": 1,
-      "avgDiffPct": 0.593,
-      "maxDiffPct": 0.593,
-      "minDiffPct": 0.593,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
       "axeStyledViolations": 0,
       "axeNativeViolations": 0
     },
@@ -421,9 +421,9 @@
     {
       "component": "ExJumbotron",
       "cellCount": 1,
-      "avgDiffPct": 0.045,
-      "maxDiffPct": 0.045,
-      "minDiffPct": 0.045,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
       "axeStyledViolations": 0,
       "axeNativeViolations": 0
     },
@@ -457,9 +457,9 @@
     {
       "component": "ExKitchenSink",
       "cellCount": 1,
-      "avgDiffPct": 2.629,
-      "maxDiffPct": 2.629,
-      "minDiffPct": 2.629,
+      "avgDiffPct": 0.022,
+      "maxDiffPct": 0.022,
+      "minDiffPct": 0.022,
       "axeStyledViolations": 0,
       "axeNativeViolations": 0
     },
@@ -3723,15 +3723,15 @@
       },
       "sizeStyled": {
         "w": 402,
-        "h": 114
+        "h": 146
       },
       "canvas": {
         "w": 402,
         "h": 146
       },
-      "diffPixels": 348,
+      "diffPixels": 0,
       "totalPixels": 58692,
-      "diffPct": 0.593,
+      "diffPct": 0,
       "axeNativeViolations": 0,
       "axeStyledViolations": 0,
       "axeNativeRules": [],
@@ -6093,9 +6093,9 @@
         "w": 2528,
         "h": 838
       },
-      "diffPixels": 951,
+      "diffPixels": 0,
       "totalPixels": 2118464,
-      "diffPct": 0.045,
+      "diffPct": 0,
       "axeNativeViolations": 0,
       "axeStyledViolations": 0,
       "axeNativeRules": [],
@@ -6187,19 +6187,19 @@
       "note": "carries known component gaps: CloseButton SVG glyph (modal) + Tabs panel padding",
       "sizeNative": {
         "w": 2344,
-        "h": 2250
+        "h": 2218
       },
       "sizeStyled": {
         "w": 2344,
-        "h": 2190
+        "h": 2218
       },
       "canvas": {
         "w": 2344,
-        "h": 2250
+        "h": 2218
       },
-      "diffPixels": 138642,
-      "totalPixels": 5274000,
-      "diffPct": 2.629,
+      "diffPixels": 1138,
+      "totalPixels": 5198992,
+      "diffPct": 0.022,
       "axeNativeViolations": 0,
       "axeStyledViolations": 0,
       "axeNativeRules": [],

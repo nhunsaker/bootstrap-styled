@@ -100,6 +100,12 @@ const StyledNavbar = styled.nav<{ $variant?: ColorName; $expand?: NavbarExpand }
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
+  /* Link theming — cascades to .navbar-nav .nav-link (oracle .navbar block). */
+  --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+  --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+  --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-nav-link-padding-x: 0.5rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-font-size: 1.25rem;
@@ -114,13 +120,40 @@ const StyledNavbar = styled.nav<{ $variant?: ColorName; $expand?: NavbarExpand }
   flex-wrap: wrap;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 
+  /* A direct .container(-*) child lays out horizontally so brand + collapse
+     don't wrap onto separate rows (oracle .navbar>.container{display:flex;...}). */
+  & > .container,
+  & > .container-fluid,
+  & > .container-sm,
+  & > .container-md,
+  & > .container-lg,
+  & > .container-xl,
+  & > .container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   /* Sub-part base styles (only bite when NavbarNav/Collapse/Toggler are used). */
   .navbar-nav {
+    /* Cascade the navbar link theming into nav-links via the shared
+       --bs-nav-link-* custom props (they inherit down to each <NavLink>). */
+    --bs-nav-link-padding-x: var(--bs-navbar-nav-link-padding-x);
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-color: var(--bs-navbar-color);
+    --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
+    --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
     display: flex;
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+  }
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link.show,
+  .navbar-nav a[aria-current='page'] {
+    color: var(--bs-navbar-active-color);
   }
   .navbar-collapse {
     flex-basis: 100%;

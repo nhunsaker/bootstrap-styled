@@ -59,9 +59,7 @@ const radius = (s?: ButtonSize) =>
 const StyledButton = styled.button<{ $variant: ButtonVariant; $size?: ButtonSize }>`
   ${(p) => (isOutline(p.$variant) ? outlineVars(baseColor(p.$variant)) : solidVars(baseColor(p.$variant)))}
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   font-family: inherit;
   font-weight: var(--bs-font-weight-normal, 400);
   line-height: 1.5;
