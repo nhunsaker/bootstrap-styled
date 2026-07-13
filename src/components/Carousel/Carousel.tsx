@@ -12,6 +12,8 @@ const NEXT_ICON =
   "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708'/%3e%3c/svg%3e\")"
 
 const SLIDE_MS = 600
+// Bootstrap's Swipe helper ignores drags of 40px or less (oracle: `if(t<=40)return`).
+const SWIPE_THRESHOLD = 40
 
 // Every rule below is copied from the oracle; the transition-class choreography
 // (item-next/-prev + item-start/-end) is driven by the state machine in Carousel
@@ -221,12 +223,29 @@ export const CarouselItem = forwardRef<HTMLDivElement, CarouselItemProps>(functi
 /** `.carousel-caption` — a caption block positioned over a slide. */
 export const CarouselCaption = styled.div.attrs({ className: 'carousel-caption' })``
 
+/** Detail payload for the `onSlide`/`onSlid` events (mirrors Bootstrap's `slide.bs.carousel`). */
+export interface CarouselSlideEvent {
+  /** Index of the slide being left. */
+  from: number
+  /** Index of the slide being entered. */
+  to: number
+  /** Direction of travel. */
+  direction: 'next' | 'prev'
+}
+
 export interface CarouselProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'onSelect'> {
   /** Controlled active slide index. */
   activeIndex?: number
   /** Uncontrolled initial index. */
   defaultActiveIndex?: number
   onSelect?: (index: number, direction: 'next' | 'prev') => void
+  /**
+   * Fired when a slide transition BEGINS (Bootstrap `slide.bs.carousel`). Distinct
+   * from `onSlid`, which fires once the transition settles.
+   */
+  onSlide?: (event: CarouselSlideEvent) => void
+  /** Fired when a slide transition SETTLES (Bootstrap `slid.bs.carousel`). */
+  onSlid?: (event: CarouselSlideEvent) => void
   /** Autoplay. `'carousel'` (or true) cycles automatically. */
   ride?: boolean | 'carousel'
   /** Autoplay dwell time in ms. Default 5000. Set 0/null to disable. */
@@ -237,6 +256,8 @@ export interface CarouselProps extends Omit<React.HTMLAttributes<HTMLDivElement>
   pause?: 'hover' | false
   /** Wrap from last→first (and first→last). Default true. */
   wrap?: boolean
+  /** Touch/swipe (pointer) gestures advance the carousel. Default true. */
+  touch?: boolean
   /** Crossfade instead of slide (`.carousel-fade`). */
   fade?: boolean
   /** Render the indicator dots. Default true. */
@@ -256,11 +277,14 @@ export const Carousel = forwardRef<HTMLDivElement, CarouselProps>(function Carou
     activeIndex,
     defaultActiveIndex = 0,
     onSelect,
+    onSlide,
+    onSlid,
     ride = false,
     interval = 5000,
     keyboard = true,
     pause = 'hover',
     wrap = true,
+    touch = true,
     fade = false,
     indicators = true,
     controls = true,
@@ -284,9 +308,31 @@ export const Carousel = forwardRef<HTMLDivElement, CarouselProps>(function Carou
   const [slide, setSlide] = useState<{ to: number; order: 'next' | 'prev' } | null>(null)
   const [moving, setMoving] = useState(false)
   const [paused, setPaused] = useState(false)
+  const [docHidden, setDocHidden] = useState(false)
 
   const pendingOrder = useRef<'next' | 'prev' | null>(null)
   const innerRef = useRef<HTMLDivElement | null>(null)
+  const touchStartX = useRef<number | null>(null)
+
+  // Latest event callbacks (read imperatively so the animation effect — whose
+  // deps are only [slide] — always calls the current handlers).
+  const onSlideRef = useRef(onSlide)
+  onSlideRef.current = onSlide
+  const onSlidRef = useRef(onSlid)
+  onSlidRef.current = onSlid
+  const onSelectRef = useRef(onSelect)
+  onSelectRef.current = onSelect
+
+  // Pause autoplay while the tab is hidden (Bootstrap's `nextWhenVisible` guards
+  // the interval tick on `!document.hidden`; we gate the same way + re-arm on
+  // `visibilitychange`).
+  useEffect(() => {
+    if (typeof document === 'undefined') return
+    const onVis = () => setDocHidden(document.hidden)
+    setDocHidden(document.hidden)
+    document.addEventListener('visibilitychange', onVis)
+    return () => document.removeEventListener('visibilitychange', onVis)
+  }, [])
 
   // Begin a slide when the desired index diverges from the settled one.
   useEffect(() => {
@@ -301,6 +347,9 @@ export const Carousel = forwardRef<HTMLDivElement, CarouselProps>(function Carou
   // SLIDE_MS timer finalizes (mirrors bootstrap's transitionend + fallback).
   useEffect(() => {
     if (!slide) return
+    const from = settled
+    // Fire `slide` (transition begins) — Bootstrap's `slide.bs.carousel`.
+    onSlideRef.current?.({ from, to: slide.to, direction: slide.order })
     const el = innerRef.current
     if (el) void el.offsetHeight // reflow the phase-0 position
     let raf2 = 0
@@ -309,7 +358,9 @@ export const Carousel = forwardRef<HTMLDivElement, CarouselProps>(function Carou
     })
     const timer = setTimeout(() => {
       setSettled(slide.to)
-      onSelect?.(slide.to, slide.order)
+      onSelectRef.current?.(slide.to, slide.order)
+      // Fire `slid` (transition settles) — Bootstrap's `slid.bs.carousel`.
+      onSlidRef.current?.({ from, to: slide.to, direction: slide.order })
       setSlide(null)
       setMoving(false)
     }, SLIDE_MS)
@@ -353,14 +404,14 @@ export const Carousel = forwardRef<HTMLDivElement, CarouselProps>(function Carou
   stepRef.current = step
   useEffect(() => {
     const active = ride === true || ride === 'carousel'
-    if (!active || !interval || interval <= 0 || paused || total < 2) return
+    if (!active || !interval || interval <= 0 || paused || docHidden || total < 2) return
     // Per-slide interval override.
     const perSlide = slides[settled]?.props.interval
     const ms = typeof perSlide === 'number' ? perSlide : interval
     const id = setTimeout(() => stepRef.current(1), ms)
     return () => clearTimeout(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ride, interval, paused, settled, total])
+  }, [ride, interval, paused, docHidden, settled, total])
 
   // Emits only the state/transition modifier classes; CarouselItem supplies the
   // `carousel-item` base itself (so it isn't duplicated).
@@ -376,6 +427,28 @@ export const Carousel = forwardRef<HTMLDivElement, CarouselProps>(function Carou
     if (i === settled) return `active carousel-item-${dir}`
     if (i === to) return `carousel-item-${order} carousel-item-${dir}`
     return ''
+  }
+
+  // Touch/swipe via pointer events (Bootstrap enables the Swipe helper only for
+  // `pointerType` touch/pen). A drag past SWIPE_THRESHOLD advances: swipe left →
+  // next, swipe right → prev. Autoplay pauses for the gesture, mirroring
+  // Bootstrap's pause-on-touchstart / re-cycle-on-touchend.
+  const isTouchPointer = (e: React.PointerEvent) =>
+    e.pointerType === 'touch' || e.pointerType === 'pen'
+  const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!touch || !isTouchPointer(e)) return
+    touchStartX.current = e.clientX
+    if (pause === 'hover') setPaused(true)
+  }
+  const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!touch || touchStartX.current == null || !isTouchPointer(e)) return
+    const delta = e.clientX - touchStartX.current
+    touchStartX.current = null
+    if (Math.abs(delta) > SWIPE_THRESHOLD) {
+      if (delta < 0) step(1)
+      else step(-1)
+    }
+    if (pause === 'hover') setPaused(false)
   }
 
   const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
@@ -418,7 +491,13 @@ export const Carousel = forwardRef<HTMLDivElement, CarouselProps>(function Carou
         </div>
       )}
 
-      <div className="carousel-inner" ref={innerRef}>
+      <div
+        className="carousel-inner"
+        ref={innerRef}
+        onPointerDown={touch ? onPointerDown : undefined}
+        onPointerUp={touch ? onPointerUp : undefined}
+        style={touch ? { touchAction: 'pan-y' } : undefined}
+      >
         {slides.map((child, i) =>
           React.cloneElement(child, {
             className: [itemClass(i), child.props.className].filter(Boolean).join(' '),

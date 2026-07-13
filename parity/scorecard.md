@@ -1,6 +1,6 @@
 # bootstrap-styled — parity baseline scorecard (P0 proof set)
 
-> Generated 2026-07-13T05:59:48.323Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
+> Generated 2026-07-13T06:42:49.721Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
 
 Visual-diff % = fraction of pixels differing between the native Bootstrap cell and the equivalent bootstrap-styled cell (each padded to a common white canvas so size deltas count). Lower is better. 🟢 ≤0.5% · 🟡 ≤3% · 🔴 >3%. Axe = WCAG 2.0/2.1 A/AA violations on that cell subtree.
 
@@ -26,7 +26,7 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | Placeholder | 3 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Toast | 2 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Collapse | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
-| Scrollspy | 2 | 🟡 0.65 | 🟡 1.3 | 0 | 0 |
+| Scrollspy | 2 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Carousel | 2 | 🟢 0 | 🟢 0 | 1 | 1 |
 | Grid | 6 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Ratio | 2 | 🟢 0 | 🟢 0 | 0 | 0 |
@@ -34,6 +34,11 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | Table | 8 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Image | 2 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Figure | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Modal | 1 | 🟢 0.089 | 🟢 0.089 | 0 | 0 |
+| Offcanvas | 1 | 🟢 0.088 | 🟢 0.088 | 0 | 0 |
+| Dropdown | 1 | 🟢 0.424 | 🟢 0.424 | 0 | 0 |
+| Tooltip | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| Popover | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 
 ## Per-cell detail
 
@@ -194,7 +199,7 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | toast--container | Toast | container top-end | 🟢 0 | 0 | 0 | container placed absolutely inside a relative box (viewport-fixed placement escapes the per-cell capture); styled position="top-end" overridden to absolute to match .position-absolute utilities. |
 | collapse--show | Collapse | expanded (show) | 🟢 0 | 0 | 0 |  |
 | scrollspy--nav | Scrollspy | nav (activeId) | 🟢 0 | 0 | 0 |  |
-| scrollspy--list-group | Scrollspy | list-group (activeId) | 🟡 1.3 | 0 | 0 | Bootstrap scrollspy list-group uses .list-group-item-action (gray link color); ScrollspyNav renders plain body-color list items — a real minor color gap. |
+| scrollspy--list-group | Scrollspy | list-group (activeId) | 🟢 0 | 0 | 0 | Bootstrap scrollspy list-group uses .list-group-item-action (gray link color); ScrollspyNav renders plain body-color list items — a real minor color gap. |
 | carousel--slide | Carousel | slide 1 (indicators+controls+caption) | 🟢 0 | 0 | 0 | control icons are the verbatim 5.3.8 SVG data-URIs; caption h5/p use default browser margins (styled side has no Reboot reset). |
 | carousel--dark | Carousel | dark variant | 🟢 0 | 1 (color-contrast(2)) | 1 (color-contrast(2)) |  |
 | grid--cols | Grid | row cols (equal + col-6) | 🟢 0 | 0 | 0 |  |
@@ -222,6 +227,11 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | image--thumbnail | Image | thumbnail | 🟢 0 | 0 | 0 |  |
 | image--rounded | Image | rounded | 🟢 0 | 0 | 0 |  |
 | figure--basic | Figure | figure + img + caption | 🟢 0 | 0 | 0 |  |
+| modal--basic | Modal | shown (header/body/footer + backdrop) | 🟢 0.089 | 0 | 0 | native = static .modal.show + .modal-backdrop.show; clip captures dialog box + shadow over the 50% backdrop. |
+| offcanvas--start | Offcanvas | shown from start (+ backdrop) | 🟢 0.088 | 0 | 0 | native = static .offcanvas.offcanvas-start.show + backdrop; panel spans the left edge, clip clamped to viewport. |
+| dropdown--open | Dropdown | menu open (items + divider) | 🟢 0.424 | 0 | 0 | native = static .dropdown-menu.show; default dropdown menu carries no box-shadow. |
+| tooltip--top | Tooltip | shown top (arrow) | 🟢 0 | 0 | 0 | native = static .tooltip.show.bs-tooltip-top; .tooltip carries opacity 0.9 incl. arrow. |
+| popover--top | Popover | shown top (title + body + arrow) | 🟢 0 | 0 | 0 | native = static .popover.bs-popover-top; two-layer arrow (::before border + ::after fill). |
 
 ## Behavior checklist (P0 scaffold — filled in P2/P3)
 
@@ -255,3 +265,8 @@ The proof set is deterministic-visual; the behavior oracle (`bootstrap.bundle.mi
 | Table | — | — | — | — | scaffold (visual+axe only in P0) |
 | Image | — | — | — | — | scaffold (visual+axe only in P0) |
 | Figure | — | — | — | — | scaffold (visual+axe only in P0) |
+| Modal | — | — | — | — | scaffold (visual+axe only in P0) |
+| Offcanvas | — | — | — | — | scaffold (visual+axe only in P0) |
+| Dropdown | — | — | — | — | scaffold (visual+axe only in P0) |
+| Tooltip | — | — | — | — | scaffold (visual+axe only in P0) |
+| Popover | — | — | — | — | scaffold (visual+axe only in P0) |

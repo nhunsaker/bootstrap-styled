@@ -134,6 +134,133 @@ async function captureSide(browser, side) {
   return result
 }
 
+// Uniform margin (CSS px) added around a floating element's box so its shadow +
+// arrow + surrounding backdrop fall inside the clipped frame.
+const OVERLAY_MARGIN = 24
+
+/**
+ * Isolated overlay capture. Each overlay cell renders ALONE on `?overlay=id`, so
+ * its portal/backdrop can't touch the grid cells. We clip a tight region around
+ * the floating element (`shot`) with OVERLAY_MARGIN on every side, element-
+ * relative, so the two sides align even if absolute placement differs.
+ * Returns rows shaped like the grid rows.
+ */
+async function captureOverlays(browser) {
+  // Read the overlay manifest from the page (avoids importing TSX here).
+  const manifest = await (async () => {
+    const ctx = await browser.newContext({ viewport: VIEWPORT })
+    const page = await ctx.newPage()
+    await page.goto(`${BASE}/?side=styled`, { waitUntil: 'networkidle' })
+    await page.waitForFunction(() => window.__PARITY_READY__ === true, { timeout: 15000 })
+    const list = await page.evaluate(() => window.__OVERLAY_CELLS__ || [])
+    await ctx.close()
+    return list
+  })()
+
+  log(`overlay cells: ${manifest.length}`)
+
+  /** Render one overlay cell on one side; clip + axe the floating element. */
+  async function shotSide(cell, sideName) {
+    const ctx = await browser.newContext({
+      viewport: VIEWPORT,
+      deviceScaleFactor: DPR,
+      reducedMotion: 'reduce',
+      colorScheme: 'light',
+    })
+    const page = await ctx.newPage()
+    await page.goto(`${BASE}/?overlay=${encodeURIComponent(cell.id)}&side=${sideName}`, {
+      waitUntil: 'networkidle',
+    })
+    await page.waitForFunction(() => window.__PARITY_READY__ === true, { timeout: 15000 })
+    await page.addStyleTag({ content: FREEZE_CSS })
+    await page.waitForTimeout(300)
+    // Neutralize the focus ring: FloatingFocusManager auto-focuses the first
+    // focusable on the styled side (correct behavior — asserted in Part 3), but
+    // the inert native static markup focuses nothing. Blur so the STATIC pixel
+    // diff measures the box, not the focus state.
+    await page.evaluate(() => {
+      const a = document.activeElement
+      if (a && a !== document.body && typeof a.blur === 'function') a.blur()
+    })
+    await page.waitForTimeout(50)
+    await page.addScriptTag({ path: join(repoRoot, 'node_modules', 'axe-core', 'axe.min.js') })
+
+    const el = await page.$(cell.shot)
+    if (!el) {
+      await ctx.close()
+      return { error: `shot selector not found: ${cell.shot}` }
+    }
+    const box = await el.boundingBox()
+    const x = Math.max(0, Math.floor(box.x - OVERLAY_MARGIN))
+    const y = Math.max(0, Math.floor(box.y - OVERLAY_MARGIN))
+    const clip = {
+      x,
+      y,
+      width: Math.min(VIEWPORT.width - x, Math.ceil(box.width + 2 * OVERLAY_MARGIN)),
+      height: Math.min(VIEWPORT.height - y, Math.ceil(box.height + 2 * OVERLAY_MARGIN)),
+    }
+    const buffer = await page.screenshot({ clip })
+    const axe = await page.evaluate(async (sel) => {
+      const node = document.querySelector(sel)
+      try {
+        const r = await window.axe.run(node, {
+          resultTypes: ['violations'],
+          runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'] },
+        })
+        return { violations: r.violations.length, rules: r.violations.map((v) => `${v.id}(${v.nodes.length})`) }
+      } catch (e) {
+        return { violations: -1, rules: [`axe-error: ${String(e)}`] }
+      }
+    }, cell.shot)
+    await ctx.close()
+    return { buffer, axe }
+  }
+
+  const rows = []
+  for (const cell of manifest) {
+    const n = await shotSide(cell, 'native')
+    const s = await shotSide(cell, 'styled')
+    if (n.error || s.error) {
+      rows.push({ id: cell.id, error: n.error || s.error })
+      continue
+    }
+    const nPng = PNG.sync.read(n.buffer)
+    const sPng = PNG.sync.read(s.buffer)
+    const w = Math.max(nPng.width, sPng.width)
+    const h = Math.max(nPng.height, sPng.height)
+    const nPad = padToWhite(nPng, w, h)
+    const sPad = padToWhite(sPng, w, h)
+    const diff = new PNG({ width: w, height: h })
+    const diffPixels = pixelmatch(nPad.data, sPad.data, diff.data, w, h, {
+      threshold: 0.1,
+      includeAA: false,
+    })
+    const totalPixels = w * h
+    const diffPct = (diffPixels / totalPixels) * 100
+    writeFileSync(join(resultsDir, `${cell.id}.diff.png`), PNG.sync.write(diff))
+    writeFileSync(join(resultsDir, `${cell.id}.native.png`), n.buffer)
+    writeFileSync(join(resultsDir, `${cell.id}.styled.png`), s.buffer)
+    rows.push({
+      id: cell.id,
+      component: cell.component,
+      label: cell.label,
+      note: cell.note || '',
+      sizeNative: { w: nPng.width, h: nPng.height },
+      sizeStyled: { w: sPng.width, h: sPng.height },
+      canvas: { w, h },
+      diffPixels,
+      totalPixels,
+      diffPct: Number(diffPct.toFixed(3)),
+      axeNativeViolations: n.axe.violations,
+      axeStyledViolations: s.axe.violations,
+      axeNativeRules: n.axe.rules,
+      axeStyledRules: s.axe.rules,
+    })
+    log(`  overlay ${cell.id.padEnd(20)} diff=${String(diffPct.toFixed(3)).padStart(7)}%  axe(styled)=${s.axe.violations}`)
+  }
+  return rows
+}
+
 async function main() {
   if (!existsSync(resultsDir)) mkdirSync(resultsDir, { recursive: true })
 
@@ -199,6 +326,11 @@ async function main() {
         axeStyledRules: s.axe.rules,
       })
     }
+
+    // Isolated overlay pass (Modal · Offcanvas · Dropdown · Tooltip · Popover).
+    log('capturing overlays (isolated shown-state)…')
+    const overlayRows = await captureOverlays(browser)
+    for (const r of overlayRows) rows.push(r)
 
     // Per-component rollup.
     const byComp = new Map()

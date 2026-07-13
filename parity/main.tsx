@@ -1,21 +1,29 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BootstrapStyledProvider } from '../src'
-import { cells, type Cell } from './fixtures'
+import { cells, overlayCells, type Cell, type OverlayCell } from './fixtures'
 
 /**
  * The parity render rig. Both sides render the SAME fixture set into identical
  * `[data-cell-id]` wrappers so the Playwright runner can screenshot the matching
  * element on each side and pixel-diff them.
  *
- *   ?side=native  → raw Bootstrap markup + vendored oracle CSS/JS
+ *   ?side=native  → raw Bootstrap markup + vendored oracle CSS
  *   ?side=styled  → the equivalent bootstrap-styled React components
+ *
+ * Overlay mode (Q2 extension):
+ *   ?overlay=<id>&side=<side> → render ONLY that one overlay cell (Modal ·
+ *   Offcanvas · Dropdown · Tooltip · Popover), ISOLATED, so its FloatingPortal /
+ *   fixed backdrop can't corrupt the 183 grid cells. The runner clips a tight
+ *   region around the floating element (`shot` selector) on each side.
  *
  * The shared cell CSS below is applied on BOTH sides so only the component
  * itself differs.
  */
 
-const side = new URLSearchParams(location.search).get('side') === 'native' ? 'native' : 'styled'
+const params = new URLSearchParams(location.search)
+const side = params.get('side') === 'native' ? 'native' : 'styled'
+const overlayId = params.get('overlay')
 document.documentElement.dataset.side = side
 
 // Shared, bootstrap-agnostic cell chrome (present identically on both sides).
@@ -43,11 +51,27 @@ if (side === 'native') {
   link.rel = 'stylesheet'
   link.href = './oracle/bootstrap.min.css'
   document.head.appendChild(link)
-  // Vendored oracle behavior bundle (proves it loads; used by P2/P3 behavior).
-  const js = document.createElement('script')
-  js.src = './oracle/bootstrap.bundle.min.js'
-  document.body.appendChild(js)
+  // Vendored oracle behavior bundle (proves it loads). NOT loaded on the
+  // isolated overlay pages: the shown-state markup there is hand-written + pure
+  // CSS, and bundle.js would auto-instantiate the shown offcanvas/modal and
+  // inject a SECOND backdrop (doubling the 0.5 → 0.75 tint) — corrupting the
+  // static backdrop diff. Behavioral parity uses the bundle in the vitest suite.
+  if (!overlayId) {
+    const js = document.createElement('script')
+    js.src = './oracle/bootstrap.bundle.min.js'
+    document.body.appendChild(js)
+  }
 }
+
+// Expose the overlay cell manifest (id/component/label/note/shot) so the runner
+// can iterate without importing TSX.
+;(window as any).__OVERLAY_CELLS__ = overlayCells.map((c) => ({
+  id: c.id,
+  component: c.component,
+  label: c.label,
+  note: c.note || '',
+  shot: c.shot,
+}))
 
 function NativeCell({ cell }: { cell: Cell }) {
   return (
@@ -77,7 +101,26 @@ function StyledCell({ cell }: { cell: Cell }) {
   )
 }
 
+// ---- Isolated overlay render (one cell, full page) ------------------------
+function OverlayNative({ cell }: { cell: OverlayCell }) {
+  return <div dangerouslySetInnerHTML={{ __html: cell.native }} />
+}
+function OverlayStyled({ cell }: { cell: OverlayCell }) {
+  return <>{cell.styled}</>
+}
+
 function App() {
+  if (overlayId) {
+    const cell = overlayCells.find((c) => c.id === overlayId)
+    if (!cell) return <div>unknown overlay: {overlayId}</div>
+    if (side === 'native') return <OverlayNative cell={cell} />
+    return (
+      <BootstrapStyledProvider>
+        <OverlayStyled cell={cell} />
+      </BootstrapStyledProvider>
+    )
+  }
+
   const grid = (
     <div className="parity-grid">
       {cells.map((cell) =>
@@ -102,4 +145,4 @@ function App() {
 const rootEl = document.getElementById('root')!
 createRoot(rootEl).render(<App />)
 // Set a ready flag after paint so the runner can wait on it deterministically.
-requestAnimationFrame(() => requestAnimationFrame(() => (window as any).__PARITY_READY__ = true))
+requestAnimationFrame(() => requestAnimationFrame(() => ((window as any).__PARITY_READY__ = true)))

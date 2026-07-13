@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T05:59:48.323Z",
+  "generatedAt": "2026-07-13T06:42:49.721Z",
   "bootstrapVersion": "5.3.8",
   "viewport": {
     "width": 1280,
@@ -11,7 +11,7 @@
     "includeAA": false,
     "note": "padded-to-common-canvas white bg"
   },
-  "cellCount": 183,
+  "cellCount": 188,
   "components": [
     {
       "component": "Button",
@@ -178,8 +178,8 @@
     {
       "component": "Scrollspy",
       "cellCount": 2,
-      "avgDiffPct": 0.65,
-      "maxDiffPct": 1.3,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
       "minDiffPct": 0,
       "axeStyledViolations": 0,
       "axeNativeViolations": 0
@@ -240,6 +240,51 @@
     },
     {
       "component": "Figure",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Modal",
+      "cellCount": 1,
+      "avgDiffPct": 0.089,
+      "maxDiffPct": 0.089,
+      "minDiffPct": 0.089,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Offcanvas",
+      "cellCount": 1,
+      "avgDiffPct": 0.088,
+      "maxDiffPct": 0.088,
+      "minDiffPct": 0.088,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Dropdown",
+      "cellCount": 1,
+      "avgDiffPct": 0.424,
+      "maxDiffPct": 0.424,
+      "minDiffPct": 0.424,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Tooltip",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Popover",
       "cellCount": 1,
       "avgDiffPct": 0,
       "maxDiffPct": 0,
@@ -4193,9 +4238,9 @@
         "w": 244,
         "h": 314
       },
-      "diffPixels": 996,
+      "diffPixels": 0,
       "totalPixels": 76616,
-      "diffPct": 1.3,
+      "diffPct": 0,
       "axeNativeViolations": 0,
       "axeStyledViolations": 0,
       "axeNativeRules": [],
@@ -4874,6 +4919,131 @@
       },
       "diffPixels": 0,
       "totalPixels": 163760,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "modal--basic",
+      "component": "Modal",
+      "label": "shown (header/body/footer + backdrop)",
+      "note": "native = static .modal.show + .modal-backdrop.show; clip captures dialog box + shadow over the 50% backdrop.",
+      "sizeNative": {
+        "w": 1096,
+        "h": 512
+      },
+      "sizeStyled": {
+        "w": 1096,
+        "h": 512
+      },
+      "canvas": {
+        "w": 1096,
+        "h": 512
+      },
+      "diffPixels": 498,
+      "totalPixels": 561152,
+      "diffPct": 0.089,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "offcanvas--start",
+      "component": "Offcanvas",
+      "label": "shown from start (+ backdrop)",
+      "note": "native = static .offcanvas.offcanvas-start.show + backdrop; panel spans the left edge, clip clamped to viewport.",
+      "sizeNative": {
+        "w": 896,
+        "h": 3600
+      },
+      "sizeStyled": {
+        "w": 896,
+        "h": 3600
+      },
+      "canvas": {
+        "w": 896,
+        "h": 3600
+      },
+      "diffPixels": 2833,
+      "totalPixels": 3225600,
+      "diffPct": 0.088,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "dropdown--open",
+      "component": "Dropdown",
+      "label": "menu open (items + divider)",
+      "note": "native = static .dropdown-menu.show; default dropdown menu carries no box-shadow.",
+      "sizeNative": {
+        "w": 416,
+        "h": 358
+      },
+      "sizeStyled": {
+        "w": 416,
+        "h": 358
+      },
+      "canvas": {
+        "w": 416,
+        "h": 358
+      },
+      "diffPixels": 632,
+      "totalPixels": 148928,
+      "diffPct": 0.424,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "tooltip--top",
+      "component": "Tooltip",
+      "label": "shown top (arrow)",
+      "note": "native = static .tooltip.show.bs-tooltip-top; .tooltip carries opacity 0.9 incl. arrow.",
+      "sizeNative": {
+        "w": 272,
+        "h": 154
+      },
+      "sizeStyled": {
+        "w": 272,
+        "h": 154
+      },
+      "canvas": {
+        "w": 272,
+        "h": 154
+      },
+      "diffPixels": 0,
+      "totalPixels": 41888,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "popover--top",
+      "component": "Popover",
+      "label": "shown top (title + body + arrow)",
+      "note": "native = static .popover.bs-popover-top; two-layer arrow (::before border + ::after fill).",
+      "sizeNative": {
+        "w": 648,
+        "h": 330
+      },
+      "sizeStyled": {
+        "w": 648,
+        "h": 330
+      },
+      "canvas": {
+        "w": 648,
+        "h": 330
+      },
+      "diffPixels": 0,
+      "totalPixels": 213840,
       "diffPct": 0,
       "axeNativeViolations": 0,
       "axeStyledViolations": 0,

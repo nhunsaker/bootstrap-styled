@@ -5,6 +5,17 @@ import { defaultTheme } from './defaultTheme'
 import { GlobalStyles } from './GlobalStyles'
 import { ThemeVars } from './tokens'
 
+export type ColorMode = 'light' | 'dark'
+
+/**
+ * The active color mode, so portaled overlays (Modal/Offcanvas/Dropdown/Tooltip/
+ * Popover) — which escape the Provider's `data-bs-theme` wrapper via
+ * FloatingPortal — can re-establish the same Reboot + token scope on their own
+ * portal root. Defaults to 'light'.
+ */
+export const ColorModeContext = React.createContext<ColorMode>('light')
+export const useColorMode = (): ColorMode => React.useContext(ColorModeContext)
+
 export interface BootstrapStyledProviderProps {
   theme?: Theme
   /** 'light' | 'dark' — applied via data-bs-theme on the wrapper. */
@@ -34,15 +45,17 @@ export function BootstrapStyledProvider({
 }: BootstrapStyledProviderProps) {
   return (
     <ThemeProvider theme={theme}>
-      {!noGlobalStyles && (
-        <>
-          <GlobalStyles />
-          <ThemeVars />
-        </>
-      )}
-      <div data-bs-theme={colorMode} style={rootStyle}>
-        {children}
-      </div>
+      <ColorModeContext.Provider value={colorMode}>
+        {!noGlobalStyles && (
+          <>
+            <GlobalStyles />
+            <ThemeVars />
+          </>
+        )}
+        <div data-bs-theme={colorMode} style={rootStyle}>
+          {children}
+        </div>
+      </ColorModeContext.Provider>
     </ThemeProvider>
   )
 }

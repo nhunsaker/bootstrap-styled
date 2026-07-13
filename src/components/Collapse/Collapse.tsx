@@ -1,4 +1,4 @@
-import React, { forwardRef, useCallback, useEffect, useRef } from 'react'
+import React, { forwardRef, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import styled from 'styled-components'
 
 export interface CollapseProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -117,3 +117,76 @@ export const Collapse = forwardRef<HTMLDivElement, CollapseProps>(function Colla
     </CollapseRoot>
   )
 })
+
+// ---------------------------------------------------------------------------
+// useCollapse — optional toggler-aria wiring helper.
+//
+// Bootstrap wires a `[data-bs-toggle="collapse"]` trigger to a collapse region
+// by keeping `aria-expanded` on the trigger in sync with the region's shown
+// state and pointing `aria-controls` at the region's id (see the oracle's
+// Collapse plugin, `Bt='[data-bs-toggle="collapse"]'`). This hook does that
+// coordination for a *provided* trigger without coupling Collapse to any
+// particular consumer (Accordion, Navbar, a bare button, …): spread
+// `toggleProps` onto the trigger and `collapseProps` onto <Collapse>. It stays
+// a standalone primitive — nothing here imports Accordion/Navbar.
+// ---------------------------------------------------------------------------
+
+export interface UseCollapseOptions {
+  /** Uncontrolled initial open state. Default false. */
+  defaultOpen?: boolean
+  /** Controlled open state. When provided, the hook does not own the state. */
+  open?: boolean
+  /** id linking the trigger (`aria-controls`) to the collapse region. Auto-generated if omitted. */
+  id?: string
+  /** Called whenever the open state changes (fires in controlled + uncontrolled modes). */
+  onToggle?: (open: boolean) => void
+}
+
+export interface UseCollapseReturn {
+  /** Current open state. */
+  open: boolean
+  /** Imperatively set the open state. */
+  setOpen: (open: boolean) => void
+  /** Flip the open state. */
+  toggle: () => void
+  /** Spread onto the trigger (button/link): wires `aria-expanded`/`aria-controls`/`onClick`. */
+  toggleProps: {
+    'aria-expanded': boolean
+    'aria-controls': string
+    onClick: () => void
+  }
+  /** Spread onto `<Collapse>`: supplies the matching `id` + `show`. */
+  collapseProps: { id: string; show: boolean }
+}
+
+export function useCollapse(options: UseCollapseOptions = {}): UseCollapseReturn {
+  const generatedId = React.useId()
+  const id = options.id ?? generatedId
+  const isControlled = options.open != null
+  const [internal, setInternal] = useState(options.defaultOpen ?? false)
+  const open = isControlled ? (options.open as boolean) : internal
+
+  // Keep the latest onToggle without churning the memoized callbacks.
+  const onToggleRef = useRef(options.onToggle)
+  onToggleRef.current = options.onToggle
+
+  const setOpen = useCallback(
+    (next: boolean) => {
+      if (!isControlled) setInternal(next)
+      onToggleRef.current?.(next)
+    },
+    [isControlled],
+  )
+  const toggle = useCallback(() => setOpen(!open), [setOpen, open])
+
+  return useMemo(
+    () => ({
+      open,
+      setOpen,
+      toggle,
+      toggleProps: { 'aria-expanded': open, 'aria-controls': id, onClick: toggle },
+      collapseProps: { id, show: open },
+    }),
+    [open, setOpen, toggle, id],
+  )
+}

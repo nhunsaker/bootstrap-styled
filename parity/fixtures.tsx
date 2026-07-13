@@ -59,6 +59,22 @@ import {
   Figure,
   FigureImage,
   FigureCaption,
+  Modal,
+  ModalHeader,
+  ModalTitle,
+  ModalBody,
+  ModalFooter,
+  Offcanvas,
+  OffcanvasHeader,
+  OffcanvasTitle,
+  OffcanvasBody,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  DropdownDivider,
+  Tooltip,
+  Popover,
   type ColorName,
 } from '../src'
 
@@ -1052,18 +1068,190 @@ const carouselCells: Cell[] = [
   },
 ]
 
-// ---------------------------------------------------------------------------
-// NOT captured here (by design — behavioral/portal, deferred to P3):
-//   Modal · Offcanvas · Dropdown · Tooltip · Popover
-// Dropdown/Tooltip/Popover expose no open/defaultOpen prop (internal
-// useState(false) opened only by click/hover) → cannot be forced static
-// without a src change (out of scope). Modal/Offcanvas take `show` but render
-// through a FloatingPortal + a viewport-fixed backdrop that (a) escapes the
-// per-cell [data-cell-id] box and (b) would overlay/corrupt every other styled
-// cell's screenshot. Their inner chrome (Dialog/Menu/Bubble/Card borders) is
-// not exported, so it can't be reconstructed statically either. Forcing them in
-// would break the run for no honest measurement — see scorecard/report.
-// ---------------------------------------------------------------------------
+// ===========================================================================
+// OVERLAY CELLS (shown-state, ISOLATED capture) — Q2 harness extension.
+//
+// The 5 overlays portal (FloatingPortal) to <body> and lay out fixed/absolute,
+// so they escape the per-cell [data-cell-id] box the grid runner screenshots.
+// Instead each overlay cell is rendered ALONE on its own route
+// (`?overlay=<id>&side=<side>`, see main.tsx) and the runner clips a tight
+// region around the floating element itself (`shot` selector) with a uniform
+// margin, so shadow + arrow + backdrop fall inside the frame. Both sides are
+// clipped element-relative, so absolute placement need not match between sides
+// (placement parity is asserted separately in the behavioral tests). These
+// cells are NOT part of `cells` — the 183 grid cells render/measure unchanged.
+//
+// `shot` is a role-based selector present on BOTH sides (native markup carries
+// the matching role; styled gets it from @floating-ui useRole).
+// ===========================================================================
+export interface OverlayCell {
+  id: string
+  component: string
+  label: string
+  note?: string
+  /** Selector for the floating element to clip + axe (works on both sides). */
+  shot: string
+  /** Raw Bootstrap markup (oracle side), positioned statically. */
+  native: string
+  /** Equivalent bootstrap-styled node, forced shown. */
+  styled: React.ReactNode
+}
+
+// Fixed wrapper that keeps referenceless native floating markup on-screen and
+// clear of the viewport edges (arrow/shadow have room on every side).
+const floatWrap = (inner: string) =>
+  `<div style="position:fixed;top:420px;left:460px">${inner}</div>`
+
+const noop = () => {}
+
+const overlayCells: OverlayCell[] = [
+  // ---- Modal (header/body/footer + backdrop) --------------------------------
+  {
+    id: 'modal--basic',
+    component: 'Modal',
+    label: 'shown (header/body/footer + backdrop)',
+    note: 'native = static .modal.show + .modal-backdrop.show; clip captures dialog box + shadow over the 50% backdrop.',
+    shot: '[role="dialog"][aria-modal="true"]',
+    native: `<div class="modal-backdrop show"></div>
+      <div class="modal show" style="display:block">
+        <div class="modal-dialog">
+          <div class="modal-content" role="dialog" aria-modal="true" aria-label="Modal">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"><p>Modal body content goes here.</p></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>`,
+    styled: (
+      <Modal show onHide={noop}>
+        <ModalHeader>
+          <ModalTitle>Modal title</ModalTitle>
+          <CloseButton aria-label="Close" />
+        </ModalHeader>
+        <ModalBody>
+          <p>Modal body content goes here.</p>
+        </ModalBody>
+        <ModalFooter>
+          <Button variant="secondary">Close</Button>
+          <Button variant="primary">Save changes</Button>
+        </ModalFooter>
+      </Modal>
+    ),
+  },
+  // ---- Offcanvas (start, shown) --------------------------------------------
+  {
+    id: 'offcanvas--start',
+    component: 'Offcanvas',
+    label: 'shown from start (+ backdrop)',
+    note: 'native = static .offcanvas.offcanvas-start.show + backdrop; panel spans the left edge, clip clamped to viewport.',
+    shot: '[role="dialog"][aria-modal="true"]',
+    native: `<div class="offcanvas-backdrop show"></div>
+      <div class="offcanvas offcanvas-start show" style="visibility:visible;transform:none" role="dialog" aria-modal="true" aria-label="Offcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Offcanvas</h5>
+          <button type="button" class="btn-close" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body"><p>Offcanvas body content.</p></div>
+      </div>`,
+    styled: (
+      <Offcanvas show onHide={noop} placement="start">
+        <OffcanvasHeader>
+          <OffcanvasTitle>Offcanvas</OffcanvasTitle>
+          <CloseButton aria-label="Close" />
+        </OffcanvasHeader>
+        <OffcanvasBody>
+          <p>Offcanvas body content.</p>
+        </OffcanvasBody>
+      </Offcanvas>
+    ),
+  },
+  // ---- Dropdown (menu open) -------------------------------------------------
+  {
+    id: 'dropdown--open',
+    component: 'Dropdown',
+    label: 'menu open (items + divider)',
+    note: 'native = static .dropdown-menu.show; default dropdown menu carries no box-shadow.',
+    shot: '[role="menu"]',
+    native: floatWrap(`<div class="dropdown">
+        <div class="dropdown-menu show" role="menu" style="position:static;display:block">
+          <button class="dropdown-item" type="button" role="menuitem">Action</button>
+          <button class="dropdown-item" type="button" role="menuitem">Another action</button>
+          <hr class="dropdown-divider">
+          <button class="dropdown-item" type="button" role="menuitem">Separated link</button>
+        </div>
+      </div>`),
+    styled: (
+      <div style={{ position: 'fixed', top: 420, left: 460 }}>
+        <Dropdown defaultOpen>
+          {/* Trigger hidden: it only anchors placement; native renders no trigger. */}
+          <DropdownToggle style={{ visibility: 'hidden' }}>Menu</DropdownToggle>
+          <DropdownMenu>
+            <DropdownItem>Action</DropdownItem>
+            <DropdownItem>Another action</DropdownItem>
+            <DropdownDivider />
+            <DropdownItem>Separated link</DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+      </div>
+    ),
+  },
+  // ---- Tooltip (shown, top) -------------------------------------------------
+  {
+    id: 'tooltip--top',
+    component: 'Tooltip',
+    label: 'shown top (arrow)',
+    note: 'native = static .tooltip.show.bs-tooltip-top; .tooltip carries opacity 0.9 incl. arrow.',
+    shot: '[role="tooltip"]',
+    native: floatWrap(`<div class="tooltip show bs-tooltip-top" role="tooltip" style="position:relative;display:inline-block">
+        <div class="tooltip-arrow" style="position:absolute;left:calc(50% - 0.4rem)"></div>
+        <div class="tooltip-inner">Tooltip text</div>
+      </div>`),
+    styled: (
+      <div style={{ position: 'fixed', top: 420, left: 460 }}>
+        <Tooltip content="Tooltip text" placement="top" defaultOpen>
+          <button type="button" className="btn btn-secondary" style={{ visibility: 'hidden' }}>
+            Trigger
+          </button>
+        </Tooltip>
+      </div>
+    ),
+  },
+  // ---- Popover (shown, top, title + body) -----------------------------------
+  {
+    id: 'popover--top',
+    component: 'Popover',
+    label: 'shown top (title + body + arrow)',
+    note: 'native = static .popover.bs-popover-top; two-layer arrow (::before border + ::after fill).',
+    shot: '[role="dialog"]',
+    native: floatWrap(`<div class="popover bs-popover-top" role="dialog" style="position:relative;display:inline-block">
+        <div class="popover-arrow" style="position:absolute;bottom:calc(-0.5rem - 1px);left:calc(50% - 0.5rem)"></div>
+        <div class="popover-header">Popover title</div>
+        <div class="popover-body">And here's some amazing content. It's very engaging. Right?</div>
+      </div>`),
+    styled: (
+      <div style={{ position: 'fixed', top: 420, left: 460 }}>
+        <Popover
+          title="Popover title"
+          content="And here's some amazing content. It's very engaging. Right?"
+          placement="top"
+          defaultOpen
+        >
+          <button type="button" className="btn btn-secondary" style={{ visibility: 'hidden' }}>
+            Trigger
+          </button>
+        </Popover>
+      </div>
+    ),
+  },
+]
+
+export { overlayCells }
 
 // ---------------------------------------------------------------------------
 // Grid — cols (equal+span) · offset · order · row-cols-3 · gutter · container
