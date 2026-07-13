@@ -21,10 +21,10 @@ import { Box, Display, Lead, Button, BsIconChevronRight } from '../../index'
 export function Jumbotron() {
   return (
     <Box p={5} mb={4} bg="body-tertiary" rounded={3}>
-      <Display size={4}>Build faster with Sorb</Display>
+      <Display size={4}>Build faster with components</Display>
       <Lead>
-        A design-token bridge between Figma and React. Preview proposed tokens in
-        your running app before a single line of CSS ships.
+        A complete Bootstrap 5.3 component set, styled with styled-components and
+        themeable end-to-end through CSS custom properties.
       </Lead>
       <hr className="my-4" />
       <p>

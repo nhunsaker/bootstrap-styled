@@ -554,11 +554,11 @@ const navbarCells: Cell[] = [
     component: 'Navbar',
     label: 'brand only',
     note: 'styled Navbar is a bare flex shell: padding 0.5rem 1rem vs Bootstrap 0.5rem 0; NavbarBrand has no py/margin-right vs Bootstrap brand py 0.3125rem + mr 1rem. No expand/toggler/container/NavbarNav.',
-    native: `<div style="width: 30rem"><nav class="navbar"><a class="navbar-brand" href="#">Sorb</a></nav></div>`,
+    native: `<div style="width: 30rem"><nav class="navbar"><a class="navbar-brand" href="#">Acme</a></nav></div>`,
     styled: (
       <div style={{ width: '30rem' }}>
         <Navbar>
-          <NavbarBrand href="#">Sorb</NavbarBrand>
+          <NavbarBrand href="#">Acme</NavbarBrand>
         </Navbar>
       </div>
     ),
@@ -568,11 +568,11 @@ const navbarCells: Cell[] = [
     component: 'Navbar',
     label: 'dark',
     note: 'color variant maps (bg-dark ≈ variant="dark"); remaining diff is the same brand/padding geometry gap as navbar--basic.',
-    native: `<div style="width: 30rem"><nav class="navbar bg-dark" data-bs-theme="dark"><a class="navbar-brand" href="#">Sorb</a></nav></div>`,
+    native: `<div style="width: 30rem"><nav class="navbar bg-dark" data-bs-theme="dark"><a class="navbar-brand" href="#">Acme</a></nav></div>`,
     styled: (
       <div style={{ width: '30rem' }}>
         <Navbar variant="dark">
-          <NavbarBrand href="#">Sorb</NavbarBrand>
+          <NavbarBrand href="#">Acme</NavbarBrand>
         </Navbar>
       </div>
     ),

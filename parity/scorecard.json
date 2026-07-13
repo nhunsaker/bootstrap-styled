@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T08:49:02.371Z",
+  "generatedAt": "2026-07-13T08:56:32.466Z",
   "bootstrapVersion": "5.3.8",
   "viewport": {
     "width": 1280,
@@ -115,8 +115,8 @@
     {
       "component": "Navbar",
       "cellCount": 2,
-      "avgDiffPct": 0.188,
-      "maxDiffPct": 0.376,
+      "avgDiffPct": 0.201,
+      "maxDiffPct": 0.401,
       "minDiffPct": 0,
       "axeStyledViolations": 0,
       "axeNativeViolations": 0
@@ -457,9 +457,9 @@
     {
       "component": "ExKitchenSink",
       "cellCount": 1,
-      "avgDiffPct": 0.022,
-      "maxDiffPct": 0.022,
-      "minDiffPct": 0.022,
+      "avgDiffPct": 0.021,
+      "maxDiffPct": 0.021,
+      "minDiffPct": 0.021,
       "axeStyledViolations": 0,
       "axeNativeViolations": 0
     },
@@ -3929,9 +3929,9 @@
         "w": 1024,
         "h": 178
       },
-      "diffPixels": 685,
+      "diffPixels": 730,
       "totalPixels": 182272,
-      "diffPct": 0.376,
+      "diffPct": 0.401,
       "axeNativeViolations": 0,
       "axeStyledViolations": 0,
       "axeNativeRules": [],
@@ -6007,19 +6007,19 @@
       "label": "Headers — logo + centred pills + auth buttons bar",
       "note": "",
       "sizeNative": {
-        "w": 1134,
+        "w": 1156,
         "h": 412
       },
       "sizeStyled": {
-        "w": 1134,
+        "w": 1156,
         "h": 412
       },
       "canvas": {
-        "w": 1134,
+        "w": 1156,
         "h": 412
       },
       "diffPixels": 0,
-      "totalPixels": 467208,
+      "totalPixels": 476272,
       "diffPct": 0,
       "axeNativeViolations": 0,
       "axeStyledViolations": 0,
@@ -6083,18 +6083,18 @@
       "note": "",
       "sizeNative": {
         "w": 2528,
-        "h": 838
+        "h": 898
       },
       "sizeStyled": {
         "w": 2528,
-        "h": 838
+        "h": 898
       },
       "canvas": {
         "w": 2528,
-        "h": 838
+        "h": 898
       },
       "diffPixels": 0,
-      "totalPixels": 2118464,
+      "totalPixels": 2270144,
       "diffPct": 0,
       "axeNativeViolations": 0,
       "axeStyledViolations": 0,
@@ -6197,9 +6197,9 @@
         "w": 2344,
         "h": 2218
       },
-      "diffPixels": 1138,
+      "diffPixels": 1099,
       "totalPixels": 5198992,
-      "diffPct": 0.022,
+      "diffPct": 0.021,
       "axeNativeViolations": 0,
       "axeStyledViolations": 0,
       "axeNativeRules": [],

@@ -2,7 +2,7 @@
 // GlobalStyles + ThemeVars layers project them onto Bootstrap's `--bs-*` custom
 // properties (incl. the -subtle/-emphasis token model and computed
 // `--bs-<color>-contrast`), and components read those vars — so runtime
-// overrides (color modes, or a Sorb preview) cascade.
+// overrides (color modes, or a runtime preview) cascade.
 
 export type ColorName =
   | 'primary'
@@ -22,7 +22,7 @@ export type Spacing = [string, string, string, string, string, string]
  * tints/shades Bootstrap precomputes — alerts/badges/list-groups consume them
  * rather than deriving at runtime. Overriding any one of these (theme field or
  * the matching `--bs-<color>-<slot>` var) re-shades the components that use it,
- * which is exactly the Sorb bind surface.
+ * which is exactly the runtime bind surface.
  */
 export interface ColorTokenSet {
   /** `--bs-<color>-text-emphasis` — readable on the subtle background. */

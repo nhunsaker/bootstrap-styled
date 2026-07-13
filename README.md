@@ -59,8 +59,7 @@ npm i @metatoy/bootstrap-styled styled-components react react-dom
 ### Usage
 
 Wrap your app in `BootstrapStyledProvider` — it injects the theme as `--bs-*` CSS variables and
-provides the styled-components theme context. (In the Sorb / Metatoy workspace this is the
-Bootstrap-styled provider; the package exports it as `BootstrapStyledProvider`.)
+provides the styled-components theme context. (The package exports it as `BootstrapStyledProvider`.)
 
 ```tsx
 import { BootstrapStyledProvider, Button } from '@metatoy/bootstrap-styled'

@@ -3,7 +3,7 @@ import type { Theme, ColorName, ColorTokenSet } from './types'
 
 // ---------------------------------------------------------------------------
 // ThemeVars — projects the extended Bootstrap 5.3.8 token model onto `--bs-*`
-// custom properties (the Sorb bind surface). It is additive to GlobalStyles:
+// custom properties (the runtime bind surface). It is additive to GlobalStyles:
 // GlobalStyles owns the base color / body / border / radius(base/sm/lg/pill)
 // vars (theme-driven), and ThemeVars completes the set with the -subtle /
 // -emphasis / -rgb / body-secondary/tertiary / emphasis-color / translucent /

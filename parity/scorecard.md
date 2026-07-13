@@ -1,6 +1,6 @@
 # bootstrap-styled — parity baseline scorecard (P0 proof set)
 
-> Generated 2026-07-13T08:49:02.371Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
+> Generated 2026-07-13T08:56:32.466Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
 
 Visual-diff % = fraction of pixels differing between the native Bootstrap cell and the equivalent bootstrap-styled cell (each padded to a common white canvas so size deltas count). Lower is better. 🟢 ≤0.5% · 🟡 ≤3% · 🔴 >3%. Axe = WCAG 2.0/2.1 A/AA violations on that cell subtree.
 
@@ -19,7 +19,7 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | Breadcrumb | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Pagination | 3 | 🟢 0.15 | 🟢 0.17 | 0 | 0 |
 | Nav | 4 | 🟢 0 | 🟢 0 | 0 | 0 |
-| Navbar | 2 | 🟢 0.188 | 🟢 0.376 | 0 | 0 |
+| Navbar | 2 | 🟢 0.201 | 🟢 0.401 | 0 | 0 |
 | Tabs | 1 | 🟢 0.241 | 🟢 0.241 | 0 | 0 |
 | ButtonGroup | 5 | 🟢 0 | 🟢 0 | 0 | 0 |
 | ListGroup | 6 | 🟢 0 | 🟢 0 | 0 | 0 |
@@ -57,7 +57,7 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | ExNavbars | 1 | 🟢 0 | 🟢 0 | 1 | 1 |
 | ExSidebars | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | ExFooters | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
-| ExKitchenSink | 1 | 🟢 0.022 | 🟢 0.022 | 0 | 0 |
+| ExKitchenSink | 1 | 🟢 0.021 | 🟢 0.021 | 0 | 0 |
 | Modal | 1 | 🟢 0.089 | 🟢 0.089 | 0 | 0 |
 | Offcanvas | 1 | 🟢 0.088 | 🟢 0.088 | 0 | 0 |
 | Dropdown | 1 | 🟢 0.424 | 🟢 0.424 | 0 | 0 |
@@ -202,7 +202,7 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | nav--tabs | Nav | tabs | 🟢 0 | 0 | 0 |  |
 | nav--pills | Nav | pills | 🟢 0 | 0 | 0 |  |
 | nav--fill | Nav | fill | 🟢 0 | 0 | 0 |  |
-| navbar--basic | Navbar | brand only | 🟢 0.376 | 0 | 0 | styled Navbar is a bare flex shell: padding 0.5rem 1rem vs Bootstrap 0.5rem 0; NavbarBrand has no py/margin-right vs Bootstrap brand py 0.3125rem + mr 1rem. No expand/toggler/container/NavbarNav. |
+| navbar--basic | Navbar | brand only | 🟢 0.401 | 0 | 0 | styled Navbar is a bare flex shell: padding 0.5rem 1rem vs Bootstrap 0.5rem 0; NavbarBrand has no py/margin-right vs Bootstrap brand py 0.3125rem + mr 1rem. No expand/toggler/container/NavbarNav. |
 | navbar--dark | Navbar | dark | 🟢 0 | 0 | 0 | color variant maps (bg-dark ≈ variant="dark"); remaining diff is the same brand/padding geometry gap as navbar--basic. |
 | tabs--basic | Tabs | first active | 🟢 0.241 | 0 | 0 | styled TabPanel adds 1rem 0 padding; Bootstrap .tab-pane has none → panel content sits ~1rem lower. Tab buttons themselves mirror nav-tabs closely. |
 | buttongroup--default | ButtonGroup | default | 🟢 0 | 0 | 0 |  |
@@ -290,7 +290,7 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | example--navbars | ExNavbars | Navbars — brand + collapsible nav variants | 🟢 0 | 1 (color-contrast(3)) | 1 (color-contrast(3)) |  |
 | example--sidebars | ExSidebars | Sidebars — fixed vertical nav shell | 🟢 0 | 0 | 0 |  |
 | example--footers | ExFooters | Footers — multi-column links + bottom social bar | 🟢 0 | 0 | 0 |  |
-| example--kitchen-sink | ExKitchenSink | Kitchen sink — buttons · badges · alerts · list group · dropdown · pagination · tabs · form · modal | 🟢 0.022 | 0 | 0 | carries known component gaps: CloseButton SVG glyph (modal) + Tabs panel padding |
+| example--kitchen-sink | ExKitchenSink | Kitchen sink — buttons · badges · alerts · list group · dropdown · pagination · tabs · form · modal | 🟢 0.021 | 0 | 0 | carries known component gaps: CloseButton SVG glyph (modal) + Tabs panel padding |
 | modal--basic | Modal | shown (header/body/footer + backdrop) | 🟢 0.089 | 0 | 0 | native = static .modal.show + .modal-backdrop.show; clip captures dialog box + shadow over the 50% backdrop. |
 | offcanvas--start | Offcanvas | shown from start (+ backdrop) | 🟢 0.088 | 0 | 0 | native = static .offcanvas.offcanvas-start.show + backdrop; panel spans the left edge, clip clamped to viewport. |
 | dropdown--open | Dropdown | menu open (items + divider) | 🟢 0.424 | 0 | 0 | native = static .dropdown-menu.show; default dropdown menu carries no box-shadow. |

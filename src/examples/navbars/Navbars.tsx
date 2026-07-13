@@ -30,7 +30,7 @@ import {
  *  - The `<Navbar>` shell does not yet cascade `--bs-navbar-*` link theming to
  *    nav-links, so this example sets the exact Bootstrap navbar link colors +
  *    padding inline (referencing the same `--bs-*` tokens, with Bootstrap-default
- *    fallbacks) so it stays Sorb-bindable AND matches the oracle to the pixel.
+ *    fallbacks) so it stays runtime-bindable AND matches the oracle to the pixel.
  *  - The "Dropdown" nav item renders CLOSED (text + chevron). The open menu +
  *    Popper caret are behavioral and out of scope for the static diff.
  */
