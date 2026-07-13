@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T06:42:49.721Z",
+  "generatedAt": "2026-07-13T07:08:23.668Z",
   "bootstrapVersion": "5.3.8",
   "viewport": {
     "width": 1280,
@@ -11,7 +11,7 @@
     "includeAA": false,
     "note": "padded-to-common-canvas white bg"
   },
-  "cellCount": 188,
+  "cellCount": 206,
   "components": [
     {
       "component": "Button",
@@ -246,6 +246,69 @@
       "minDiffPct": 0,
       "axeStyledViolations": 0,
       "axeNativeViolations": 0
+    },
+    {
+      "component": "FormControl",
+      "cellCount": 5,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 5,
+      "axeNativeViolations": 5
+    },
+    {
+      "component": "FormSelect",
+      "cellCount": 2,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 2,
+      "axeNativeViolations": 2
+    },
+    {
+      "component": "FormCheck",
+      "cellCount": 4,
+      "avgDiffPct": 0.089,
+      "maxDiffPct": 0.358,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "FormRange",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 1,
+      "axeNativeViolations": 1
+    },
+    {
+      "component": "InputGroup",
+      "cellCount": 4,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 4,
+      "axeNativeViolations": 4
+    },
+    {
+      "component": "FloatingLabel",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "FormFeedback",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 1,
+      "axeNativeViolations": 1
     },
     {
       "component": "Modal",
@@ -4924,6 +4987,508 @@
       "axeStyledViolations": 0,
       "axeNativeRules": [],
       "axeStyledRules": []
+    },
+    {
+      "id": "form-control--default",
+      "component": "FormControl",
+      "label": "default",
+      "note": "",
+      "sizeNative": {
+        "w": 468,
+        "h": 142
+      },
+      "sizeStyled": {
+        "w": 468,
+        "h": 142
+      },
+      "canvas": {
+        "w": 468,
+        "h": 142
+      },
+      "diffPixels": 0,
+      "totalPixels": 66456,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
+    },
+    {
+      "id": "form-control--sm",
+      "component": "FormControl",
+      "label": "sm",
+      "note": "",
+      "sizeNative": {
+        "w": 410,
+        "h": 128
+      },
+      "sizeStyled": {
+        "w": 410,
+        "h": 128
+      },
+      "canvas": {
+        "w": 410,
+        "h": 128
+      },
+      "diffPixels": 0,
+      "totalPixels": 52480,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
+    },
+    {
+      "id": "form-control--lg",
+      "component": "FormControl",
+      "label": "lg",
+      "note": "",
+      "sizeNative": {
+        "w": 562,
+        "h": 162
+      },
+      "sizeStyled": {
+        "w": 562,
+        "h": 162
+      },
+      "canvas": {
+        "w": 562,
+        "h": 162
+      },
+      "diffPixels": 0,
+      "totalPixels": 91044,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
+    },
+    {
+      "id": "form-control--disabled",
+      "component": "FormControl",
+      "label": "disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 466,
+        "h": 142
+      },
+      "sizeStyled": {
+        "w": 466,
+        "h": 142
+      },
+      "canvas": {
+        "w": 466,
+        "h": 142
+      },
+      "diffPixels": 0,
+      "totalPixels": 66172,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
+    },
+    {
+      "id": "form-control--is-invalid",
+      "component": "FormControl",
+      "label": "is-invalid",
+      "note": "",
+      "sizeNative": {
+        "w": 514,
+        "h": 142
+      },
+      "sizeStyled": {
+        "w": 514,
+        "h": 142
+      },
+      "canvas": {
+        "w": 514,
+        "h": 142
+      },
+      "diffPixels": 0,
+      "totalPixels": 72988,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
+    },
+    {
+      "id": "form-select--default",
+      "component": "FormSelect",
+      "label": "default",
+      "note": "",
+      "sizeNative": {
+        "w": 250,
+        "h": 142
+      },
+      "sizeStyled": {
+        "w": 250,
+        "h": 142
+      },
+      "canvas": {
+        "w": 250,
+        "h": 142
+      },
+      "diffPixels": 0,
+      "totalPixels": 35500,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "select-name(1)"
+      ],
+      "axeStyledRules": [
+        "select-name(1)"
+      ]
+    },
+    {
+      "id": "form-select--sm",
+      "component": "FormSelect",
+      "label": "sm",
+      "note": "",
+      "sizeNative": {
+        "w": 232,
+        "h": 128
+      },
+      "sizeStyled": {
+        "w": 232,
+        "h": 128
+      },
+      "canvas": {
+        "w": 232,
+        "h": 128
+      },
+      "diffPixels": 0,
+      "totalPixels": 29696,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "select-name(1)"
+      ],
+      "axeStyledRules": [
+        "select-name(1)"
+      ]
+    },
+    {
+      "id": "form-check--checkbox",
+      "component": "FormCheck",
+      "label": "checkbox",
+      "note": "",
+      "sizeNative": {
+        "w": 258,
+        "h": 118
+      },
+      "sizeStyled": {
+        "w": 258,
+        "h": 118
+      },
+      "canvas": {
+        "w": 258,
+        "h": 118
+      },
+      "diffPixels": 0,
+      "totalPixels": 30444,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "form-check--radio",
+      "component": "FormCheck",
+      "label": "radio",
+      "note": "",
+      "sizeNative": {
+        "w": 196,
+        "h": 118
+      },
+      "sizeStyled": {
+        "w": 196,
+        "h": 118
+      },
+      "canvas": {
+        "w": 196,
+        "h": 118
+      },
+      "diffPixels": 0,
+      "totalPixels": 23128,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "form-check--switch",
+      "component": "FormCheck",
+      "label": "switch",
+      "note": "",
+      "sizeNative": {
+        "w": 244,
+        "h": 118
+      },
+      "sizeStyled": {
+        "w": 244,
+        "h": 118
+      },
+      "canvas": {
+        "w": 244,
+        "h": 118
+      },
+      "diffPixels": 103,
+      "totalPixels": 28792,
+      "diffPct": 0.358,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "form-check--inline",
+      "component": "FormCheck",
+      "label": "inline",
+      "note": "",
+      "sizeNative": {
+        "w": 222,
+        "h": 118
+      },
+      "sizeStyled": {
+        "w": 222,
+        "h": 118
+      },
+      "canvas": {
+        "w": 222,
+        "h": 118
+      },
+      "diffPixels": 0,
+      "totalPixels": 26196,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "form-range--default",
+      "component": "FormRange",
+      "label": "default",
+      "note": "",
+      "sizeNative": {
+        "w": 324,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 324,
+        "h": 126
+      },
+      "canvas": {
+        "w": 324,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 40824,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
+    },
+    {
+      "id": "input-group--prepend-text",
+      "component": "InputGroup",
+      "label": "prepend text",
+      "note": "",
+      "sizeNative": {
+        "w": 546,
+        "h": 142
+      },
+      "sizeStyled": {
+        "w": 546,
+        "h": 142
+      },
+      "canvas": {
+        "w": 546,
+        "h": 142
+      },
+      "diffPixels": 0,
+      "totalPixels": 77532,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
+    },
+    {
+      "id": "input-group--button",
+      "component": "InputGroup",
+      "label": "button",
+      "note": "",
+      "sizeNative": {
+        "w": 614,
+        "h": 142
+      },
+      "sizeStyled": {
+        "w": 614,
+        "h": 142
+      },
+      "canvas": {
+        "w": 614,
+        "h": 142
+      },
+      "diffPixels": 0,
+      "totalPixels": 87188,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
+    },
+    {
+      "id": "input-group--sm",
+      "component": "InputGroup",
+      "label": "sm",
+      "note": "",
+      "sizeNative": {
+        "w": 470,
+        "h": 128
+      },
+      "sizeStyled": {
+        "w": 470,
+        "h": 128
+      },
+      "canvas": {
+        "w": 470,
+        "h": 128
+      },
+      "diffPixels": 0,
+      "totalPixels": 60160,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
+    },
+    {
+      "id": "input-group--lg",
+      "component": "InputGroup",
+      "label": "lg",
+      "note": "",
+      "sizeNative": {
+        "w": 662,
+        "h": 162
+      },
+      "sizeStyled": {
+        "w": 662,
+        "h": 162
+      },
+      "canvas": {
+        "w": 662,
+        "h": 162
+      },
+      "diffPixels": 0,
+      "totalPixels": 107244,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
+    },
+    {
+      "id": "floating-label--filled",
+      "component": "FloatingLabel",
+      "label": "filled",
+      "note": "",
+      "sizeNative": {
+        "w": 468,
+        "h": 182
+      },
+      "sizeStyled": {
+        "w": 468,
+        "h": 182
+      },
+      "canvas": {
+        "w": 468,
+        "h": 182
+      },
+      "diffPixels": 0,
+      "totalPixels": 85176,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "form-feedback--invalid",
+      "component": "FormFeedback",
+      "label": "is-invalid + invalid-feedback",
+      "note": "",
+      "sizeNative": {
+        "w": 516,
+        "h": 192
+      },
+      "sizeStyled": {
+        "w": 516,
+        "h": 192
+      },
+      "canvas": {
+        "w": 516,
+        "h": 192
+      },
+      "diffPixels": 0,
+      "totalPixels": 99072,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "label(1)"
+      ],
+      "axeStyledRules": [
+        "label(1)"
+      ]
     },
     {
       "id": "modal--basic",

@@ -64,6 +64,10 @@ const lightBlock = (t: Theme): string => `
     --bs-link-color: ${t.link.color};
     --bs-link-hover-color: ${t.link.hoverColor};
     --bs-heading-color: ${t.font.headings.color};
+    --bs-form-valid-color: #198754;
+    --bs-form-valid-border-color: #198754;
+    --bs-form-invalid-color: #dc3545;
+    --bs-form-invalid-border-color: #dc3545;
 `
 
 const darkBlock = (t: Theme): string => `
@@ -84,6 +88,10 @@ const darkBlock = (t: Theme): string => `
     --bs-border-color-translucent: ${t.dark.border.translucent};
     --bs-link-color: ${t.dark.link.color};
     --bs-link-hover-color: ${t.dark.link.hoverColor};
+    --bs-form-valid-color: #75b798;
+    --bs-form-valid-border-color: #75b798;
+    --bs-form-invalid-color: #ea868f;
+    --bs-form-invalid-border-color: #ea868f;
 `
 
 /**

@@ -1,6 +1,6 @@
 # bootstrap-styled — parity baseline scorecard (P0 proof set)
 
-> Generated 2026-07-13T06:42:49.721Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
+> Generated 2026-07-13T07:08:23.668Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
 
 Visual-diff % = fraction of pixels differing between the native Bootstrap cell and the equivalent bootstrap-styled cell (each padded to a common white canvas so size deltas count). Lower is better. 🟢 ≤0.5% · 🟡 ≤3% · 🔴 >3%. Axe = WCAG 2.0/2.1 A/AA violations on that cell subtree.
 
@@ -34,6 +34,13 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | Table | 8 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Image | 2 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Figure | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| FormControl | 5 | 🟢 0 | 🟢 0 | 5 | 5 |
+| FormSelect | 2 | 🟢 0 | 🟢 0 | 2 | 2 |
+| FormCheck | 4 | 🟢 0.089 | 🟢 0.358 | 0 | 0 |
+| FormRange | 1 | 🟢 0 | 🟢 0 | 1 | 1 |
+| InputGroup | 4 | 🟢 0 | 🟢 0 | 4 | 4 |
+| FloatingLabel | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| FormFeedback | 1 | 🟢 0 | 🟢 0 | 1 | 1 |
 | Modal | 1 | 🟢 0.089 | 🟢 0.089 | 0 | 0 |
 | Offcanvas | 1 | 🟢 0.088 | 🟢 0.088 | 0 | 0 |
 | Dropdown | 1 | 🟢 0.424 | 🟢 0.424 | 0 | 0 |
@@ -227,6 +234,24 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | image--thumbnail | Image | thumbnail | 🟢 0 | 0 | 0 |  |
 | image--rounded | Image | rounded | 🟢 0 | 0 | 0 |  |
 | figure--basic | Figure | figure + img + caption | 🟢 0 | 0 | 0 |  |
+| form-control--default | FormControl | default | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| form-control--sm | FormControl | sm | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| form-control--lg | FormControl | lg | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| form-control--disabled | FormControl | disabled | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| form-control--is-invalid | FormControl | is-invalid | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| form-select--default | FormSelect | default | 🟢 0 | 1 (select-name(1)) | 1 (select-name(1)) |  |
+| form-select--sm | FormSelect | sm | 🟢 0 | 1 (select-name(1)) | 1 (select-name(1)) |  |
+| form-check--checkbox | FormCheck | checkbox | 🟢 0 | 0 | 0 |  |
+| form-check--radio | FormCheck | radio | 🟢 0 | 0 | 0 |  |
+| form-check--switch | FormCheck | switch | 🟢 0.358 | 0 | 0 |  |
+| form-check--inline | FormCheck | inline | 🟢 0 | 0 | 0 |  |
+| form-range--default | FormRange | default | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| input-group--prepend-text | InputGroup | prepend text | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| input-group--button | InputGroup | button | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| input-group--sm | InputGroup | sm | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| input-group--lg | InputGroup | lg | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
+| floating-label--filled | FloatingLabel | filled | 🟢 0 | 0 | 0 |  |
+| form-feedback--invalid | FormFeedback | is-invalid + invalid-feedback | 🟢 0 | 1 (label(1)) | 1 (label(1)) |  |
 | modal--basic | Modal | shown (header/body/footer + backdrop) | 🟢 0.089 | 0 | 0 | native = static .modal.show + .modal-backdrop.show; clip captures dialog box + shadow over the 50% backdrop. |
 | offcanvas--start | Offcanvas | shown from start (+ backdrop) | 🟢 0.088 | 0 | 0 | native = static .offcanvas.offcanvas-start.show + backdrop; panel spans the left edge, clip clamped to viewport. |
 | dropdown--open | Dropdown | menu open (items + divider) | 🟢 0.424 | 0 | 0 | native = static .dropdown-menu.show; default dropdown menu carries no box-shadow. |
@@ -265,6 +290,13 @@ The proof set is deterministic-visual; the behavior oracle (`bootstrap.bundle.mi
 | Table | — | — | — | — | scaffold (visual+axe only in P0) |
 | Image | — | — | — | — | scaffold (visual+axe only in P0) |
 | Figure | — | — | — | — | scaffold (visual+axe only in P0) |
+| FormControl | — | — | — | — | scaffold (visual+axe only in P0) |
+| FormSelect | — | — | — | — | scaffold (visual+axe only in P0) |
+| FormCheck | — | — | — | — | scaffold (visual+axe only in P0) |
+| FormRange | — | — | — | — | scaffold (visual+axe only in P0) |
+| InputGroup | — | — | — | — | scaffold (visual+axe only in P0) |
+| FloatingLabel | — | — | — | — | scaffold (visual+axe only in P0) |
+| FormFeedback | — | — | — | — | scaffold (visual+axe only in P0) |
 | Modal | — | — | — | — | scaffold (visual+axe only in P0) |
 | Offcanvas | — | — | — | — | scaffold (visual+axe only in P0) |
 | Dropdown | — | — | — | — | scaffold (visual+axe only in P0) |

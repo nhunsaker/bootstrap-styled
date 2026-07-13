@@ -75,6 +75,14 @@ import {
   DropdownDivider,
   Tooltip,
   Popover,
+  FormControl,
+  FormSelect,
+  FormCheck,
+  FormRange,
+  InputGroup,
+  InputGroupText,
+  FloatingLabel,
+  FormFeedback,
   type ColorName,
 } from '../src'
 
@@ -1680,6 +1688,221 @@ const figureCells: Cell[] = [
   },
 ]
 
+// ---------------------------------------------------------------------------
+// Forms — controls (FormControl · FormSelect · FormCheck · FormRange) +
+// composition (InputGroup · FloatingLabel · FormFeedback). Each cell maps to
+// the exact native Bootstrap 5.3.8 markup. Filled/checked states use static
+// `value`/`checked` (native) ↔ `defaultValue`/`defaultChecked` (styled) so both
+// sides render identical, deterministic pixels at the fixed viewport.
+// ---------------------------------------------------------------------------
+const SELECT_OPTS = `<option>One</option><option>Two</option><option>Three</option>`
+const formCells: Cell[] = [
+  // ── FormControl ──
+  {
+    id: 'form-control--default',
+    component: 'FormControl',
+    label: 'default',
+    native: `<input type="text" class="form-control" value="Text">`,
+    styled: <FormControl type="text" defaultValue="Text" />,
+  },
+  {
+    id: 'form-control--sm',
+    component: 'FormControl',
+    label: 'sm',
+    native: `<input type="text" class="form-control form-control-sm" value="Text">`,
+    styled: <FormControl type="text" size="sm" defaultValue="Text" />,
+  },
+  {
+    id: 'form-control--lg',
+    component: 'FormControl',
+    label: 'lg',
+    native: `<input type="text" class="form-control form-control-lg" value="Text">`,
+    styled: <FormControl type="text" size="lg" defaultValue="Text" />,
+  },
+  {
+    id: 'form-control--disabled',
+    component: 'FormControl',
+    label: 'disabled',
+    native: `<input type="text" class="form-control" value="Text" disabled>`,
+    styled: <FormControl type="text" defaultValue="Text" disabled />,
+  },
+  {
+    id: 'form-control--is-invalid',
+    component: 'FormControl',
+    label: 'is-invalid',
+    native: `<input type="text" class="form-control is-invalid" value="Text">`,
+    styled: <FormControl type="text" defaultValue="Text" isInvalid />,
+  },
+  // ── FormSelect ──
+  {
+    id: 'form-select--default',
+    component: 'FormSelect',
+    label: 'default',
+    native: `<select class="form-select">${SELECT_OPTS}</select>`,
+    styled: (
+      <FormSelect defaultValue="One">
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+      </FormSelect>
+    ),
+  },
+  {
+    id: 'form-select--sm',
+    component: 'FormSelect',
+    label: 'sm',
+    native: `<select class="form-select form-select-sm">${SELECT_OPTS}</select>`,
+    styled: (
+      <FormSelect size="sm" defaultValue="One">
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+      </FormSelect>
+    ),
+  },
+  // ── FormCheck ──
+  {
+    id: 'form-check--checkbox',
+    component: 'FormCheck',
+    label: 'checkbox',
+    native: `<div class="form-check">
+      <input class="form-check-input" type="checkbox" id="fc-cb" checked>
+      <label class="form-check-label" for="fc-cb">Check me</label>
+    </div>`,
+    styled: <FormCheck type="checkbox" id="fc-cb" label="Check me" defaultChecked />,
+  },
+  {
+    id: 'form-check--radio',
+    component: 'FormCheck',
+    label: 'radio',
+    native: `<div class="form-check">
+      <input class="form-check-input" type="radio" name="fc-r" id="fc-rd" checked>
+      <label class="form-check-label" for="fc-rd">Radio</label>
+    </div>`,
+    styled: <FormCheck type="radio" name="fc-r" id="fc-rd" label="Radio" defaultChecked />,
+  },
+  {
+    id: 'form-check--switch',
+    component: 'FormCheck',
+    label: 'switch',
+    native: `<div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="fc-sw" checked>
+      <label class="form-check-label" for="fc-sw">Switch</label>
+    </div>`,
+    styled: <FormCheck type="switch" id="fc-sw" label="Switch" defaultChecked />,
+  },
+  {
+    id: 'form-check--inline',
+    component: 'FormCheck',
+    label: 'inline',
+    native: `<div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="fc-in" checked>
+      <label class="form-check-label" for="fc-in">Inline</label>
+    </div>`,
+    styled: <FormCheck type="checkbox" id="fc-in" label="Inline" inline defaultChecked />,
+  },
+  // ── FormRange ──
+  {
+    id: 'form-range--default',
+    component: 'FormRange',
+    label: 'default',
+    native: `<input type="range" class="form-range" min="0" max="100" value="50">`,
+    styled: <FormRange min={0} max={100} defaultValue={50} />,
+  },
+  // ── InputGroup ──
+  {
+    id: 'input-group--prepend-text',
+    component: 'InputGroup',
+    label: 'prepend text',
+    native: `<div class="input-group">
+      <span class="input-group-text">@</span>
+      <input type="text" class="form-control" value="Text">
+    </div>`,
+    styled: (
+      <InputGroup>
+        <InputGroupText>@</InputGroupText>
+        <FormControl type="text" defaultValue="Text" />
+      </InputGroup>
+    ),
+  },
+  {
+    id: 'input-group--button',
+    component: 'InputGroup',
+    label: 'button',
+    native: `<div class="input-group">
+      <button class="btn btn-outline-secondary" type="button">Button</button>
+      <input type="text" class="form-control" value="Text">
+    </div>`,
+    styled: (
+      <InputGroup>
+        <Button variant="outline-secondary">Button</Button>
+        <FormControl type="text" defaultValue="Text" />
+      </InputGroup>
+    ),
+  },
+  {
+    id: 'input-group--sm',
+    component: 'InputGroup',
+    label: 'sm',
+    native: `<div class="input-group input-group-sm">
+      <span class="input-group-text">@</span>
+      <input type="text" class="form-control" value="Text">
+    </div>`,
+    styled: (
+      <InputGroup size="sm">
+        <InputGroupText>@</InputGroupText>
+        <FormControl type="text" defaultValue="Text" />
+      </InputGroup>
+    ),
+  },
+  {
+    id: 'input-group--lg',
+    component: 'InputGroup',
+    label: 'lg',
+    native: `<div class="input-group input-group-lg">
+      <span class="input-group-text">@</span>
+      <input type="text" class="form-control" value="Text">
+    </div>`,
+    styled: (
+      <InputGroup size="lg">
+        <InputGroupText>@</InputGroupText>
+        <FormControl type="text" defaultValue="Text" />
+      </InputGroup>
+    ),
+  },
+  // ── FloatingLabel (filled) ──
+  {
+    id: 'floating-label--filled',
+    component: 'FloatingLabel',
+    label: 'filled',
+    native: `<div class="form-floating">
+      <input type="text" class="form-control" id="fl-name" placeholder="Name" value="Filled">
+      <label for="fl-name">Name</label>
+    </div>`,
+    styled: (
+      <FloatingLabel label="Name" controlId="fl-name">
+        <FormControl type="text" placeholder="Name" defaultValue="Filled" />
+      </FloatingLabel>
+    ),
+  },
+  // ── FormFeedback (is-invalid input + shown invalid-feedback) ──
+  {
+    id: 'form-feedback--invalid',
+    component: 'FormFeedback',
+    label: 'is-invalid + invalid-feedback',
+    native: `<div>
+      <input type="text" class="form-control is-invalid" value="Text">
+      <div class="invalid-feedback">Please provide a valid value.</div>
+    </div>`,
+    styled: (
+      <div>
+        <FormControl type="text" defaultValue="Text" isInvalid />
+        <FormFeedback type="invalid">Please provide a valid value.</FormFeedback>
+      </div>
+    ),
+  },
+]
+
 export const cells: Cell[] = [
   ...buttonCells,
   ...alertCells,
@@ -1707,6 +1930,7 @@ export const cells: Cell[] = [
   ...tableCells,
   ...imageCells,
   ...figureCells,
+  ...formCells,
 ]
 
 /** Distinct component names in fixture order (for scorecard grouping). */
