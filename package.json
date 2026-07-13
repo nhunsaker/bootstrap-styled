@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Bootstrap 5 components implemented in styled-components, theme-driven. A modern rewrite of bootstrap-styled/v4.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhunsaker/bootstrap-styled.git"
+  },
+  "homepage": "https://github.com/nhunsaker/bootstrap-styled#readme",
+  "bugs": "https://github.com/nhunsaker/bootstrap-styled/issues",
   "publishConfig": {
     "access": "public"
   },

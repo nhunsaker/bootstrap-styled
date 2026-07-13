@@ -9,10 +9,10 @@ The RC1 leap: from the 0.1.0 component shell to **full Bootstrap 5.3.8 parity**,
 proven by a hermetic visual-regression + accessibility harness. Every surface
 below is rendered pixel-for-pixel against a vendored Bootstrap 5.3.8 oracle.
 
-> Status: this is a **release-candidate cut prepared on-branch**. It has **not**
-> been republished to npm and CI has **not** yet run green (the CI workflow is
-> authored but founder-gated on first push). See the parity scorecard
-> (`parity/scorecard.md`) for the current per-component diff numbers.
+> Status: **published to npm** as `@metatoy/bootstrap-styled@1.0.0` (2026-07-13),
+> with CI (typecheck · test · build · the parity visual-regression gate) and the
+> docs build green on `main`. See the parity scorecard (`parity/scorecard.md`)
+> for the per-component diff numbers.
 
 ### Added
 
@@ -74,11 +74,27 @@ below is rendered pixel-for-pixel against a vendored Bootstrap 5.3.8 oracle.
 
 ### Tooling
 
-- CI workflow (`.github/workflows/ci.yml`): `npm ci` → typecheck → test → build
-  → **parity** as the visual-regression gate (Playwright Chromium installed
-  first). Authored this release; runs once pushed (founder-gated).
+- CI workflow (`.github/workflows/ci.yml`): `npm install` → typecheck → test →
+  build → **parity** as the visual-regression gate (Playwright Chromium installed
+  first). Green on `main`. (Uses `npm install`, not `npm ci` — the repo has no
+  committed lockfile, matching `docs.yml`/`release.yml`.)
 - Build via **tsup** (ESM + CJS + `.d.ts`), tests via **Vitest** + Testing
   Library, interactive docs via **Ladle** (52 stories, incl. the example pages).
+- Published to npm as `@metatoy/bootstrap-styled@1.0.0` via the `release.yml`
+  GitHub-Release workflow; `repository`/`homepage`/`bugs` metadata added.
+
+### Fixed
+
+- **`FormCheck` dropped its `className`** — a passed utility class landed on the
+  inner `<input>` instead of the `.form-check` wrapper, so `mb-3` etc. were lost.
+  Now routed to the wrapper (validation state stays on the input).
+- **`Button` icon+text alignment** — `.btn` used `inline-flex`; matched Bootstrap's
+  `inline-block` so icon-and-text buttons lay out identically to the oracle.
+- **`Breadcrumb`** — restored the Reboot link underline + margin so it matches the
+  oracle (was drifting ~0.6%).
+- **Footer example** imported social icons from the build-time-generated icon set
+  (git-ignored); repointed to committed icon modules so a clean checkout typechecks.
+- Disambiguated duplicate Ladle story IDs so the docs site builds.
 
 ## [0.1.0] — 2026-06-02
 

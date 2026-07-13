@@ -22,9 +22,10 @@ runtime `--bs-*` token surface — the modern rewrite of
 [bootstrap-styled/v4](https://github.com/bootstrap-styled/v4). Every component, helper, and utility
 is rendered pixel-for-pixel against a vendored Bootstrap 5.3.8 oracle by a hermetic parity harness.
 
-> **Status — RC1 (v1.0.0), branch-local.** This 1.0.0 cut reaches full Bootstrap 5.3.8 parity but has
-> **not** yet been republished to npm and the CI workflow is founder-gated on first push. See
-> [`CHANGELOG.md`](./CHANGELOG.md) and `parity/scorecard.md` for the specifics.
+> **Status — v1.0.0, published.** Full Bootstrap 5.3.8 parity, **live on npm** as
+> [`@metatoy/bootstrap-styled@1.0.0`](https://www.npmjs.com/package/@metatoy/bootstrap-styled). CI
+> (typecheck · test · build · the parity visual-regression gate) and the docs build run **green on
+> `main`**. See [`CHANGELOG.md`](./CHANGELOG.md) and `parity/scorecard.md` for the specifics.
 
 ---
 
