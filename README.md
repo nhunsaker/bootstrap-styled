@@ -14,6 +14,9 @@
   <a href="https://github.com/nhunsaker/bootstrap-styled/actions/workflows/ci.yml">
     <img src="https://img.shields.io/github/actions/workflow/status/nhunsaker/bootstrap-styled/ci.yml?branch=main&style=flat-square&color=6868AA&labelColor=0D0E0C&label=CI" alt="CI" />
   </a>
+  <a href="https://bootstrap-styled.metatoy.com">
+    <img src="https://img.shields.io/badge/docs-live-6868AA?style=flat-square&labelColor=0D0E0C" alt="documentation" />
+  </a>
 </p>
 
 **[Bootstrap 5.3.8](https://github.com/twbs/bootstrap/releases/tag/v5.3.8) UI, rebuilt in
@@ -21,6 +24,8 @@
 runtime `--bs-*` token surface — the modern rewrite of
 [bootstrap-styled/v4](https://github.com/bootstrap-styled/v4). Every component, helper, and utility
 is rendered pixel-for-pixel against a vendored Bootstrap 5.3.8 oracle by a hermetic parity harness.
+
+**📖 Documentation & live component demos → [bootstrap-styled.metatoy.com](https://bootstrap-styled.metatoy.com)**
 
 > **Status — v1.0.0, published.** Full Bootstrap 5.3.8 parity, **live on npm** as
 > [`@metatoy/bootstrap-styled@1.0.0`](https://www.npmjs.com/package/@metatoy/bootstrap-styled). CI
