@@ -1,7 +1,7 @@
 import type { Story } from '@ladle/react'
 import { FormControl, FormSelect, FormCheck, FormLabel, FormGroup, FormText, InputGroup, InputGroupText, Button, Stack } from '../../src'
 
-export default { title: 'Forms/FormControl' }
+export default { title: 'Forms/Overview' }
 
 export const Inputs: Story = () => (
   <Stack gap={3} style={{ maxWidth: 480 }}>
