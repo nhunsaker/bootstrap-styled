@@ -1,0 +1,3613 @@
+{
+  "generatedAt": "2026-07-13T04:55:55.172Z",
+  "bootstrapVersion": "5.3.8",
+  "viewport": {
+    "width": 1280,
+    "height": 1800
+  },
+  "deviceScaleFactor": 2,
+  "pixelmatch": {
+    "threshold": 0.1,
+    "includeAA": false,
+    "note": "padded-to-common-canvas white bg"
+  },
+  "cellCount": 137,
+  "components": [
+    {
+      "component": "Button",
+      "cellCount": 96,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 9,
+      "axeNativeViolations": 9
+    },
+    {
+      "component": "Alert",
+      "cellCount": 8,
+      "avgDiffPct": 0.109,
+      "maxDiffPct": 0.444,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Badge",
+      "cellCount": 9,
+      "avgDiffPct": 0.001,
+      "maxDiffPct": 0.008,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Card",
+      "cellCount": 2,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Spinner",
+      "cellCount": 4,
+      "avgDiffPct": 0.073,
+      "maxDiffPct": 0.292,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Progress",
+      "cellCount": 4,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 4,
+      "axeNativeViolations": 4
+    },
+    {
+      "component": "CloseButton",
+      "cellCount": 2,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Accordion",
+      "cellCount": 1,
+      "avgDiffPct": 0.008,
+      "maxDiffPct": 0.008,
+      "minDiffPct": 0.008,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Breadcrumb",
+      "cellCount": 1,
+      "avgDiffPct": 0.593,
+      "maxDiffPct": 0.593,
+      "minDiffPct": 0.593,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Pagination",
+      "cellCount": 3,
+      "avgDiffPct": 0.15,
+      "maxDiffPct": 0.17,
+      "minDiffPct": 0.125,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Nav",
+      "cellCount": 4,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Navbar",
+      "cellCount": 2,
+      "avgDiffPct": 0.188,
+      "maxDiffPct": 0.376,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "Tabs",
+      "cellCount": 1,
+      "avgDiffPct": 0.241,
+      "maxDiffPct": 0.241,
+      "minDiffPct": 0.241,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    }
+  ],
+  "cells": [
+    {
+      "id": "button--primary--md--default",
+      "component": "Button",
+      "label": "primary md",
+      "note": "",
+      "sizeNative": {
+        "w": 228,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 228,
+        "h": 140
+      },
+      "canvas": {
+        "w": 228,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 31920,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--primary--md--disabled",
+      "component": "Button",
+      "label": "primary md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 228,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 228,
+        "h": 140
+      },
+      "canvas": {
+        "w": 228,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 31920,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--primary--sm--default",
+      "component": "Button",
+      "label": "primary sm",
+      "note": "",
+      "sizeNative": {
+        "w": 200,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 200,
+        "h": 126
+      },
+      "canvas": {
+        "w": 200,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 25200,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--primary--sm--disabled",
+      "component": "Button",
+      "label": "primary sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 200,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 200,
+        "h": 126
+      },
+      "canvas": {
+        "w": 200,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 25200,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--primary--lg--default",
+      "component": "Button",
+      "label": "primary lg",
+      "note": "",
+      "sizeNative": {
+        "w": 268,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 268,
+        "h": 160
+      },
+      "canvas": {
+        "w": 268,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 42880,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--primary--lg--disabled",
+      "component": "Button",
+      "label": "primary lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 268,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 268,
+        "h": 160
+      },
+      "canvas": {
+        "w": 268,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 42880,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-primary--md--default",
+      "component": "Button",
+      "label": "outline-primary md",
+      "note": "",
+      "sizeNative": {
+        "w": 228,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 228,
+        "h": 140
+      },
+      "canvas": {
+        "w": 228,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 31920,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-primary--md--disabled",
+      "component": "Button",
+      "label": "outline-primary md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 228,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 228,
+        "h": 140
+      },
+      "canvas": {
+        "w": 228,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 31920,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-primary--sm--default",
+      "component": "Button",
+      "label": "outline-primary sm",
+      "note": "",
+      "sizeNative": {
+        "w": 200,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 200,
+        "h": 126
+      },
+      "canvas": {
+        "w": 200,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 25200,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-primary--sm--disabled",
+      "component": "Button",
+      "label": "outline-primary sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 200,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 200,
+        "h": 126
+      },
+      "canvas": {
+        "w": 200,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 25200,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-primary--lg--default",
+      "component": "Button",
+      "label": "outline-primary lg",
+      "note": "",
+      "sizeNative": {
+        "w": 266,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 266,
+        "h": 160
+      },
+      "canvas": {
+        "w": 266,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 42560,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-primary--lg--disabled",
+      "component": "Button",
+      "label": "outline-primary lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 268,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 268,
+        "h": 160
+      },
+      "canvas": {
+        "w": 268,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 42880,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--secondary--md--default",
+      "component": "Button",
+      "label": "secondary md",
+      "note": "",
+      "sizeNative": {
+        "w": 270,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 270,
+        "h": 140
+      },
+      "canvas": {
+        "w": 270,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 37800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--secondary--md--disabled",
+      "component": "Button",
+      "label": "secondary md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 270,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 270,
+        "h": 140
+      },
+      "canvas": {
+        "w": 270,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 37800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--secondary--sm--default",
+      "component": "Button",
+      "label": "secondary sm",
+      "note": "",
+      "sizeNative": {
+        "w": 238,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 238,
+        "h": 126
+      },
+      "canvas": {
+        "w": 238,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 29988,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--secondary--sm--disabled",
+      "component": "Button",
+      "label": "secondary sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 236,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 236,
+        "h": 126
+      },
+      "canvas": {
+        "w": 236,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 29736,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--secondary--lg--default",
+      "component": "Button",
+      "label": "secondary lg",
+      "note": "",
+      "sizeNative": {
+        "w": 318,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 318,
+        "h": 160
+      },
+      "canvas": {
+        "w": 318,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 50880,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--secondary--lg--disabled",
+      "component": "Button",
+      "label": "secondary lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 316,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 316,
+        "h": 160
+      },
+      "canvas": {
+        "w": 316,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 50560,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-secondary--md--default",
+      "component": "Button",
+      "label": "outline-secondary md",
+      "note": "",
+      "sizeNative": {
+        "w": 270,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 270,
+        "h": 140
+      },
+      "canvas": {
+        "w": 270,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 37800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-secondary--md--disabled",
+      "component": "Button",
+      "label": "outline-secondary md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 270,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 270,
+        "h": 140
+      },
+      "canvas": {
+        "w": 270,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 37800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-secondary--sm--default",
+      "component": "Button",
+      "label": "outline-secondary sm",
+      "note": "",
+      "sizeNative": {
+        "w": 238,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 238,
+        "h": 126
+      },
+      "canvas": {
+        "w": 238,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 29988,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-secondary--sm--disabled",
+      "component": "Button",
+      "label": "outline-secondary sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 238,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 238,
+        "h": 126
+      },
+      "canvas": {
+        "w": 238,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 29988,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-secondary--lg--default",
+      "component": "Button",
+      "label": "outline-secondary lg",
+      "note": "",
+      "sizeNative": {
+        "w": 318,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 318,
+        "h": 160
+      },
+      "canvas": {
+        "w": 318,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 50880,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-secondary--lg--disabled",
+      "component": "Button",
+      "label": "outline-secondary lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 318,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 318,
+        "h": 160
+      },
+      "canvas": {
+        "w": 318,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 50880,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--success--md--default",
+      "component": "Button",
+      "label": "success md",
+      "note": "",
+      "sizeNative": {
+        "w": 236,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 236,
+        "h": 140
+      },
+      "canvas": {
+        "w": 236,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 33040,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--success--md--disabled",
+      "component": "Button",
+      "label": "success md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 236,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 236,
+        "h": 140
+      },
+      "canvas": {
+        "w": 236,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 33040,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--success--sm--default",
+      "component": "Button",
+      "label": "success sm",
+      "note": "",
+      "sizeNative": {
+        "w": 206,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 206,
+        "h": 126
+      },
+      "canvas": {
+        "w": 206,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 25956,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--success--sm--disabled",
+      "component": "Button",
+      "label": "success sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 208,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 208,
+        "h": 126
+      },
+      "canvas": {
+        "w": 208,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 26208,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--success--lg--default",
+      "component": "Button",
+      "label": "success lg",
+      "note": "",
+      "sizeNative": {
+        "w": 278,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 278,
+        "h": 160
+      },
+      "canvas": {
+        "w": 278,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 44480,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--success--lg--disabled",
+      "component": "Button",
+      "label": "success lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 276,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 276,
+        "h": 160
+      },
+      "canvas": {
+        "w": 276,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 44160,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-success--md--default",
+      "component": "Button",
+      "label": "outline-success md",
+      "note": "",
+      "sizeNative": {
+        "w": 236,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 236,
+        "h": 140
+      },
+      "canvas": {
+        "w": 236,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 33040,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-success--md--disabled",
+      "component": "Button",
+      "label": "outline-success md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 236,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 236,
+        "h": 140
+      },
+      "canvas": {
+        "w": 236,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 33040,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-success--sm--default",
+      "component": "Button",
+      "label": "outline-success sm",
+      "note": "",
+      "sizeNative": {
+        "w": 206,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 206,
+        "h": 126
+      },
+      "canvas": {
+        "w": 206,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 25956,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-success--sm--disabled",
+      "component": "Button",
+      "label": "outline-success sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 208,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 208,
+        "h": 126
+      },
+      "canvas": {
+        "w": 208,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 26208,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-success--lg--default",
+      "component": "Button",
+      "label": "outline-success lg",
+      "note": "",
+      "sizeNative": {
+        "w": 276,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 276,
+        "h": 160
+      },
+      "canvas": {
+        "w": 276,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 44160,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-success--lg--disabled",
+      "component": "Button",
+      "label": "outline-success lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 278,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 278,
+        "h": 160
+      },
+      "canvas": {
+        "w": 278,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 44480,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--danger--md--default",
+      "component": "Button",
+      "label": "danger md",
+      "note": "",
+      "sizeNative": {
+        "w": 220,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 220,
+        "h": 140
+      },
+      "canvas": {
+        "w": 220,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 30800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--danger--md--disabled",
+      "component": "Button",
+      "label": "danger md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 220,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 220,
+        "h": 140
+      },
+      "canvas": {
+        "w": 220,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 30800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--danger--sm--default",
+      "component": "Button",
+      "label": "danger sm",
+      "note": "",
+      "sizeNative": {
+        "w": 194,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 194,
+        "h": 126
+      },
+      "canvas": {
+        "w": 194,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 24444,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--danger--sm--disabled",
+      "component": "Button",
+      "label": "danger sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 192,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 192,
+        "h": 126
+      },
+      "canvas": {
+        "w": 192,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 24192,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--danger--lg--default",
+      "component": "Button",
+      "label": "danger lg",
+      "note": "",
+      "sizeNative": {
+        "w": 258,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 258,
+        "h": 160
+      },
+      "canvas": {
+        "w": 258,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 41280,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--danger--lg--disabled",
+      "component": "Button",
+      "label": "danger lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 258,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 258,
+        "h": 160
+      },
+      "canvas": {
+        "w": 258,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 41280,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-danger--md--default",
+      "component": "Button",
+      "label": "outline-danger md",
+      "note": "",
+      "sizeNative": {
+        "w": 220,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 220,
+        "h": 140
+      },
+      "canvas": {
+        "w": 220,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 30800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-danger--md--disabled",
+      "component": "Button",
+      "label": "outline-danger md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 220,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 220,
+        "h": 140
+      },
+      "canvas": {
+        "w": 220,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 30800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-danger--sm--default",
+      "component": "Button",
+      "label": "outline-danger sm",
+      "note": "",
+      "sizeNative": {
+        "w": 192,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 192,
+        "h": 126
+      },
+      "canvas": {
+        "w": 192,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 24192,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-danger--sm--disabled",
+      "component": "Button",
+      "label": "outline-danger sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 194,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 194,
+        "h": 126
+      },
+      "canvas": {
+        "w": 194,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 24444,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-danger--lg--default",
+      "component": "Button",
+      "label": "outline-danger lg",
+      "note": "",
+      "sizeNative": {
+        "w": 256,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 256,
+        "h": 160
+      },
+      "canvas": {
+        "w": 256,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 40960,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-danger--lg--disabled",
+      "component": "Button",
+      "label": "outline-danger lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 258,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 258,
+        "h": 160
+      },
+      "canvas": {
+        "w": 258,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 41280,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--warning--md--default",
+      "component": "Button",
+      "label": "warning md",
+      "note": "",
+      "sizeNative": {
+        "w": 234,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 234,
+        "h": 140
+      },
+      "canvas": {
+        "w": 234,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 32760,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--warning--md--disabled",
+      "component": "Button",
+      "label": "warning md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 232,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 232,
+        "h": 140
+      },
+      "canvas": {
+        "w": 232,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 32480,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--warning--sm--default",
+      "component": "Button",
+      "label": "warning sm",
+      "note": "",
+      "sizeNative": {
+        "w": 204,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 204,
+        "h": 126
+      },
+      "canvas": {
+        "w": 204,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 25704,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--warning--sm--disabled",
+      "component": "Button",
+      "label": "warning sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 204,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 204,
+        "h": 126
+      },
+      "canvas": {
+        "w": 204,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 25704,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--warning--lg--default",
+      "component": "Button",
+      "label": "warning lg",
+      "note": "",
+      "sizeNative": {
+        "w": 272,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 272,
+        "h": 160
+      },
+      "canvas": {
+        "w": 272,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 43520,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--warning--lg--disabled",
+      "component": "Button",
+      "label": "warning lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 272,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 272,
+        "h": 160
+      },
+      "canvas": {
+        "w": 272,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 43520,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-warning--md--default",
+      "component": "Button",
+      "label": "outline-warning md",
+      "note": "",
+      "sizeNative": {
+        "w": 234,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 234,
+        "h": 140
+      },
+      "canvas": {
+        "w": 234,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 32760,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
+      ]
+    },
+    {
+      "id": "button--outline-warning--md--disabled",
+      "component": "Button",
+      "label": "outline-warning md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 232,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 232,
+        "h": 140
+      },
+      "canvas": {
+        "w": 232,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 32480,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-warning--sm--default",
+      "component": "Button",
+      "label": "outline-warning sm",
+      "note": "",
+      "sizeNative": {
+        "w": 204,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 204,
+        "h": 126
+      },
+      "canvas": {
+        "w": 204,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 25704,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
+      ]
+    },
+    {
+      "id": "button--outline-warning--sm--disabled",
+      "component": "Button",
+      "label": "outline-warning sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 206,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 206,
+        "h": 126
+      },
+      "canvas": {
+        "w": 206,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 25956,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-warning--lg--default",
+      "component": "Button",
+      "label": "outline-warning lg",
+      "note": "",
+      "sizeNative": {
+        "w": 272,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 272,
+        "h": 160
+      },
+      "canvas": {
+        "w": 272,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 43520,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
+      ]
+    },
+    {
+      "id": "button--outline-warning--lg--disabled",
+      "component": "Button",
+      "label": "outline-warning lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 272,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 272,
+        "h": 160
+      },
+      "canvas": {
+        "w": 272,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 43520,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--info--md--default",
+      "component": "Button",
+      "label": "info md",
+      "note": "",
+      "sizeNative": {
+        "w": 170,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 170,
+        "h": 140
+      },
+      "canvas": {
+        "w": 170,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 23800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--info--md--disabled",
+      "component": "Button",
+      "label": "info md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 170,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 170,
+        "h": 140
+      },
+      "canvas": {
+        "w": 170,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 23800,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--info--sm--default",
+      "component": "Button",
+      "label": "info sm",
+      "note": "",
+      "sizeNative": {
+        "w": 150,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 150,
+        "h": 126
+      },
+      "canvas": {
+        "w": 150,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 18900,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--info--sm--disabled",
+      "component": "Button",
+      "label": "info sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 150,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 150,
+        "h": 126
+      },
+      "canvas": {
+        "w": 150,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 18900,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--info--lg--default",
+      "component": "Button",
+      "label": "info lg",
+      "note": "",
+      "sizeNative": {
+        "w": 198,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 198,
+        "h": 160
+      },
+      "canvas": {
+        "w": 198,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 31680,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--info--lg--disabled",
+      "component": "Button",
+      "label": "info lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 198,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 198,
+        "h": 160
+      },
+      "canvas": {
+        "w": 198,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 31680,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-info--md--default",
+      "component": "Button",
+      "label": "outline-info md",
+      "note": "",
+      "sizeNative": {
+        "w": 172,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 172,
+        "h": 140
+      },
+      "canvas": {
+        "w": 172,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 24080,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
+      ]
+    },
+    {
+      "id": "button--outline-info--md--disabled",
+      "component": "Button",
+      "label": "outline-info md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 172,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 172,
+        "h": 140
+      },
+      "canvas": {
+        "w": 172,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 24080,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-info--sm--default",
+      "component": "Button",
+      "label": "outline-info sm",
+      "note": "",
+      "sizeNative": {
+        "w": 150,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 150,
+        "h": 126
+      },
+      "canvas": {
+        "w": 150,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 18900,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
+      ]
+    },
+    {
+      "id": "button--outline-info--sm--disabled",
+      "component": "Button",
+      "label": "outline-info sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 150,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 150,
+        "h": 126
+      },
+      "canvas": {
+        "w": 150,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 18900,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-info--lg--default",
+      "component": "Button",
+      "label": "outline-info lg",
+      "note": "",
+      "sizeNative": {
+        "w": 198,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 198,
+        "h": 160
+      },
+      "canvas": {
+        "w": 198,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 31680,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
+      ]
+    },
+    {
+      "id": "button--outline-info--lg--disabled",
+      "component": "Button",
+      "label": "outline-info lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 200,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 200,
+        "h": 160
+      },
+      "canvas": {
+        "w": 200,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 32000,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--light--md--default",
+      "component": "Button",
+      "label": "light md",
+      "note": "",
+      "sizeNative": {
+        "w": 180,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 180,
+        "h": 140
+      },
+      "canvas": {
+        "w": 180,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 25200,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--light--md--disabled",
+      "component": "Button",
+      "label": "light md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 180,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 180,
+        "h": 140
+      },
+      "canvas": {
+        "w": 180,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 25200,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--light--sm--default",
+      "component": "Button",
+      "label": "light sm",
+      "note": "",
+      "sizeNative": {
+        "w": 158,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 158,
+        "h": 126
+      },
+      "canvas": {
+        "w": 158,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 19908,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--light--sm--disabled",
+      "component": "Button",
+      "label": "light sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 160,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 160,
+        "h": 126
+      },
+      "canvas": {
+        "w": 160,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 20160,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--light--lg--default",
+      "component": "Button",
+      "label": "light lg",
+      "note": "",
+      "sizeNative": {
+        "w": 208,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 208,
+        "h": 160
+      },
+      "canvas": {
+        "w": 208,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 33280,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--light--lg--disabled",
+      "component": "Button",
+      "label": "light lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 210,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 210,
+        "h": 160
+      },
+      "canvas": {
+        "w": 210,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 33600,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-light--md--default",
+      "component": "Button",
+      "label": "outline-light md",
+      "note": "",
+      "sizeNative": {
+        "w": 180,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 180,
+        "h": 140
+      },
+      "canvas": {
+        "w": 180,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 25200,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
+      ]
+    },
+    {
+      "id": "button--outline-light--md--disabled",
+      "component": "Button",
+      "label": "outline-light md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 182,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 182,
+        "h": 140
+      },
+      "canvas": {
+        "w": 182,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 25480,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-light--sm--default",
+      "component": "Button",
+      "label": "outline-light sm",
+      "note": "",
+      "sizeNative": {
+        "w": 158,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 158,
+        "h": 126
+      },
+      "canvas": {
+        "w": 158,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 19908,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
+      ]
+    },
+    {
+      "id": "button--outline-light--sm--disabled",
+      "component": "Button",
+      "label": "outline-light sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 158,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 158,
+        "h": 126
+      },
+      "canvas": {
+        "w": 158,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 19908,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-light--lg--default",
+      "component": "Button",
+      "label": "outline-light lg",
+      "note": "",
+      "sizeNative": {
+        "w": 210,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 210,
+        "h": 160
+      },
+      "canvas": {
+        "w": 210,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 33600,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(1)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(1)"
+      ]
+    },
+    {
+      "id": "button--outline-light--lg--disabled",
+      "component": "Button",
+      "label": "outline-light lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 208,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 208,
+        "h": 160
+      },
+      "canvas": {
+        "w": 208,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 33280,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--dark--md--default",
+      "component": "Button",
+      "label": "dark md",
+      "note": "",
+      "sizeNative": {
+        "w": 182,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 182,
+        "h": 140
+      },
+      "canvas": {
+        "w": 182,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 25480,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--dark--md--disabled",
+      "component": "Button",
+      "label": "dark md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 184,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 184,
+        "h": 140
+      },
+      "canvas": {
+        "w": 184,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 25760,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--dark--sm--default",
+      "component": "Button",
+      "label": "dark sm",
+      "note": "",
+      "sizeNative": {
+        "w": 158,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 158,
+        "h": 126
+      },
+      "canvas": {
+        "w": 158,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 19908,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--dark--sm--disabled",
+      "component": "Button",
+      "label": "dark sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 160,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 160,
+        "h": 126
+      },
+      "canvas": {
+        "w": 160,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 20160,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--dark--lg--default",
+      "component": "Button",
+      "label": "dark lg",
+      "note": "",
+      "sizeNative": {
+        "w": 212,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 212,
+        "h": 160
+      },
+      "canvas": {
+        "w": 212,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 33920,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--dark--lg--disabled",
+      "component": "Button",
+      "label": "dark lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 212,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 212,
+        "h": 160
+      },
+      "canvas": {
+        "w": 212,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 33920,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-dark--md--default",
+      "component": "Button",
+      "label": "outline-dark md",
+      "note": "",
+      "sizeNative": {
+        "w": 182,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 182,
+        "h": 140
+      },
+      "canvas": {
+        "w": 182,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 25480,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-dark--md--disabled",
+      "component": "Button",
+      "label": "outline-dark md disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 182,
+        "h": 140
+      },
+      "sizeStyled": {
+        "w": 182,
+        "h": 140
+      },
+      "canvas": {
+        "w": 182,
+        "h": 140
+      },
+      "diffPixels": 0,
+      "totalPixels": 25480,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-dark--sm--default",
+      "component": "Button",
+      "label": "outline-dark sm",
+      "note": "",
+      "sizeNative": {
+        "w": 160,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 160,
+        "h": 126
+      },
+      "canvas": {
+        "w": 160,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 20160,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-dark--sm--disabled",
+      "component": "Button",
+      "label": "outline-dark sm disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 158,
+        "h": 126
+      },
+      "sizeStyled": {
+        "w": 158,
+        "h": 126
+      },
+      "canvas": {
+        "w": 158,
+        "h": 126
+      },
+      "diffPixels": 0,
+      "totalPixels": 19908,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-dark--lg--default",
+      "component": "Button",
+      "label": "outline-dark lg",
+      "note": "",
+      "sizeNative": {
+        "w": 210,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 210,
+        "h": 160
+      },
+      "canvas": {
+        "w": 210,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 33600,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "button--outline-dark--lg--disabled",
+      "component": "Button",
+      "label": "outline-dark lg disabled",
+      "note": "",
+      "sizeNative": {
+        "w": 212,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 212,
+        "h": 160
+      },
+      "canvas": {
+        "w": 212,
+        "h": 160
+      },
+      "diffPixels": 0,
+      "totalPixels": 33920,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "alert--primary",
+      "component": "Alert",
+      "label": "primary",
+      "note": "bootstrap-styled derives fill via color-mix; Bootstrap 5.3 uses -subtle/-emphasis tokens",
+      "sizeNative": {
+        "w": 446,
+        "h": 212
+      },
+      "sizeStyled": {
+        "w": 446,
+        "h": 212
+      },
+      "canvas": {
+        "w": 446,
+        "h": 212
+      },
+      "diffPixels": 0,
+      "totalPixels": 94552,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "alert--secondary",
+      "component": "Alert",
+      "label": "secondary",
+      "note": "bootstrap-styled derives fill via color-mix; Bootstrap 5.3 uses -subtle/-emphasis tokens",
+      "sizeNative": {
+        "w": 486,
+        "h": 212
+      },
+      "sizeStyled": {
+        "w": 486,
+        "h": 212
+      },
+      "canvas": {
+        "w": 486,
+        "h": 212
+      },
+      "diffPixels": 0,
+      "totalPixels": 103032,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "alert--success",
+      "component": "Alert",
+      "label": "success",
+      "note": "bootstrap-styled derives fill via color-mix; Bootstrap 5.3 uses -subtle/-emphasis tokens",
+      "sizeNative": {
+        "w": 452,
+        "h": 212
+      },
+      "sizeStyled": {
+        "w": 452,
+        "h": 212
+      },
+      "canvas": {
+        "w": 452,
+        "h": 212
+      },
+      "diffPixels": 409,
+      "totalPixels": 95824,
+      "diffPct": 0.427,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "alert--danger",
+      "component": "Alert",
+      "label": "danger",
+      "note": "bootstrap-styled derives fill via color-mix; Bootstrap 5.3 uses -subtle/-emphasis tokens",
+      "sizeNative": {
+        "w": 436,
+        "h": 212
+      },
+      "sizeStyled": {
+        "w": 436,
+        "h": 212
+      },
+      "canvas": {
+        "w": 436,
+        "h": 212
+      },
+      "diffPixels": 410,
+      "totalPixels": 92432,
+      "diffPct": 0.444,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "alert--warning",
+      "component": "Alert",
+      "label": "warning",
+      "note": "bootstrap-styled derives fill via color-mix; Bootstrap 5.3 uses -subtle/-emphasis tokens",
+      "sizeNative": {
+        "w": 448,
+        "h": 212
+      },
+      "sizeStyled": {
+        "w": 448,
+        "h": 212
+      },
+      "canvas": {
+        "w": 448,
+        "h": 212
+      },
+      "diffPixels": 0,
+      "totalPixels": 94976,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "alert--info",
+      "component": "Alert",
+      "label": "info",
+      "note": "bootstrap-styled derives fill via color-mix; Bootstrap 5.3 uses -subtle/-emphasis tokens",
+      "sizeNative": {
+        "w": 388,
+        "h": 212
+      },
+      "sizeStyled": {
+        "w": 388,
+        "h": 212
+      },
+      "canvas": {
+        "w": 388,
+        "h": 212
+      },
+      "diffPixels": 0,
+      "totalPixels": 82256,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "alert--light",
+      "component": "Alert",
+      "label": "light",
+      "note": "bootstrap-styled derives fill via color-mix; Bootstrap 5.3 uses -subtle/-emphasis tokens",
+      "sizeNative": {
+        "w": 398,
+        "h": 212
+      },
+      "sizeStyled": {
+        "w": 398,
+        "h": 212
+      },
+      "canvas": {
+        "w": 398,
+        "h": 212
+      },
+      "diffPixels": 0,
+      "totalPixels": 84376,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "alert--dark",
+      "component": "Alert",
+      "label": "dark",
+      "note": "bootstrap-styled derives fill via color-mix; Bootstrap 5.3 uses -subtle/-emphasis tokens",
+      "sizeNative": {
+        "w": 398,
+        "h": 212
+      },
+      "sizeStyled": {
+        "w": 398,
+        "h": 212
+      },
+      "canvas": {
+        "w": 398,
+        "h": 212
+      },
+      "diffPixels": 0,
+      "totalPixels": 84376,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "badge--primary",
+      "component": "Badge",
+      "label": "primary",
+      "note": "",
+      "sizeNative": {
+        "w": 192,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 192,
+        "h": 114
+      },
+      "canvas": {
+        "w": 192,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 21888,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "badge--secondary",
+      "component": "Badge",
+      "label": "secondary",
+      "note": "",
+      "sizeNative": {
+        "w": 224,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 224,
+        "h": 114
+      },
+      "canvas": {
+        "w": 224,
+        "h": 114
+      },
+      "diffPixels": 2,
+      "totalPixels": 25536,
+      "diffPct": 0.008,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "badge--success",
+      "component": "Badge",
+      "label": "success",
+      "note": "",
+      "sizeNative": {
+        "w": 194,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 194,
+        "h": 114
+      },
+      "canvas": {
+        "w": 194,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 22116,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "badge--danger",
+      "component": "Badge",
+      "label": "danger",
+      "note": "",
+      "sizeNative": {
+        "w": 182,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 182,
+        "h": 114
+      },
+      "canvas": {
+        "w": 182,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 20748,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "badge--warning",
+      "component": "Badge",
+      "label": "warning",
+      "note": "",
+      "sizeNative": {
+        "w": 194,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 194,
+        "h": 114
+      },
+      "canvas": {
+        "w": 194,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 22116,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "badge--info",
+      "component": "Badge",
+      "label": "info",
+      "note": "",
+      "sizeNative": {
+        "w": 144,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 144,
+        "h": 114
+      },
+      "canvas": {
+        "w": 144,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 16416,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "badge--light",
+      "component": "Badge",
+      "label": "light",
+      "note": "",
+      "sizeNative": {
+        "w": 150,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 150,
+        "h": 114
+      },
+      "canvas": {
+        "w": 150,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 17100,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "badge--dark",
+      "component": "Badge",
+      "label": "dark",
+      "note": "",
+      "sizeNative": {
+        "w": 152,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 152,
+        "h": 114
+      },
+      "canvas": {
+        "w": 152,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 17328,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "badge--primary-pill",
+      "component": "Badge",
+      "label": "primary pill",
+      "note": "",
+      "sizeNative": {
+        "w": 134,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 134,
+        "h": 114
+      },
+      "canvas": {
+        "w": 134,
+        "h": 114
+      },
+      "diffPixels": 0,
+      "totalPixels": 15276,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "card--basic",
+      "component": "Card",
+      "label": "basic",
+      "note": "",
+      "sizeNative": {
+        "w": 642,
+        "h": 340
+      },
+      "sizeStyled": {
+        "w": 642,
+        "h": 340
+      },
+      "canvas": {
+        "w": 642,
+        "h": 340
+      },
+      "diffPixels": 0,
+      "totalPixels": 218280,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "card--header-footer",
+      "component": "Card",
+      "label": "header+footer",
+      "note": "",
+      "sizeNative": {
+        "w": 640,
+        "h": 410
+      },
+      "sizeStyled": {
+        "w": 640,
+        "h": 410
+      },
+      "canvas": {
+        "w": 640,
+        "h": 410
+      },
+      "diffPixels": 0,
+      "totalPixels": 262400,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "spinner--default",
+      "component": "Spinner",
+      "label": "default",
+      "note": "",
+      "sizeNative": {
+        "w": 128,
+        "h": 138
+      },
+      "sizeStyled": {
+        "w": 128,
+        "h": 138
+      },
+      "canvas": {
+        "w": 128,
+        "h": 138
+      },
+      "diffPixels": 0,
+      "totalPixels": 17664,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "spinner--sm",
+      "component": "Spinner",
+      "label": "sm",
+      "note": "",
+      "sizeNative": {
+        "w": 96,
+        "h": 114
+      },
+      "sizeStyled": {
+        "w": 96,
+        "h": 114
+      },
+      "canvas": {
+        "w": 96,
+        "h": 114
+      },
+      "diffPixels": 32,
+      "totalPixels": 10944,
+      "diffPct": 0.292,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "spinner--primary",
+      "component": "Spinner",
+      "label": "primary",
+      "note": "",
+      "sizeNative": {
+        "w": 128,
+        "h": 138
+      },
+      "sizeStyled": {
+        "w": 128,
+        "h": 138
+      },
+      "canvas": {
+        "w": 128,
+        "h": 138
+      },
+      "diffPixels": 0,
+      "totalPixels": 17664,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "spinner--success",
+      "component": "Spinner",
+      "label": "success",
+      "note": "",
+      "sizeNative": {
+        "w": 128,
+        "h": 138
+      },
+      "sizeStyled": {
+        "w": 128,
+        "h": 138
+      },
+      "canvas": {
+        "w": 128,
+        "h": 138
+      },
+      "diffPixels": 0,
+      "totalPixels": 17664,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "progress--25",
+      "component": "Progress",
+      "label": "25%",
+      "note": "",
+      "sizeNative": {
+        "w": 576,
+        "h": 98
+      },
+      "sizeStyled": {
+        "w": 576,
+        "h": 98
+      },
+      "canvas": {
+        "w": 576,
+        "h": 98
+      },
+      "diffPixels": 0,
+      "totalPixels": 56448,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "aria-progressbar-name(1)"
+      ],
+      "axeStyledRules": [
+        "aria-progressbar-name(1)"
+      ]
+    },
+    {
+      "id": "progress--45",
+      "component": "Progress",
+      "label": "45%",
+      "note": "",
+      "sizeNative": {
+        "w": 576,
+        "h": 98
+      },
+      "sizeStyled": {
+        "w": 576,
+        "h": 98
+      },
+      "canvas": {
+        "w": 576,
+        "h": 98
+      },
+      "diffPixels": 0,
+      "totalPixels": 56448,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "aria-progressbar-name(1)"
+      ],
+      "axeStyledRules": [
+        "aria-progressbar-name(1)"
+      ]
+    },
+    {
+      "id": "progress--70-success",
+      "component": "Progress",
+      "label": "70% success",
+      "note": "",
+      "sizeNative": {
+        "w": 576,
+        "h": 98
+      },
+      "sizeStyled": {
+        "w": 576,
+        "h": 98
+      },
+      "canvas": {
+        "w": 576,
+        "h": 98
+      },
+      "diffPixels": 0,
+      "totalPixels": 56448,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "aria-progressbar-name(1)"
+      ],
+      "axeStyledRules": [
+        "aria-progressbar-name(1)"
+      ]
+    },
+    {
+      "id": "progress--90-danger",
+      "component": "Progress",
+      "label": "90% danger",
+      "note": "",
+      "sizeNative": {
+        "w": 576,
+        "h": 98
+      },
+      "sizeStyled": {
+        "w": 576,
+        "h": 98
+      },
+      "canvas": {
+        "w": 576,
+        "h": 98
+      },
+      "diffPixels": 0,
+      "totalPixels": 56448,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "aria-progressbar-name(1)"
+      ],
+      "axeStyledRules": [
+        "aria-progressbar-name(1)"
+      ]
+    },
+    {
+      "id": "closebutton--default",
+      "component": "CloseButton",
+      "label": "default",
+      "note": "Bootstrap btn-close uses an SVG background-image; styled renders a × glyph",
+      "sizeNative": {
+        "w": 112,
+        "h": 118
+      },
+      "sizeStyled": {
+        "w": 112,
+        "h": 118
+      },
+      "canvas": {
+        "w": 112,
+        "h": 118
+      },
+      "diffPixels": 0,
+      "totalPixels": 13216,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "closebutton--disabled",
+      "component": "CloseButton",
+      "label": "disabled",
+      "note": "Bootstrap btn-close uses an SVG background-image; styled renders a × glyph",
+      "sizeNative": {
+        "w": 112,
+        "h": 118
+      },
+      "sizeStyled": {
+        "w": 112,
+        "h": 118
+      },
+      "canvas": {
+        "w": 112,
+        "h": 118
+      },
+      "diffPixels": 0,
+      "totalPixels": 13216,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "accordion--first-open",
+      "component": "Accordion",
+      "label": "first open",
+      "note": "styled chevron is a CSS border-rotate + open bg via color-mix(primary 10%); Bootstrap uses an SVG-mask chevron + --bs-accordion-active-bg/-active-color tokens",
+      "sizeNative": {
+        "w": 768,
+        "h": 392
+      },
+      "sizeStyled": {
+        "w": 768,
+        "h": 392
+      },
+      "canvas": {
+        "w": 768,
+        "h": 392
+      },
+      "diffPixels": 24,
+      "totalPixels": 301056,
+      "diffPct": 0.008,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "breadcrumb--default",
+      "component": "Breadcrumb",
+      "label": "default",
+      "note": "Bootstrap divider is the --bs-breadcrumb-divider var (default \"/\") on ::before; styled hardcodes \"/\" — same glyph, but no divider-override token",
+      "sizeNative": {
+        "w": 402,
+        "h": 146
+      },
+      "sizeStyled": {
+        "w": 402,
+        "h": 114
+      },
+      "canvas": {
+        "w": 402,
+        "h": 146
+      },
+      "diffPixels": 348,
+      "totalPixels": 58692,
+      "diffPct": 0.593,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "pagination--default",
+      "component": "Pagination",
+      "label": "default (active+disabled)",
+      "note": "",
+      "sizeNative": {
+        "w": 562,
+        "h": 174
+      },
+      "sizeStyled": {
+        "w": 562,
+        "h": 142
+      },
+      "canvas": {
+        "w": 562,
+        "h": 174
+      },
+      "diffPixels": 152,
+      "totalPixels": 97788,
+      "diffPct": 0.155,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "pagination--sm",
+      "component": "Pagination",
+      "label": "sm",
+      "note": "",
+      "sizeNative": {
+        "w": 456,
+        "h": 160
+      },
+      "sizeStyled": {
+        "w": 456,
+        "h": 128
+      },
+      "canvas": {
+        "w": 456,
+        "h": 160
+      },
+      "diffPixels": 124,
+      "totalPixels": 72960,
+      "diffPct": 0.17,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "pagination--lg",
+      "component": "Pagination",
+      "label": "lg",
+      "note": "",
+      "sizeNative": {
+        "w": 854,
+        "h": 210
+      },
+      "sizeStyled": {
+        "w": 854,
+        "h": 178
+      },
+      "canvas": {
+        "w": 854,
+        "h": 210
+      },
+      "diffPixels": 224,
+      "totalPixels": 179340,
+      "diffPct": 0.125,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "nav--base",
+      "component": "Nav",
+      "label": "base",
+      "note": "",
+      "sizeNative": {
+        "w": 712,
+        "h": 146
+      },
+      "sizeStyled": {
+        "w": 712,
+        "h": 146
+      },
+      "canvas": {
+        "w": 712,
+        "h": 146
+      },
+      "diffPixels": 0,
+      "totalPixels": 103952,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "nav--tabs",
+      "component": "Nav",
+      "label": "tabs",
+      "note": "",
+      "sizeNative": {
+        "w": 730,
+        "h": 150
+      },
+      "sizeStyled": {
+        "w": 730,
+        "h": 150
+      },
+      "canvas": {
+        "w": 730,
+        "h": 150
+      },
+      "diffPixels": 0,
+      "totalPixels": 109500,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "nav--pills",
+      "component": "Nav",
+      "label": "pills",
+      "note": "",
+      "sizeNative": {
+        "w": 712,
+        "h": 146
+      },
+      "sizeStyled": {
+        "w": 712,
+        "h": 146
+      },
+      "canvas": {
+        "w": 712,
+        "h": 146
+      },
+      "diffPixels": 0,
+      "totalPixels": 103952,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "nav--fill",
+      "component": "Nav",
+      "label": "fill",
+      "note": "",
+      "sizeNative": {
+        "w": 1026,
+        "h": 146
+      },
+      "sizeStyled": {
+        "w": 1026,
+        "h": 146
+      },
+      "canvas": {
+        "w": 1026,
+        "h": 146
+      },
+      "diffPixels": 0,
+      "totalPixels": 149796,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "navbar--basic",
+      "component": "Navbar",
+      "label": "brand only",
+      "note": "styled Navbar is a bare flex shell: padding 0.5rem 1rem vs Bootstrap 0.5rem 0; NavbarBrand has no py/margin-right vs Bootstrap brand py 0.3125rem + mr 1rem. No expand/toggler/container/NavbarNav.",
+      "sizeNative": {
+        "w": 1024,
+        "h": 178
+      },
+      "sizeStyled": {
+        "w": 1024,
+        "h": 178
+      },
+      "canvas": {
+        "w": 1024,
+        "h": 178
+      },
+      "diffPixels": 685,
+      "totalPixels": 182272,
+      "diffPct": 0.376,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "navbar--dark",
+      "component": "Navbar",
+      "label": "dark",
+      "note": "color variant maps (bg-dark ≈ variant=\"dark\"); remaining diff is the same brand/padding geometry gap as navbar--basic.",
+      "sizeNative": {
+        "w": 1024,
+        "h": 178
+      },
+      "sizeStyled": {
+        "w": 1024,
+        "h": 178
+      },
+      "canvas": {
+        "w": 1024,
+        "h": 178
+      },
+      "diffPixels": 0,
+      "totalPixels": 182272,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "tabs--basic",
+      "component": "Tabs",
+      "label": "first active",
+      "note": "styled TabPanel adds 1rem 0 padding; Bootstrap .tab-pane has none → panel content sits ~1rem lower. Tab buttons themselves mirror nav-tabs closely.",
+      "sizeNative": {
+        "w": 1024,
+        "h": 198
+      },
+      "sizeStyled": {
+        "w": 1024,
+        "h": 198
+      },
+      "canvas": {
+        "w": 1024,
+        "h": 198
+      },
+      "diffPixels": 488,
+      "totalPixels": 202752,
+      "diffPct": 0.241,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    }
+  ]
+}

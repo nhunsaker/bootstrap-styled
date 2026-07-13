@@ -6,3 +6,4 @@ storybook-static/
 package-lock.json
 playground/dist/
 docs-build/
+parity/results/

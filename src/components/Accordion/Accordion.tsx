@@ -37,29 +37,57 @@ const Item = styled.div`
   }
 `
 
+// Bootstrap 5.3.8 accordion chevron icons (SVG data-URIs; light-theme stroke colors).
+const CHEVRON_ICON =
+  "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23212529' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e\")"
+const CHEVRON_ACTIVE_ICON =
+  "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e\")"
+// Dark-theme ([data-bs-theme=dark]) chevron — stroke #6ea8fe for both states.
+const CHEVRON_ICON_DARK =
+  "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%236ea8fe' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e\")"
+
 const HeaderButton = styled.button<{ $open?: boolean }>`
+  /* Bootstrap 5.3.8 .accordion active-state tokens (runtime-overridable). */
+  --bs-accordion-active-bg: var(--bs-primary-bg-subtle, #cfe2ff);
+  --bs-accordion-active-color: var(--bs-primary-text-emphasis, #052c65);
+  --bs-accordion-btn-icon: ${CHEVRON_ICON};
+  --bs-accordion-btn-active-icon: ${CHEVRON_ACTIVE_ICON};
+  --bs-accordion-btn-icon-width: 1.25rem;
+  [data-bs-theme='dark'] & {
+    --bs-accordion-btn-icon: ${CHEVRON_ICON_DARK};
+    --bs-accordion-btn-active-icon: ${CHEVRON_ICON_DARK};
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 1rem 1.25rem;
-  font: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  /* Native .accordion-button sits in an <h2> and inherits heading line-height (1.2). */
+  line-height: 1.2;
   text-align: left;
   cursor: pointer;
   border: 0;
   background-color: ${(p) =>
-    p.$open ? 'color-mix(in srgb, var(--bs-primary) 10%, var(--bs-body-bg))' : 'var(--bs-body-bg)'};
-  color: ${(p) => (p.$open ? 'var(--bs-primary)' : 'var(--bs-body-color)')};
+    p.$open ? 'var(--bs-accordion-active-bg)' : 'var(--bs-body-bg)'};
+  color: ${(p) => (p.$open ? 'var(--bs-accordion-active-color)' : 'var(--bs-body-color)')};
+  box-shadow: ${(p) =>
+    p.$open ? 'inset 0 calc(-1 * var(--bs-border-width, 1px)) 0 var(--bs-border-color)' : 'none'};
 
   &::after {
+    flex-shrink: 0;
+    width: var(--bs-accordion-btn-icon-width);
+    height: var(--bs-accordion-btn-icon-width);
+    margin-left: auto;
     content: '';
-    width: 0.6rem;
-    height: 0.6rem;
-    margin-left: 0.5rem;
-    border-right: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
-    transform: rotate(${(p) => (p.$open ? '-135deg' : '45deg')});
-    transition: transform 0.2s ease;
+    background-repeat: no-repeat;
+    background-size: var(--bs-accordion-btn-icon-width);
+    background-image: ${(p) =>
+      p.$open ? 'var(--bs-accordion-btn-active-icon)' : 'var(--bs-accordion-btn-icon)'};
+    transform: ${(p) => (p.$open ? 'rotate(-180deg)' : 'none')};
+    transition: transform 0.2s ease-in-out;
   }
 `
 

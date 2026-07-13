@@ -53,9 +53,8 @@ const TabButton = styled.button<{ $active?: boolean; $disabled?: boolean }>`
   ${(p) => (p.$disabled ? 'color: var(--bs-secondary); pointer-events: none;' : '')}
 `
 
-const TabPanel = styled.div`
-  padding: 1rem 0;
-`
+// Bootstrap .tab-pane has no padding (matches oracle).
+const TabPanel = styled.div``
 
 export function Tabs({ activeKey, defaultActiveKey, onSelect, children }: TabsProps) {
   const tabs = React.Children.toArray(children).filter(

@@ -1,30 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 import type { ColorName } from '../../theme/types'
+import { defaultTheme } from '../../theme/defaultTheme'
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: ColorName
   as?: React.ElementType
 }
 
-// BS5.3 derives alert colors from -subtle/-emphasis tokens; we don't model those
-// yet, so derive a soft fill + readable text from the base color via color-mix —
-// which keeps it tracking runtime overrides.
+// Bootstrap 5.3's .alert-<variant> consumes the -text-emphasis / -bg-subtle /
+// -border-subtle token trio (NOT a runtime color-mix). We read those `--bs-*`
+// vars — so a live token override re-shades the alert — with the exact 5.3.8
+// defaults as fallbacks (verified against parity/oracle/bootstrap.min.css) for
+// use without the Provider.
+const variantVars = (v: ColorName): string => {
+  const d = defaultTheme.colorTokens[v]
+  return `
+    --bs-alert-color: var(--bs-${v}-text-emphasis, ${d.emphasis});
+    --bs-alert-bg: var(--bs-${v}-bg-subtle, ${d.bgSubtle});
+    --bs-alert-border-color: var(--bs-${v}-border-subtle, ${d.borderSubtle});
+    --bs-alert-link-color: var(--bs-${v}-text-emphasis, ${d.emphasis});
+  `
+}
+
 const StyledAlert = styled.div<{ $variant: ColorName }>`
-  ${(p) => `
-    --bs-alert-bg: color-mix(in srgb, var(--bs-${p.$variant}) 12%, var(--bs-body-bg));
-    --bs-alert-border-color: color-mix(in srgb, var(--bs-${p.$variant}) 30%, var(--bs-body-bg));
-    /* Mix the emphasis text toward the body text color (not always black) so it
-       darkens in light mode and lightens in dark mode — readable on both. */
-    --bs-alert-color: color-mix(in srgb, var(--bs-${p.$variant}) 60%, var(--bs-body-color));
-  `}
+  ${(p) => variantVars(p.$variant)}
   position: relative;
   padding: 1rem 1rem;
   margin-bottom: 1rem;
+  line-height: var(--bs-body-line-height, 1.5);
   color: var(--bs-alert-color);
   background-color: var(--bs-alert-bg);
-  border: 1px solid var(--bs-alert-border-color);
+  border: var(--bs-border-width, 1px) solid var(--bs-alert-border-color);
   border-radius: var(--bs-border-radius);
+
+  .alert-link {
+    font-weight: 700;
+    color: var(--bs-alert-link-color);
+  }
 `
 
 export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
