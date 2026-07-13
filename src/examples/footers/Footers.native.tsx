@@ -1,9 +1,9 @@
 import React from 'react'
 import { BsIconStar } from '../../index'
-import { BsIconTwitter } from '../../components/Icon/generated/BsIconTwitter'
-import { BsIconInstagram } from '../../components/Icon/generated/BsIconInstagram'
-import { BsIconFacebook } from '../../components/Icon/generated/BsIconFacebook'
-import { BsIconGithub } from '../../components/Icon/generated/BsIconGithub'
+import { BsIconTwitter } from '../../components/Icon/icons/BsIconTwitter'
+import { BsIconInstagram } from '../../components/Icon/icons/BsIconInstagram'
+import { BsIconFacebook } from '../../components/Icon/icons/BsIconFacebook'
+import { BsIconGithub } from '../../components/Icon/icons/BsIconGithub'
 
 /**
  * Native twin of Footers.tsx — raw Bootstrap 5.3.8 `.container`/`.row`/`.col-md-*`

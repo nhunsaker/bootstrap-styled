@@ -2,10 +2,10 @@ import React from 'react'
 import { Container, Row, Col, BsIconStar } from '../../index'
 // Social icons live in the generated icon set (not the committed re-export
 // subset), so they're deep-imported. They render identically on the native twin.
-import { BsIconTwitter } from '../../components/Icon/generated/BsIconTwitter'
-import { BsIconInstagram } from '../../components/Icon/generated/BsIconInstagram'
-import { BsIconFacebook } from '../../components/Icon/generated/BsIconFacebook'
-import { BsIconGithub } from '../../components/Icon/generated/BsIconGithub'
+import { BsIconTwitter } from '../../components/Icon/icons/BsIconTwitter'
+import { BsIconInstagram } from '../../components/Icon/icons/BsIconInstagram'
+import { BsIconFacebook } from '../../components/Icon/icons/BsIconFacebook'
+import { BsIconGithub } from '../../components/Icon/icons/BsIconGithub'
 
 /**
  * Example page — Footer (styled).

@@ -28,6 +28,7 @@ const SUBSET = [
   'alarm', 'check', 'x',
   'chevron-down', 'chevron-up', 'chevron-left', 'chevron-right',
   'house', 'gear', 'search', 'trash', 'plus', 'star',
+  'twitter', 'instagram', 'facebook', 'github',
 ]
 
 const isSubset = process.argv.includes('--subset')
