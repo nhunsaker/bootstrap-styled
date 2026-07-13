@@ -96,6 +96,28 @@ import {
   Clearfix,
   TranslateMiddle,
 } from '../src'
+import { renderToStaticMarkup } from 'react-dom/server'
+// Vendored hermetic oracle, imported as a raw string so it can be re-scoped
+// under `@scope` for the composed example-page cells only (see exampleCells).
+import oracleCssRaw from './oracle/bootstrap.min.css?inline'
+
+// P5 example pages (Q5) — styled composition + its raw-Bootstrap native twin.
+import { Headers } from '../src/examples/headers/Headers'
+import { HeadersNative } from '../src/examples/headers/Headers.native'
+import { Heroes } from '../src/examples/heroes/Heroes'
+import { HeroesNative } from '../src/examples/heroes/Heroes.native'
+import { Features } from '../src/examples/features/Features'
+import { FeaturesNative } from '../src/examples/features/Features.native'
+import { Jumbotron } from '../src/examples/jumbotron/Jumbotron'
+import { JumbotronNative } from '../src/examples/jumbotron/Jumbotron.native'
+import { Navbars } from '../src/examples/navbars/Navbars'
+import { NavbarsNative } from '../src/examples/navbars/Navbars.native'
+import { Sidebar } from '../src/examples/sidebars/Sidebar'
+import { SidebarNative } from '../src/examples/sidebars/Sidebar.native'
+import { Footers } from '../src/examples/footers/Footers'
+import { FootersNative } from '../src/examples/footers/Footers.native'
+import { KitchenSink } from '../src/examples/kitchen-sink/KitchenSink'
+import { KitchenSinkNative } from '../src/examples/kitchen-sink/KitchenSink.native'
 
 /**
  * A parity cell = one component × variant/state rendered BOTH ways under
@@ -2129,6 +2151,74 @@ const boxCells: Cell[] = [
   },
 ]
 
+// ---------------------------------------------------------------------------
+// P5 example pages — full-page composition parity (Q5)
+// ---------------------------------------------------------------------------
+//
+// Each cell pairs a styled example page against its raw-Bootstrap `.native.tsx`
+// twin. Both sides are served the vendored oracle CSS so the composed Bootstrap
+// utility classes (`d-flex`, `col-md-*`, `py-3`, `.modal-content`, …) that the
+// example pages layer on top of the library components resolve identically:
+//
+//   - NATIVE side: the oracle stylesheet is already loaded globally (via the
+//     <link> in main.tsx), so the static twin markup is styled directly. The
+//     twin is a pure presentational React component (no hooks) → we render it to
+//     a static HTML string here for the harness's `native: string` contract.
+//
+//   - STYLED side: GlobalStyles ships Reboot + --bs-* tokens but NOT the utility
+//     classes, so we inject the SAME oracle CSS — but re-scoped under
+//     `@scope (.oracle-scope) { … }` and wrapped in a `.oracle-scope` div. That
+//     confines every oracle selector to the example subtree so it cannot touch
+//     the 220 atomic component cells (Scrollspy/Navbar emit literal `.nav` /
+//     `.navbar-*` classes a GLOBAL oracle would otherwise restyle). Reboot base
+//     + the --bs-* vars still come from the Provider (globally), matching the
+//     native side's global oracle. `:root`/`html`/`body` oracle rules simply
+//     don't match inside the scope — which is correct, the Provider owns those.
+const ORACLE_SCOPED = `@scope (.oracle-scope) {\n${oracleCssRaw}\n}`
+
+function examplePair(
+  slug: string,
+  component: string,
+  label: string,
+  Styled: React.ComponentType,
+  Native: React.ComponentType,
+  note?: string,
+): Cell {
+  return {
+    id: `example--${slug}`,
+    component,
+    label,
+    note,
+    native: renderToStaticMarkup(<Native />),
+    styled: (
+      <>
+        <style>{ORACLE_SCOPED}</style>
+        <div className="oracle-scope">
+          <Styled />
+        </div>
+      </>
+    ),
+  }
+}
+
+const exampleCells: Cell[] = [
+  examplePair('headers', 'ExHeaders', 'Headers — logo + centred pills + auth buttons bar', Headers, HeadersNative),
+  examplePair('heroes', 'ExHeroes', 'Heroes — centred hero with lead + CTA buttons', Heroes, HeroesNative),
+  examplePair('features', 'ExFeatures', 'Features — icon-grid feature sections', Features, FeaturesNative),
+  examplePair('jumbotron', 'ExJumbotron', 'Jumbotron — rounded hero panel', Jumbotron, JumbotronNative),
+  examplePair('navbars', 'ExNavbars', 'Navbars — brand + collapsible nav variants', Navbars, NavbarsNative),
+  examplePair('sidebars', 'ExSidebars', 'Sidebars — fixed vertical nav shell', Sidebar, SidebarNative),
+  examplePair('footers', 'ExFooters', 'Footers — multi-column links + bottom social bar', Footers, FootersNative),
+  examplePair(
+    'kitchen-sink',
+    'ExKitchenSink',
+    'Kitchen sink — buttons · badges · alerts · list group · dropdown · pagination · tabs · form · modal',
+    KitchenSink,
+    KitchenSinkNative,
+    'carries known component gaps: CloseButton SVG glyph (modal) + Tabs panel padding',
+  ),
+]
+
 export const cells: Cell[] = [
   ...buttonCells,
   ...alertCells,
@@ -2160,6 +2250,7 @@ export const cells: Cell[] = [
   ...iconCells,
   ...helperCells,
   ...boxCells,
+  ...exampleCells,
 ]
 
 /** Distinct component names in fixture order (for scorecard grouping). */

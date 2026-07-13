@@ -1,6 +1,6 @@
 # bootstrap-styled — parity baseline scorecard (P0 proof set)
 
-> Generated 2026-07-13T07:35:33.855Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
+> Generated 2026-07-13T08:07:29.830Z · Oracle: **Bootstrap 5.3.8** (vendored, hermetic) · Viewport 1280×1800 @2x DPR · animations frozen · pixelmatch threshold 0.1, AA excluded, padded-to-common-canvas.
 
 Visual-diff % = fraction of pixels differing between the native Bootstrap cell and the equivalent bootstrap-styled cell (each padded to a common white canvas so size deltas count). Lower is better. 🟢 ≤0.5% · 🟡 ≤3% · 🔴 >3%. Axe = WCAG 2.0/2.1 A/AA violations on that cell subtree.
 
@@ -50,6 +50,14 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | Clearfix | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | TranslateMiddle | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
 | Box | 2 | 🟢 0 | 🟢 0 | 2 | 2 |
+| ExHeaders | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| ExHeroes | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| ExFeatures | 1 | 🟢 0.156 | 🟢 0.156 | 0 | 0 |
+| ExJumbotron | 1 | 🟢 0.045 | 🟢 0.045 | 0 | 0 |
+| ExNavbars | 1 | 🟢 0 | 🟢 0 | 1 | 1 |
+| ExSidebars | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| ExFooters | 1 | 🟢 0 | 🟢 0 | 0 | 0 |
+| ExKitchenSink | 1 | 🟡 2.629 | 🟡 2.629 | 0 | 0 |
 | Modal | 1 | 🟢 0.089 | 🟢 0.089 | 0 | 0 |
 | Offcanvas | 1 | 🟢 0.088 | 🟢 0.088 | 0 | 0 |
 | Dropdown | 1 | 🟢 0.424 | 🟢 0.424 | 0 | 0 |
@@ -275,6 +283,14 @@ Visual-diff % = fraction of pixels differing between the native Bootstrap cell a
 | helper-translate-middle--badge | TranslateMiddle | .position-absolute .top-0 .start-100 .translate-middle | 🟢 0 | 0 | 0 |  |
 | box--flex-bg-primary | Box | <Box m={3} p={2} d="flex" bg="primary"/> → m-3 p-2 d-flex bg-primary | 🟢 0 | 1 (color-contrast(1)) | 1 (color-contrast(1)) | utility CSS scoped inline (verbatim oracle rules); class-map pixel check |
 | box--rounded-bg-success | Box | <Box p={3} bg="success" rounded/> → p-3 bg-success rounded | 🟢 0 | 1 (color-contrast(1)) | 1 (color-contrast(1)) | utility CSS scoped inline (verbatim oracle rules); class-map pixel check |
+| example--headers | ExHeaders | Headers — logo + centred pills + auth buttons bar | 🟢 0 | 0 | 0 |  |
+| example--heroes | ExHeroes | Heroes — centred hero with lead + CTA buttons | 🟢 0 | 0 | 0 |  |
+| example--features | ExFeatures | Features — icon-grid feature sections | 🟢 0.156 | 0 | 0 |  |
+| example--jumbotron | ExJumbotron | Jumbotron — rounded hero panel | 🟢 0.045 | 0 | 0 |  |
+| example--navbars | ExNavbars | Navbars — brand + collapsible nav variants | 🟢 0 | 1 (color-contrast(3)) | 1 (color-contrast(3)) |  |
+| example--sidebars | ExSidebars | Sidebars — fixed vertical nav shell | 🟢 0 | 0 | 0 |  |
+| example--footers | ExFooters | Footers — multi-column links + bottom social bar | 🟢 0 | 0 | 0 |  |
+| example--kitchen-sink | ExKitchenSink | Kitchen sink — buttons · badges · alerts · list group · dropdown · pagination · tabs · form · modal | 🟡 2.629 | 0 | 0 | carries known component gaps: CloseButton SVG glyph (modal) + Tabs panel padding |
 | modal--basic | Modal | shown (header/body/footer + backdrop) | 🟢 0.089 | 0 | 0 | native = static .modal.show + .modal-backdrop.show; clip captures dialog box + shadow over the 50% backdrop. |
 | offcanvas--start | Offcanvas | shown from start (+ backdrop) | 🟢 0.088 | 0 | 0 | native = static .offcanvas.offcanvas-start.show + backdrop; panel spans the left edge, clip clamped to viewport. |
 | dropdown--open | Dropdown | menu open (items + divider) | 🟢 0.424 | 0 | 0 | native = static .dropdown-menu.show; default dropdown menu carries no box-shadow. |
@@ -329,6 +345,14 @@ The proof set is deterministic-visual; the behavior oracle (`bootstrap.bundle.mi
 | Clearfix | — | — | — | — | scaffold (visual+axe only in P0) |
 | TranslateMiddle | — | — | — | — | scaffold (visual+axe only in P0) |
 | Box | — | — | — | — | scaffold (visual+axe only in P0) |
+| ExHeaders | — | — | — | — | scaffold (visual+axe only in P0) |
+| ExHeroes | — | — | — | — | scaffold (visual+axe only in P0) |
+| ExFeatures | — | — | — | — | scaffold (visual+axe only in P0) |
+| ExJumbotron | — | — | — | — | scaffold (visual+axe only in P0) |
+| ExNavbars | — | — | — | — | scaffold (visual+axe only in P0) |
+| ExSidebars | — | — | — | — | scaffold (visual+axe only in P0) |
+| ExFooters | — | — | — | — | scaffold (visual+axe only in P0) |
+| ExKitchenSink | — | — | — | — | scaffold (visual+axe only in P0) |
 | Modal | — | — | — | — | scaffold (visual+axe only in P0) |
 | Offcanvas | — | — | — | — | scaffold (visual+axe only in P0) |
 | Dropdown | — | — | — | — | scaffold (visual+axe only in P0) |

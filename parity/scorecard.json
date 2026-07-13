@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T07:35:33.855Z",
+  "generatedAt": "2026-07-13T08:07:29.830Z",
   "bootstrapVersion": "5.3.8",
   "viewport": {
     "width": 1280,
@@ -11,7 +11,7 @@
     "includeAA": false,
     "note": "padded-to-common-canvas white bg"
   },
-  "cellCount": 220,
+  "cellCount": 228,
   "components": [
     {
       "component": "Button",
@@ -390,6 +390,78 @@
       "minDiffPct": 0,
       "axeStyledViolations": 2,
       "axeNativeViolations": 2
+    },
+    {
+      "component": "ExHeaders",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "ExHeroes",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "ExFeatures",
+      "cellCount": 1,
+      "avgDiffPct": 0.156,
+      "maxDiffPct": 0.156,
+      "minDiffPct": 0.156,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "ExJumbotron",
+      "cellCount": 1,
+      "avgDiffPct": 0.045,
+      "maxDiffPct": 0.045,
+      "minDiffPct": 0.045,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "ExNavbars",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 1,
+      "axeNativeViolations": 1
+    },
+    {
+      "component": "ExSidebars",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "ExFooters",
+      "cellCount": 1,
+      "avgDiffPct": 0,
+      "maxDiffPct": 0,
+      "minDiffPct": 0,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
+    },
+    {
+      "component": "ExKitchenSink",
+      "cellCount": 1,
+      "avgDiffPct": 2.629,
+      "maxDiffPct": 2.629,
+      "minDiffPct": 2.629,
+      "axeStyledViolations": 0,
+      "axeNativeViolations": 0
     },
     {
       "component": "Modal",
@@ -5928,6 +6000,210 @@
       "axeStyledRules": [
         "color-contrast(1)"
       ]
+    },
+    {
+      "id": "example--headers",
+      "component": "ExHeaders",
+      "label": "Headers — logo + centred pills + auth buttons bar",
+      "note": "",
+      "sizeNative": {
+        "w": 1134,
+        "h": 412
+      },
+      "sizeStyled": {
+        "w": 1134,
+        "h": 412
+      },
+      "canvas": {
+        "w": 1134,
+        "h": 412
+      },
+      "diffPixels": 0,
+      "totalPixels": 467208,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "example--heroes",
+      "component": "ExHeroes",
+      "label": "Heroes — centred hero with lead + CTA buttons",
+      "note": "",
+      "sizeNative": {
+        "w": 2528,
+        "h": 1098
+      },
+      "sizeStyled": {
+        "w": 2528,
+        "h": 1098
+      },
+      "canvas": {
+        "w": 2528,
+        "h": 1098
+      },
+      "diffPixels": 0,
+      "totalPixels": 2775744,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "example--features",
+      "component": "ExFeatures",
+      "label": "Features — icon-grid feature sections",
+      "note": "",
+      "sizeNative": {
+        "w": 2344,
+        "h": 1114
+      },
+      "sizeStyled": {
+        "w": 2344,
+        "h": 1114
+      },
+      "canvas": {
+        "w": 2344,
+        "h": 1114
+      },
+      "diffPixels": 4062,
+      "totalPixels": 2611216,
+      "diffPct": 0.156,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "example--jumbotron",
+      "component": "ExJumbotron",
+      "label": "Jumbotron — rounded hero panel",
+      "note": "",
+      "sizeNative": {
+        "w": 2528,
+        "h": 838
+      },
+      "sizeStyled": {
+        "w": 2528,
+        "h": 838
+      },
+      "canvas": {
+        "w": 2528,
+        "h": 838
+      },
+      "diffPixels": 951,
+      "totalPixels": 2118464,
+      "diffPct": 0.045,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "example--navbars",
+      "component": "ExNavbars",
+      "label": "Navbars — brand + collapsible nav variants",
+      "note": "",
+      "sizeNative": {
+        "w": 1578,
+        "h": 466
+      },
+      "sizeStyled": {
+        "w": 1578,
+        "h": 466
+      },
+      "canvas": {
+        "w": 1578,
+        "h": 466
+      },
+      "diffPixels": 0,
+      "totalPixels": 735348,
+      "diffPct": 0,
+      "axeNativeViolations": 1,
+      "axeStyledViolations": 1,
+      "axeNativeRules": [
+        "color-contrast(3)"
+      ],
+      "axeStyledRules": [
+        "color-contrast(3)"
+      ]
+    },
+    {
+      "id": "example--sidebars",
+      "component": "ExSidebars",
+      "label": "Sidebars — fixed vertical nav shell",
+      "note": "",
+      "sizeNative": {
+        "w": 626,
+        "h": 1346
+      },
+      "sizeStyled": {
+        "w": 626,
+        "h": 1346
+      },
+      "canvas": {
+        "w": 626,
+        "h": 1346
+      },
+      "diffPixels": 0,
+      "totalPixels": 842596,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "example--footers",
+      "component": "ExFooters",
+      "label": "Footers — multi-column links + bottom social bar",
+      "note": "",
+      "sizeNative": {
+        "w": 1810,
+        "h": 864
+      },
+      "sizeStyled": {
+        "w": 1810,
+        "h": 864
+      },
+      "canvas": {
+        "w": 1810,
+        "h": 864
+      },
+      "diffPixels": 0,
+      "totalPixels": 1563840,
+      "diffPct": 0,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
+    },
+    {
+      "id": "example--kitchen-sink",
+      "component": "ExKitchenSink",
+      "label": "Kitchen sink — buttons · badges · alerts · list group · dropdown · pagination · tabs · form · modal",
+      "note": "carries known component gaps: CloseButton SVG glyph (modal) + Tabs panel padding",
+      "sizeNative": {
+        "w": 2344,
+        "h": 2250
+      },
+      "sizeStyled": {
+        "w": 2344,
+        "h": 2190
+      },
+      "canvas": {
+        "w": 2344,
+        "h": 2250
+      },
+      "diffPixels": 138642,
+      "totalPixels": 5274000,
+      "diffPct": 2.629,
+      "axeNativeViolations": 0,
+      "axeStyledViolations": 0,
+      "axeNativeRules": [],
+      "axeStyledRules": []
     },
     {
       "id": "modal--basic",
