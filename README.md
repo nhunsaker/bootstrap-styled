@@ -19,6 +19,10 @@
   </a>
 </p>
 
+<p align="center">
+  <img src="./assets/theming-demo.gif" alt="bootstrap-styled components re-skinning at runtime — light and dark" width="800" />
+</p>
+
 **[Bootstrap 5.3.8](https://github.com/twbs/bootstrap/releases/tag/v5.3.8) UI, rebuilt in
 [styled-components](https://styled-components.com/).** CSS-in-JS, React 18, TypeScript, and a
 runtime `--bs-*` token surface — the modern rewrite of
