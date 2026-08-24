@@ -1,4 +1,0 @@
-import{R as d,j as t,g as i}from"./index-DiIymZMJ.js";import{c as m}from"./cx-2dOUpm6k.js";import{b as n,T as c,a as l}from"./colors-BdFxzKWK.js";const g=i.div`
-  color: ${e=>n[e.$color]} !important;
-  background-color: rgba(${e=>c[e.$color]}, var(--bs-bg-opacity, 1)) !important;
-`,o=d.forwardRef(({color:e,className:s,...r},a)=>t.jsx(g,{ref:a,$color:e,className:m(`text-bg-${e}`,s),...r}));o.displayName="TextBg";const T={title:"Helpers/TextBg"},b=()=>t.jsx("div",{style:{display:"grid",gap:"0.5rem",maxWidth:320},children:l.map(e=>t.jsxs(o,{color:e,style:{padding:"0.5rem 0.75rem",borderRadius:"0.375rem"},children:[".text-bg-",e]},e))}),R=()=>t.jsx(o,{as:"span",color:"success",style:{padding:"0.35em 0.65em",borderRadius:"0.375rem",fontSize:"0.75em"},children:"New"});typeof window<"u"&&window.document&&window.document.createElement&&document.documentElement.setAttribute("data-storyloaded","");export{b as AllColors,R as AsBadge,T as default};
